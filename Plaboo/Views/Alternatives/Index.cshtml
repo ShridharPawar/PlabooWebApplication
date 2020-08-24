@@ -1,10 +1,5 @@
 ﻿@model IEnumerable<Plaboo.Models.Plastic>
 
-@{
-    ViewBag.Title = "Index";
-}
-
-
 
 <!doctype html>
 <html lang="en">
@@ -22,7 +17,60 @@
             width: 140px;
             margin-top: 40px;
             margin-left: 10px;
+            border: 2px solid #555;
         }
+
+        .inner {
+            overflow: hidden;
+        }
+
+         img:hover {
+               animation: shake 0.5s;
+               animation-iteration-count: infinite;
+            }
+
+         @@keyframes shake {
+          0% { transform: translate(1px, 1px) rotate(0deg); }
+          10% { transform: translate(-1px, -2px) rotate(-1deg); }
+          20% { transform: translate(-3px, 0px) rotate(1deg); }
+          30% { transform: translate(3px, 2px) rotate(0deg); }
+          40% { transform: translate(1px, -1px) rotate(1deg); }
+          50% { transform: translate(-1px, 2px) rotate(-1deg); }
+          60% { transform: translate(-3px, 1px) rotate(0deg); }
+          70% { transform: translate(3px, 1px) rotate(-1deg); }
+          80% { transform: translate(-1px, -1px) rotate(1deg); }
+          90% { transform: translate(1px, 2px) rotate(0deg); }
+          100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+    .modal.fade .modal-dialog {
+      opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s;
+  transform: scale(0) rotate(500deg);
+    }
+
+    .modal.fade.in .modal-dialog {
+       opacity: 1;
+  transform: scale(1) rotate(0deg);
+    }
+
+    .modal-backdrop {
+   background-color: gray;
+}
+
+    .modal-header {
+  background-color: cornsilk;
+  color: white;
+}
+    .modal-body {
+  background-color: cornsilk;
+  color: white;
+}
+
+    .mcontent{
+        color:black;
+    }
 
     </style>
 </head>
@@ -33,21 +81,20 @@
     <div class="container">
         <div class="row justify-content-center">
 
-
-           
+         
     @foreach (var item in Model)
     {
             <div class="col-md-3">
-                <img alternative=@item.Alternative src=@item.Image
-                     harmindex =@item.Harmindex reason=@item.Reason
-                     class="card-img-top center-block imgsize" alt="Missing img">
-            </div>
-    }
-            
+                <div class="inner">
+                    <img alternative=@item.Alternative src=@item.Image
+                         harmindex=@item.Harmindex reason=@item.Reason
+                         class="card-img-top center-block imgsize" alt="Missing img">
+                </div>
+             </div>
+     }
 
 
-
-            <!--
+          <!--
     <div class="col-md-12">
         <div class="row">
             <div class="col-md-2">
@@ -67,71 +114,16 @@
             </div>
         </div>
     </div>
-    <div class="col-md-12">
-        <div class="row">
-            <div class="col-md-2">
-                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
-            </div>
-            <div class="col-md-2">
-                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
-            </div>
-            <div class="col-md-2">
-                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
-            </div>
-            <div class="col-md-2">
-                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
-            </div>
-            <div class="col-md-2">
-                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
-            </div>
-        </div>
-    </div>
-    <div class="col-md-12">
-        <div class="row">
-            <div class="col-md-2">
-                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
-            </div>
-            <div class="col-md-2">
-                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
-            </div>
-            <div class="col-md-2">
-                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
-            </div>
-            <div class="col-md-2">
-                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
-            </div>
-            <div class="col-md-2">
-                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
-            </div>
-        </div>
-    </div>
-    <div class="col-md-12">
-        <div class="row">
-            <div class="col-md-2">
-                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
-            </div>
-            <div class="col-md-2">
-                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
-            </div>
-            <div class="col-md-2">
-                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
-            </div>
-            <div class="col-md-2">
-                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
-            </div>
-            <div class="col-md-2">
-                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
-            </div>
-        </div>
-    </div>
+    
     -->
 
 
 
-        </div>
+            </div>
 
                 </div>
-                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" 
+                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" id="resizemodal" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -140,11 +132,11 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <p id="reason1">Reason:</p>
+                                <p class="mcontent" id="reason1">Reason:</p>
                                 <br />
-                                <p id="harmindex1">Harmindex:</p>
+                                <p class="mcontent" id="harmindex1">Harmindex:</p>
                                 <br />
-                                <p id="alternative1">Alternative:</p>
+                                <p class="mcontent" id="alternative1">Alternative:</p>
                             </div>
 
                         </div>
@@ -162,11 +154,11 @@
         /* Applying the top margin on modal dialog to align it vertically center */
         modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 2.5));
             var reason1 = $("#reason1");
-            reason1[0].lastChild.data = "Reason:" + reason;
+            reason1[0].lastChild.data = "Reason: " + reason;
             var alternative1 = $("#alternative1");
-            alternative1[0].lastChild.data = "The alternative is:" + alternative;
+            alternative1[0].lastChild.data = "The alternative is: " + alternative;
             var harmindex1 = $("#harmindex1");
-            harmindex1[0].lastChild.data = "Plastic Harm Number:" + harmindex;
+            harmindex1[0].lastChild.data = "Plastic Harm Number: " + harmindex;
         }
         $(".imgsize").click(function (e) {
             alignModal($(this).attr('reason'), $(this).attr('alternative'),
@@ -177,57 +169,3 @@
         });
     });
 </script>
-
-<!--
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Alternative)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Reason)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Image)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Harmindex)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Alternative)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Reason)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Image)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Harmindex)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Plasticid }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Plasticid }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Plasticid })
-        </td>
-    </tr>
-}
-
-</table>
-    -->

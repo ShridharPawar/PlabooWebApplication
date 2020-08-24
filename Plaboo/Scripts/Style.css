@@ -1,16 +1,24 @@
-﻿#videodiv {
-    position: absolute;
-    top: 0;
+﻿/*
+<!-- #videodiv {
+    position: fixed;
+    float:left;
     left: 0;
     right: 0;
-    bottom: 0;
+
+    width: 100%;
+ 
     background-color: #ccc;
 }
+
+.second{
+    position:relative;
+}
+
 
 #videodiv video{
     height:100vh;
     width:100%;
-    background-position:absolute;
+    position:absolute;
     z-index:10;
     object-fit:cover;
     font-family:'object-fit:cover'; 
@@ -26,12 +34,66 @@
     left:0;
 }
 
-#videodiv .content h1{
-    color:#fff;
-    font-weight:600;
-} 
-
 #videodiv .content h3{
-    color:#fff;
+    color:papayawhip;
     font-weight:300;
+    margin-top:70px;
 }
+
+    #videodiv .content .second {
+        color: papayawhip;
+        font-weight: 300;
+        margin-top: 170px;
+    }
+*/
+
+
+ body{
+     margin:0;
+     padding:0;
+     font-family: 'Poppins',sans-serif;
+     height:1000px;
+ }
+ .banner{
+     width:100%;
+     height:100vh;
+     overflow:hidden;
+     display:flex;
+     justify-content:center;
+     align-items:center;
+
+ }
+
+ .banner video{
+     position:absolute;
+     top:0;
+     left:0;
+     object-fit:cover;
+     width:100%;
+     height:100%;
+     pointer-events:none;
+ }
+
+ .banner .content{
+     position:relative;
+     z-index:1;
+     max-width:1000px;
+     margin:0 auto;
+     text-align:center;
+ }
+
+ .banner .content h1{
+     margin:0;
+     padding:0;
+     font-size:4.5em;
+     text-transform:uppercase;
+     color:#fff;
+
+ }
+
+    .banner .content p {
+        
+        font-size: 1.5em;
+        
+        color: #fff;
+    }

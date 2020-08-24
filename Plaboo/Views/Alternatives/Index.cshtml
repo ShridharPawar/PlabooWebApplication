@@ -4,6 +4,181 @@
     ViewBag.Title = "Index";
 }
 
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+    <style>
+        .imgsize {
+            height: 140px;
+            width: 140px;
+            margin-top: 40px;
+            margin-left: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+
+
+           
+    @foreach (var item in Model)
+    {
+            <div class="col-md-3">
+                <img alternative=@item.Alternative src=@item.Image
+                     harmindex =@item.Harmindex reason=@item.Reason
+                     class="card-img-top center-block imgsize" alt="Missing img">
+            </div>
+    }
+            
+
+
+
+            <!--
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
+            </div>
+            <div class="col-md-2">
+                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
+            </div>
+            <div class="col-md-2">
+                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
+            </div>
+            <div class="col-md-2">
+                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
+            </div>
+            <div class="col-md-2">
+                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
+            </div>
+            <div class="col-md-2">
+                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
+            </div>
+            <div class="col-md-2">
+                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
+            </div>
+            <div class="col-md-2">
+                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
+            </div>
+            <div class="col-md-2">
+                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
+            </div>
+            <div class="col-md-2">
+                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
+            </div>
+            <div class="col-md-2">
+                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
+            </div>
+            <div class="col-md-2">
+                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
+            </div>
+            <div class="col-md-2">
+                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
+            </div>
+            <div class="col-md-2">
+                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
+            </div>
+            <div class="col-md-2">
+                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
+            </div>
+            <div class="col-md-2">
+                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
+            </div>
+            <div class="col-md-2">
+                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
+            </div>
+        </div>
+    </div>
+    -->
+
+
+
+        </div>
+
+                </div>
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" id="resizemodal" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p id="reason1">Reason:</p>
+                                <br />
+                                <p id="harmindex1">Harmindex:</p>
+                                <br />
+                                <p id="alternative1">Alternative:</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+</body>
+</html>
+
+<script>
+    $(document).ready(function () {
+        function alignModal(reason,alternative,harmindex) {
+            debugger;
+        var modalDialog = $("#resizemodal");
+        /* Applying the top margin on modal dialog to align it vertically center */
+        modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 2.5));
+            var reason1 = $("#reason1");
+            reason1[0].lastChild.data = "Reason:" + reason;
+            var alternative1 = $("#alternative1");
+            alternative1[0].lastChild.data = "The alternative is:" + alternative;
+            var harmindex1 = $("#harmindex1");
+            harmindex1[0].lastChild.data = "Plastic Harm Number:" + harmindex;
+        }
+        $(".imgsize").click(function (e) {
+            alignModal($(this).attr('reason'), $(this).attr('alternative'),
+            $(this).attr('harmindex'));
+            $("#exampleModalCenter").modal('show');
+           
+           
+        });
+    });
+</script>
+
+<!--
 <h2>Index</h2>
 
 <p>
@@ -55,3 +230,4 @@
 }
 
 </table>
+    -->

@@ -2,96 +2,34 @@
     ViewBag.Title = "Home Page";
 }
 
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link href="~/Scripts/Style.css" rel="stylesheet" />
+   
     <style>
-        .split {
-        height: 100%;
-        width: 50%;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        overflow-x: hidden;
-        padding-top: 20px;
-        }
-
-        /* Control the left side 
-        .left {
-        left: 0;
-        background-color: #00ff21;
-        }*/
-
-        /* Control the right side */
-        .right {
-        right: 0;
-        background-color: white;
-        }
-
-        /* If you want the content centered horizontally and vertically */
-        .centered {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        }
-
-        /* Style the image inside the centered container, if needed */
-        .centered img {
-        width: 150px;
-        border-radius: 50%;
-        }
-
-        .regbuttons {
-            display: inline-block;
-            padding: 10px;
-            margin-top: 10px;
-            width: 340px;
-        }
-
-        .plaboosymbol {
-            height: 200px;
-            width: 530px;
-            margin-top: 50px;
-            margin-left:60px;
-        }
-
-        
-
-       
     </style>
 
+</head>
 
-
-    <div class="split left">
-      
-            
-            <img class="" src="~/Images/Plastic2.JPG" alt="Plastic">
-        
-
-      
-
-    </div>
-
-<div class="split right">
-    <img class="plaboosymbol" src="~/Images/Plaboo.JPG" alt="Plaboo Symbol">
-    <div class="centered col-md-12">
-        <p>Join PlaBOO today!</p>
-        <div class="row">
-            <button type="button" class="btn btn-success regbuttons"
-                    onclick="location.href='@Url.Action("Login", "Account")'">
-                Sign In
-            </button>
+<body>
+    <div id="videodiv">
+        <video loop muted autoplay poster="">
+            <source src="~/Images/Ocean.mp4" type="video/mp4" />
+        </video>
+        <div class="content d-flex align-items-center">
+            <div class="container text-center">
+                <h1>Welcome to my website</h1>
+                <h3>This is the background</h3>
+            </div>
         </div>
-        <div class="row">
-            <button type="button" class="btn btn-light regbuttons"
-                    onclick="location.href='@Url.Action("Register", "Account")'">
-                Sign Up
-            </button>
-        </div>
-
-
     </div>
 
 
-
-</div>
-    
+    <script src="~/Scripts/Objectfitvideos.js"></script>
+    <script>
+        objectFitVideos();
+    </script>
+</body>
+</html>

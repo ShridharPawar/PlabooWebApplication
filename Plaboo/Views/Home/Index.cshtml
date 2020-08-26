@@ -1,20 +1,84 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿
 
 <!doctype html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
     <link href="~/Scripts/Style.css" rel="stylesheet" />
-   
+
     <style>
+        .adolescents {
+            margin-top: 40px;
+            margin-left:0px;
+            font-family: 'Courier New';
+            font-size: 25px;
+        }
+
+        .adolescents1 {
+            font-family: 'Courier New';
+            font-size: 25px;
+            margin: 15px;
+        }
     </style>
 
 </head>
 
 <body>
-    <!--
+
+
+    <div class="banner">
+        <video autoplay muted loop>
+            <source src="~/Content/Images/Ocean4.mp4" type="video/mp4" />
+        </video>
+        <div class="content col-md-12 col-sm-12 col-xs-12 col-lg-12">
+            
+            <p>
+                On an average, 130,000 tons of plastic is decomposed into the ocean
+                in Australia per year. Are you ready to make the change?
+            </p>
+
+        </div>
+    </div>
+    <div class="row" style="width:90%; position: absolute; left: 50px; right:30px;">
+        <div class="col-md-4">
+            <img src="~/Content/Images/Adolescents.JPG" class="card-img-top imgsize" alt="Missing img" />
+        </div>
+        <div class="col-md-8 adolescents">
+            <p>
+
+                The current generation of adolescents in Australia is concerned about plastic pollution and this issue is mentally
+                disturbing them. The majority of them want to do something about it but currently, there aren't enrough platforms
+                that can guide them to reduce their plastic usage in an engaging manner.
+
+            </p>
+        </div>
+        <div class="col-md-12 adolescents1">
+            <p>
+                We have developed PlaBOO to suggest possible alternatives for the plastic items in an entertaining manner, show
+                nearby waste management centers to recycle, entertain adolescents with quizzes and record their experience
+                in a reflective diary. We believe this approach can have a global impact towards a plastic-free world.
+            </p>
+        </div>
+        <div class="col-md-6 adolescents">
+            <p style="margin:15px;">
+                Click next to save the environment and switch to plastic alternatives today!!!
+            </p>
+            <button type="button" class="btn btn-success regbuttons" style="margin-left:80px; margin-top:30px;"
+                    onclick="location.href='@Url.Action("HomeCards", "Home")'">
+                Let's save this world!
+            </button>
+        </div>
+        <div class="col-md-6">
+            <img src="~/Content/Images/adolescentsaction.JPG" class="card-img-top imgsize" alt="Missing img" />
+        </div>
+
+    </div>
+
+
+</body>
+</html>
+
+<!--
     <div class="row">
         <div id="videodiv">
             <video loop muted autoplay poster="">
@@ -44,25 +108,3 @@
         objectFitVideos();
     </script>
         -->
-  
-    <div class="banner">
-        <video autoplay muted loop>
-            <source src="~/Images/Ocean4.mp4" type="video/mp4" />
-        </video>
-        <div class="content">
-            <h1>Fullscreen Video Banner</h1>
-            <p>
-                On an average, 130,000 tons of plastic is decomposed into the ocean
-                in Australia per year. Are you ready to make the change?
-            </p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <p>Hey there</p>
-        </div>
-    </div>
-
-
-</body>
-</html>

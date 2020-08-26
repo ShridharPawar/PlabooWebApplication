@@ -9,16 +9,56 @@
     <style>
         .adolescents {
             margin-top: 40px;
-            margin-left:0px;
+            
             font-family: 'Courier New';
             font-size: 25px;
         }
 
         .adolescents1 {
             font-family: 'Courier New';
-            font-size: 25px;
-            margin: 15px;
+            font-size: 15px;
+            border:1px;
         }
+
+         .navbar {
+       background-color: black !important;
+    }
+
+    .navbar-toggle{
+        background-color: lightyellow;
+    }
+
+ 
+
+.alignfull {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    max-width: 1000%;
+    width: auto;
+}
+
+.trial {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    max-width: 1000%;
+    width: auto;
+}
+
+ .imgsize {
+            height: 200px;
+            width: 200px;
+            padding:5px;
+        }
+
+        .cardrow {
+            margin-top: 20px;
+            padding: 30px;
+        }
+
+        .inner {
+            overflow: hidden;
+        }
+ 
     </style>
 
 </head>
@@ -26,85 +66,67 @@
 <body>
 
 
-    <div class="banner">
-        <video autoplay muted loop>
-            <source src="~/Content/Images/Ocean4.mp4" type="video/mp4" />
-        </video>
-        <div class="content col-md-12 col-sm-12 col-xs-12 col-lg-12">
-            
-            <p>
-                On an average, 130,000 tons of plastic is decomposed into the ocean
-                in Australia per year. Are you ready to make the change?
-            </p>
+    <!--<video width="320" height="240" autoplay muted loop style="margin-top:50px;">
+        <source src="~/Content/Images/Ocean4.mp4" type="video/mp4" />
+    </video>-->
 
-        </div>
+   <div class="alignfull">
+        <img class="img-fluid" src="~/Content/Images/parentsplastic.jpg" alt="Missing image.">
     </div>
-    <div class="row" style="width:90%; position: absolute; left: 50px; right:30px;">
-        <div class="col-md-4">
-            <img src="~/Content/Images/Adolescents.JPG" class="card-img-top imgsize" alt="Missing img" />
-        </div>
-        <div class="col-md-8 adolescents">
-            <p>
 
-                The current generation of adolescents in Australia is concerned about plastic pollution and this issue is mentally
-                disturbing them. The majority of them want to do something about it but currently, there aren't enrough platforms
-                that can guide them to reduce their plastic usage in an engaging manner.
+   <div class="row">
+       <div class="trial">
+           <div class="col-md-8">
+               <img style="margin-top:20px; margin-left:40px;" class="img-fluid" src="~/Content/Images/parentsplastic.jpg" alt="Super Wide Highway Picture.">
+           </div>
+           <div class="col-md-4">
+               <p>Hey!</p>
+           </div>
+       </div>
+   </div>
 
-            </p>
-        </div>
-        <div class="col-md-12 adolescents1">
-            <p>
-                We have developed PlaBOO to suggest possible alternatives for the plastic items in an entertaining manner, show
-                nearby waste management centers to recycle, entertain adolescents with quizzes and record their experience
-                in a reflective diary. We believe this approach can have a global impact towards a plastic-free world.
-            </p>
-        </div>
-        <div class="col-md-6 adolescents">
-            <p style="margin:15px;">
-                Click next to save the environment and switch to plastic alternatives today!!!
-            </p>
-            <button type="button" class="btn btn-success regbuttons" style="margin-left:80px; margin-top:30px;"
-                    onclick="location.href='@Url.Action("HomeCards", "Home")'">
-                Let's save this world!
-            </button>
-        </div>
-        <div class="col-md-6">
-            <img src="~/Content/Images/adolescentsaction.JPG" class="card-img-top imgsize" alt="Missing img" />
-        </div>
+   
+   <div class="cardrow">
+       <div class="col-md-12">
+           <div class="col-md-6" style="padding:15px;">
+               <div class="card" style="width: 15rem;">
+                   <div class="inner">
+                       <img src="~/Content/Images/Quiz.jpg" class="card-img-top imgsize" alt="Missing img">
+                   </div>
+                   <div class="card-body">
+                       <h4 class="card-title text-center">The Challenge</h4>
+                       <p>The adolescents of Australia are concerned about the plastic pollution issue but are
+                       unsure how to deal with it since there aren't enough platforms to guide them in the
+                       right direction.</p>
+                       
+                   </div>
+               </div>
+           </div>
+           <div class="col-md-6" style="padding:15px;">
+               <div class="card" style="width:15rem;">
+                   <div class="inner">
+                       <img src="~/Content/Images/Quiz.jpg" class="card-img-top imgsize" alt="Missing img">
+                   </div>
+                   <div class="card-body">
+                       <h4 class="card-title text-center">The Solution</h4>
+                       
+                   </div>
+               </div>
+           </div>
+         
+       </div>
+   </div>
 
-    </div>
+
+
+
+
+
+
+
 
 
 </body>
 </html>
 
-<!--
-    <div class="row">
-        <div id="videodiv">
-            <video loop muted autoplay poster="">
-                <source src="~/Images/Ocean4.mp4" type="video/mp4" />
-            </video>
-            <div class="content d-flex align-items-center">
-                <div class="container text-center">
-                    <h3>
-                        On an average, 130,000 tons of plastic is decomposed into the ocean
-                        in Australia per year. Are you ready to make the change?
-                    </h3>
-                </div>
-            </div>
 
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12 second">
-            <p>Hey there</p>
-        </div>
-    </div>
-
-
-
-    <script src="~/Scripts/Objectfitvideos.js"></script>
-    <script>
-        objectFitVideos();
-    </script>
-        -->

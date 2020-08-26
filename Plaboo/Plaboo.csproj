@@ -199,7 +199,6 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Images\Adolescents.JPG" />
     <Content Include="Content\Images\adolescentsaction.JPG" />
     <Content Include="Content\Images\Alternative.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -228,9 +227,7 @@
     <Content Include="Content\Images\mold.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\Images\Ocean4.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Content\Images\parentsplastic.JPG" />
     <Content Include="Content\Images\phonecases.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

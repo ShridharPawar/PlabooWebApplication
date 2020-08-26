@@ -116,7 +116,6 @@ D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\hardh
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\Journal.jpg
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\mediacase.jpg
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\mold.jpg
-D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\Ocean4.mp4
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\phonecases.jpg
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\Plaboo.JPG
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\pots.jpg
@@ -234,7 +233,6 @@ D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Microsoft.Owin.Secur
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Microsoft.Owin.Security.OAuth.xml
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Release\Plaboo.csprojAssemblyReference.cache
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Release\Plaboo.Migrations.init.resources
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Release\Plaboo.Migrations.init1.resources
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Release\Plaboo.csproj.GenerateResource.cache

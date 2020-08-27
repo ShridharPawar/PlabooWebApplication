@@ -218,6 +218,7 @@
     <Content Include="Content\Images\hardhat.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Images\HomeVideo.mp4" />
     <Content Include="Content\Images\Journal.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -237,6 +238,7 @@
     <Content Include="Content\Images\pots.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Images\problem.jpg" />
     <Content Include="Content\Images\Quiz.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -252,6 +254,7 @@
     <Content Include="Content\Images\skincare.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Images\solution.png" />
     <Content Include="Content\Images\speaker.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -267,6 +270,9 @@
     <Content Include="Content\Images\toothpaste.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Images\Water1.jpeg" />
+    <Content Include="Content\Images\Water2.jpeg" />
+    <Content Include="Content\Images\Water3.jpeg" />
     <Content Include="Content\Images\yogamat.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

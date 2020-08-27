@@ -21,7 +21,7 @@
 
         .imgsize {
             height: 200px;
-            width: 200px;
+            width: 180px;
         }
 
         .card {
@@ -30,7 +30,7 @@
              border: 1px solid #555;
         }
 
-        .inner {
+        /*.inner {
             overflow: hidden;
         }
 
@@ -62,7 +62,42 @@
           90% { transform: translate(1px, 2px) rotate(0deg); }
           100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
+*/
 
+        .card-container{
+            perspective:200rem;
+            position:relative;
+            height: 291.6px;
+        }
+
+        .card-container:hover .card-front{
+            transform : rotateY(180deg);
+          }
+
+         .card-container:hover .card-back{
+            transform : rotateY(0deg);
+          }
+
+         .card-back{
+            transform: rotateY(180deg);
+        }
+
+        .card{
+            transition: 0.9s all;
+            position: absolute;
+            height:100%;
+            width:100%;
+            backface-visibility:hidden;
+        }
+
+        .card-back .card-body{
+            position:relative;
+        }
+
+
+        
+
+        
 
     </style>
 </head>
@@ -71,16 +106,41 @@
     
     <div class="container">
         <div class="row justify-content-center">
+
             <div class="col-md-3">
+                <div class="card-container">
+                    <div class="card card-front" style="width:15rem;">
+                        <div class="inner">
+                            <img src="~/Content/Images/Alternative.jpg" class="card-img-top imgsize" alt="Missing img">
+                        </div>
+                        <div class="card-body">
+                            <h6 style="font-family:'Comic Sans MS'" class="card-title text-center">Alternatives</h6>
+                        </div>
+                    </div>
+
+                    <div class="card card-back" style="width:15rem;">
+                        <div class="card-body">
+                            <p></p>
+                            <button type="button" class="btn btn-primary flip" style="margin-left:60px; margin-top:60px;"
+                                    onclick="location.href='@Url.Action("Index", "Alternatives")'">
+                                <i class="fa fa-angle-double-right"></i>
+                            </button>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--<div class="col-md-3">
                 <div class="card shadow" style="width:15rem;">
                     <div class="inner">
                         <img src="~/Content/Images/Alternative.jpg" class="card-img-top imgsize" alt="Missing img">
                     </div>
-                   
+
                     <div class="card-body">
                         <h6 class="card-title text-center">Alternatives</h6>
-                       
-                        
+
+
                         <button type="button" class="btn btn-primary" style="margin-left:60px;"
                                 onclick="location.href='@Url.Action("Index", "Alternatives")'">
                             <i class="fa fa-angle-double-right"></i>
@@ -89,49 +149,48 @@
                     </div>
         </div>
     </div>
-    <div class="col-md-3">
-        <div class="card shadow" style="width: 15rem;">
-            <div class="inner">
-                <img src="~/Content/Images/Quiz.jpg" class="card-img-top imgsize" alt="Missing img">
-            </div>
-                <div class="card-body">
-                    <h6 class="card-title text-center">Quiz</h6>
-                    <button type="button" class="btn btn-primary" style="margin-left:60px;"
-                            >
-                        <i class="fa fa-angle-double-right"></i>
-                    </button>
+            <div class="col-md-3">
+                <div class="card shadow" style="width: 15rem;">
+                    <div class="inner">
+                        <img src="~/Content/Images/Quiz.jpg" class="card-img-top imgsize" alt="Missing img">
                     </div>
-          </div>
+                    <div class="card-body">
+                        <h6 class="card-title text-center">Quiz</h6>
+                        <button type="button" class="btn btn-primary" style="margin-left: 60px; ">
+                            <i class="fa fa-angle-double-right"></i>
+                        </button>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="card shadow" style="width: 15rem;">
-                        <div class="inner">
-                            <img src="~/Content/Images/Journal.jpg" class="card-img-top imgsize" alt="Missing img">
-                        </div>
-                            <div class="card-body">
-                                <h6 class="card-title text-center">Journal</h6>
-                                <button type="button" class="btn btn-primary" style="margin-left:60px;"
-                                        >
-                                    <i class="fa fa-angle-double-right"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                <div class="col-md-3">
-                    <div class="card shadow" style="width: 15rem;">
-                        <div class="inner">
-                            <img src="~/Content/Images/Recycle.jpg" class="card-img-top imgsize" alt="Missing img">
-                        </div>
-                            <div class="card-body">
-                                <h6 class="card-title text-center">Recycling Centers</h6>
-                                <button type="button" class="btn btn-primary" style="margin-left:60px;"
-                                        >
-                                    <i class="fa fa-angle-double-right"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
             </div>
+            <div class="col-md-3">
+                <div class="card shadow" style="width: 15rem;">
+                    <div class="inner">
+                        <img src="~/Content/Images/Journal.jpg" class="card-img-top imgsize" alt="Missing img">
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title text-center">Journal</h6>
+                        <button type="button" class="btn btn-primary" style="margin-left:60px;">
+                            <i class="fa fa-angle-double-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow" style="width: 15rem;">
+                    <div class="inner">
+                        <img src="~/Content/Images/Recycle.jpg" class="card-img-top imgsize" alt="Missing img">
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title text-center">Recycling Centers</h6>
+                        <button type="button" class="btn btn-primary" style="margin-left:60px;">
+                            <i class="fa fa-angle-double-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+                -->
+
+        </div>
 
         </div>
 

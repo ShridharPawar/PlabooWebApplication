@@ -7,20 +7,7 @@
     <link href="~/Scripts/Style.css" rel="stylesheet" />
 
     <style>
-        .adolescents {
-            margin-top: 40px;
-            
-            font-family: 'Courier New';
-            font-size: 25px;
-        }
-
-        .adolescents1 {
-            font-family: 'Courier New';
-            font-size: 15px;
-            border:1px;
-        }
-
-         .navbar {
+       .navbar {
        background-color: black !important;
     }
 
@@ -31,34 +18,70 @@
  
 
 .alignfull {
-    margin-left: calc(50% - 50vw);
+    /*margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
     max-width: 1000%;
-    width: auto;
+    width: auto;*/
 }
 
-.trial {
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    max-width: 1000%;
-    width: auto;
-}
 
  .imgsize {
-            height: 200px;
-            width: 200px;
-            padding:5px;
+            height: 130px;
+            width: 190px;
+            padding-left:35px;
+           
         }
 
         .cardrow {
-            margin-top: 20px;
+          }
+
+         .card {
+            margin-top: 40px;
             padding: 30px;
+             border: 1px solid #555;
         }
 
-        .inner {
+         .ocean {
+  background-color: lightgrey;
+  border: 15px solid green;
+  padding: 20px;
+  margin: 10px;
+}
+
+         .inner {
             overflow: hidden;
         }
- 
+
+            .inner img {
+                transition: all 1.5s ease;
+            }
+
+            .inner:hover img {
+                transform: scale(1.5);
+            }
+
+        .card:hover {
+            animation: shake 1.2s;
+            animation-iteration-count: infinite;
+        }
+
+         @@keyframes shake {
+          0% { transform: translate(1px, 1px) rotate(0deg); }
+          10% { transform: translate(-1px, -2px) rotate(-1deg); }
+          20% { transform: translate(-3px, 0px) rotate(1deg); }
+          30% { transform: translate(3px, 2px) rotate(0deg); }
+          40% { transform: translate(1px, -1px) rotate(1deg); }
+            50% {
+                transform: translate(-1px, 2px) rotate(-1deg);
+            }
+          60% { transform: translate(-3px, 1px) rotate(0deg); }
+          70% { transform: translate(3px, 1px) rotate(-1deg); }
+          80% { transform: translate(-1px, -1px) rotate(1deg); }
+          90% { transform: translate(1px, 2px) rotate(0deg); }
+          100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+      
     </style>
 
 </head>
@@ -70,52 +93,83 @@
         <source src="~/Content/Images/Ocean4.mp4" type="video/mp4" />
     </video>-->
 
-   <div class="alignfull">
-        <img class="img-fluid" src="~/Content/Images/parentsplastic.jpg" alt="Missing image.">
+    <div class="banner">
+        <!--<img class="img-fluid" src="~/Content/Images/parentsplastic.jpg" alt="Missing image.">-->
+        <video autoplay muted loop>
+            <source src="~/Content/Images/homeVideo.mp4" type="video/mp4" />
+        </video>
     </div>
 
-   <div class="row">
-       <div class="trial">
-           <div class="col-md-8">
-               <img style="margin-top:20px; margin-left:40px;" class="img-fluid" src="~/Content/Images/parentsplastic.jpg" alt="Super Wide Highway Picture.">
-           </div>
-           <div class="col-md-4">
-               <p>Hey!</p>
-           </div>
-       </div>
-   </div>
+       
+        <div class="row">
+            <div class="alignfull">
+                <div class="col-md-12">
+                    <img style="margin-top: 10px; margin-left: 1px;" class="img-fluid" src="~/Content/Images/parentsplastic.jpg"
+                         alt="Missing image.">
+                </div>
+                <div class="col-md-12">
+                    <p class="ocean" style=" margin-top: 20px; margin-left: 1px; font-size: 1.25em; font-family: 'Courier New'">
+                        <b>
+                            In Australia, on an average 130,000 tons of plastic is decomposed into the ocean.The current generation of
+                            adolescents in Australia is concerned about this plastic issue and most of
+                            them are blaming their parents for not creating enough awareness.
+                        </b>
+                    </p>
+                </div>
+            </div>
+        </div>
 
-   
-   <div class="cardrow">
-       <div class="col-md-12">
-           <div class="col-md-6" style="padding:15px;">
-               <div class="card" style="width: 15rem;">
-                   <div class="inner">
-                       <img src="~/Content/Images/Quiz.jpg" class="card-img-top imgsize" alt="Missing img">
-                   </div>
-                   <div class="card-body">
-                       <h4 class="card-title text-center">The Challenge</h4>
-                       <p>The adolescents of Australia are concerned about the plastic pollution issue but are
-                       unsure how to deal with it since there aren't enough platforms to guide them in the
-                       right direction.</p>
-                       
-                   </div>
-               </div>
-           </div>
-           <div class="col-md-6" style="padding:15px;">
-               <div class="card" style="width:15rem;">
-                   <div class="inner">
-                       <img src="~/Content/Images/Quiz.jpg" class="card-img-top imgsize" alt="Missing img">
-                   </div>
-                   <div class="card-body">
-                       <h4 class="card-title text-center">The Solution</h4>
-                       
-                   </div>
-               </div>
-           </div>
-         
-       </div>
-   </div>
+
+        <div class="cardrow">
+            <div class="col-md-12">
+                <div class="col-md-6">
+                    <div class="card center-block" style="width: 18rem; height:25rem;">
+                        <div class="inner">
+                            <img src="~/Content/Images/problem.jpg" class="card-img-top imgsize" alt="Missing img">
+                        </div>
+                        <div class="card-body">
+                            <h4 style="font-family:'Comic Sans MS'" class="card-title text-center">The Challenge</h4>
+                            <p style="font-weight:200; font-family:'Comic Sans MS'">
+                                The adolescents of Australia are concerned about the plastic pollution issue but are
+                                unsure how to deal with it since there aren't enough platforms to guide them in the
+                                right direction.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card center-block" style="width:18rem; height:25rem;">
+                        <div class="inner">
+                            <img src="~/Content/Images/solution.png" class="card-img-top imgsize" alt="Missing img">
+                        </div>
+                        <div class="card-body">
+                            <h4 style="font-family:'Comic Sans MS'" class="card-title text-center">The Solution</h4>
+                            <p style="font-weight:200; font-family:'Comic Sans MS'">
+                                We have developed PlaBOO to suggest possible alternatives for the common plastic items in an entertaining
+                                manner, entertain users with quizzes and record their experience using a reflective diary.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6" style="margin-top:50px;">
+                <img style="height:300px;width:450px;float:right" src="~/Content/Images/adolescentsaction.JPG"
+                     class="card-img-top" alt="Missing img" />
+            </div>
+            <div class="col-md-2" style="margin-top:120px;float:left;">
+
+                <button type="button" class="btn btn-success" style="margin-top:30px;"
+                        onclick="location.href='@Url.Action("HomeCards", "Home")'">
+                    Click me to save our earth!
+                </button>
+            </div>
+
+        </div>
 
 
 

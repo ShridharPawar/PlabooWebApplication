@@ -257,6 +257,7 @@
     <Content Include="Content\Images\toothpaste.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Images\underwaterbubbles.mp4" />
     <Content Include="Content\Images\waterbottle.jpg" />
     <Content Include="Content\Images\yogamat.jpg" />
     <Content Include="Content\Style.css" />

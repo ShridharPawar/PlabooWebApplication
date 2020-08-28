@@ -9,7 +9,7 @@ namespace Plaboo.Context
 {
     public class PlabooContext : DbContext
     {
-        public PlabooContext() : base("name=MyDbConnection")
+        public PlabooContext() : base("name=DefaultConnection")
         {
         }
         public DbSet<Plastic> Plastics { get; set; }

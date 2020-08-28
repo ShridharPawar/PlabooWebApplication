@@ -153,7 +153,7 @@
             border: 2px solid #555;
         }
 
-      #myVideo {
+      #bg {
             position: fixed;
             top: 0;
             left: 0;
@@ -167,11 +167,11 @@
 </head>
 
 <body>
-    <!-- <img src="~/Content/Images/bubbles.jpg" id="bg" alt="">-->
-    
-    <video controls="controls" autoplay muted loop id="myVideo">
-        <source src="~/Content/Images/underwaterbubbles.mp4" type="video/mp4" />
-    </video>
+    <img src="~/Content/Images/bg2.jpg" id="bg" alt="">
+
+    <!-- <video controls="controls" autoplay muted loop id="bg">
+            <source src="~/Content/Images/underwaterbubbles2.mp4" type="video/mp4" />
+        </video>-->
     <div class="container">
 
         <div class="row justify-content-center">
@@ -219,55 +219,55 @@
     </div>
 
 </body>
-</html>
+    </html>
 
-<script>
-    $(document).ready(function () {
-        function alignModal(reason, alternative, harmindex,description) {
-            
-            var modalDialog = $("#resizemodal");
-            /* Applying the top margin on modal dialog to align it vertically center */
-            modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 2.5));
-             $("#item1")[0].innerHTML = "<b>Item: </b>" + description;
-            $("#reason1")[0].innerHTML = "<b>Why Harmful? </b>" + reason;
-            $("#alternative1")[0].innerHTML = "<b>Alternative: </b>" + alternative;
-            $("#harmindex1")[0].innerHTML = "<b>Plastic Harm Scale: </b>" + harmindex + " out of 5";
-            // var reason1 = $("#reason1");
-            // reason1[0].lastChild.data = "Reason: " + reason;
-            //var alternative1 = $("#alternative1");
-            //alternative1[0].lastChild.data = "Alternative: " + alternative;
-            //var harmindex1 = $("#harmindex1");
-            //harmindex1[0].lastChild.data = "Plastic Harm Scale: " + harmindex + " out of 5";
-        }
-        $(".imgsize").click(function (e) {
-            alignModal($(this).attr('reason'), $(this).attr('alternative'),
-                $(this).attr('harmindex'),$(this).attr('desc'));
-            $("#exampleModalCenter").modal('show');
+    <script>
+        $(document).ready(function () {
+            function alignModal(reason, alternative, harmindex,description) {
+
+                var modalDialog = $("#resizemodal");
+                /* Applying the top margin on modal dialog to align it vertically center */
+                modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 2.5));
+                 $("#item1")[0].innerHTML = "<b>Item: </b>" + description;
+                $("#reason1")[0].innerHTML = "<b>Why Harmful? </b>" + reason;
+                $("#alternative1")[0].innerHTML = "<b>Alternative: </b>" + alternative;
+                $("#harmindex1")[0].innerHTML = "<b>Plastic Harm Scale: </b>" + harmindex + " out of 5";
+                // var reason1 = $("#reason1");
+                // reason1[0].lastChild.data = "Reason: " + reason;
+                //var alternative1 = $("#alternative1");
+                //alternative1[0].lastChild.data = "Alternative: " + alternative;
+                //var harmindex1 = $("#harmindex1");
+                //harmindex1[0].lastChild.data = "Plastic Harm Scale: " + harmindex + " out of 5";
+            }
+            $(".imgsize").click(function (e) {
+                alignModal($(this).attr('reason'), $(this).attr('alternative'),
+                    $(this).attr('harmindex'),$(this).attr('desc'));
+                $("#exampleModalCenter").modal('show');
 
 
+            });
         });
-    });
-</script>
+    </script>
 
-<!--
-<div class="col-md-12">
-    <div class="row">
-        <div class="col-md-2">
-            <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
-        </div>
-        <div class="col-md-2">
-            <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
-        </div>
-        <div class="col-md-2">
-            <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
-        </div>
-        <div class="col-md-2">
-            <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
-        </div>
-        <div class="col-md-2">
-            <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
+    <!--
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
+            </div>
+            <div class="col-md-2">
+                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
+            </div>
+            <div class="col-md-2">
+                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
+            </div>
+            <div class="col-md-2">
+                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
+            </div>
+            <div class="col-md-2">
+                <img src="~/Images/Alternative.jpg" class="card-img-top center-block imgsize" alt="Missing img">
+            </div>
         </div>
     </div>
-</div>
 
--->
+    -->

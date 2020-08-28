@@ -115,7 +115,6 @@ D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\media
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\mold.jpg
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\Plaboo.JPG
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\Quiz.jpg
-D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\Recycle.jpg
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\rugs.jpg
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\shoppingbags.jpg
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\Toothbrush.jpg
@@ -225,8 +224,8 @@ D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Microsoft.Owin.Secur
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Release\Plaboo.Migrations.init.resources
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Release\Plaboo.Migrations.init1.resources
+D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Release\Plaboo.Migrations.init2.resources
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Release\Plaboo.csproj.GenerateResource.cache
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Release\Plaboo.csproj.CopyComplete
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Release\Plaboo.dll
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Release\Plaboo.pdb
-D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Release\Plaboo.csprojAssemblyReference.cache

@@ -89,6 +89,19 @@
         color:black;
     }
 
+    #harmindex1{
+       animation:blinking 1.5s infinite;
+       font-size: 20px;
+    }
+
+    @@keyframes blinking{
+            0%{   color: red;   }
+            47%{   color: #000; }
+            62%{   color: transparent; }
+            97%{   color:transparent; }
+            100%{  color: #000;   }
+            }
+
     </style>
 </head>
 
@@ -101,12 +114,13 @@
          
     @foreach (var item in Model)
     {
+          
             <div class="col-md-3">
                 <div class="inner">
-                    <img alternative=@item.Alternative src=@item.Image
-                         harmindex=@item.Harmindex reason=@item.Reason
+                    <img alternative= "@item.Alternative" src= @item.Image
+                         harmindex="@item.Harmindex" reason= "@item.Reason"
                          class="card-img-top center-block imgsize" alt="Missing img">
-                    <p>@item.Alternative</p>
+                    
                  </div>
              </div>
      }
@@ -173,7 +187,8 @@
         /* Applying the top margin on modal dialog to align it vertically center */
         modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 2.5));
             var reason1 = $("#reason1");
-            reason1[0].lastChild.data = "Reason: " + reason;
+           // reason1[0].lastChild.data = "Reason: " + reason;
+            $("#reason1")[0].innerHTML = "<b>Reason: </b>" + reason;
             var alternative1 = $("#alternative1");
             alternative1[0].lastChild.data = "The alternative is: " + alternative;
             var harmindex1 = $("#harmindex1");

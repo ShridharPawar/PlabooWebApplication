@@ -203,18 +203,19 @@
     <Content Include="Content\Images\Alternative.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\Images\bottle.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\Images\clingwrap.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Content\Images\bg.jpg" />
+    <Content Include="Content\Images\bg1.jpg" />
+    <Content Include="Content\Images\bg2.jpg" />
+    <Content Include="Content\Images\bubbles.jpg" />
+    <Content Include="Content\Images\charger.jpg" />
+    <Content Include="Content\Images\clingwrap.jpg" />
     <Content Include="Content\Images\containers.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\Images\cookingutensils.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Content\Images\Cookingutensils.jpg" />
+    <Content Include="Content\Images\cups.jpg" />
+    <Content Include="Content\Images\Disposableshaver.jpg" />
+    <Content Include="Content\Images\flowerpot.jpg" />
     <Content Include="Content\Images\hardhat.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -229,15 +230,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\Images\parentsplastic.JPG" />
-    <Content Include="Content\Images\phonecases.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Content\Images\phonecase.jpg" />
     <Content Include="Content\Images\Plaboo.JPG">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\Images\pots.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Content\Images\plasticUtensils.jpg" />
     <Content Include="Content\Images\problem.jpg" />
     <Content Include="Content\Images\Quiz.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -248,34 +245,20 @@
     <Content Include="Content\Images\rugs.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Images\seasoning.jpg" />
     <Content Include="Content\Images\shoppingbags.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\Images\skincare.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Content\Images\skincarecontainer.jpg" />
     <Content Include="Content\Images\solution.png" />
-    <Content Include="Content\Images\speaker.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\Images\spices.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\Images\takeaway.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Content\Images\Toothbrush.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\Images\toothpaste.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\Images\Water1.jpeg" />
-    <Content Include="Content\Images\Water2.jpeg" />
-    <Content Include="Content\Images\Water3.jpeg" />
-    <Content Include="Content\Images\yogamat.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Content\Images\waterbottle.jpg" />
+    <Content Include="Content\Images\yogamat.jpg" />
     <Content Include="Content\Style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

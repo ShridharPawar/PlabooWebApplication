@@ -209,6 +209,8 @@
     </Content>
     <Content Include="Content\Images\bg1.jpg" />
     <Content Include="Content\Images\bg2.jpg" />
+    <Content Include="Content\Images\challenge1.JPG" />
+    <Content Include="Content\Images\challenge2.JPG" />
     <Content Include="Content\Images\charger.jpg" />
     <Content Include="Content\Images\clingwrap.jpg" />
     <Content Include="Content\Images\containers.jpg">
@@ -217,6 +219,9 @@
     <Content Include="Content\Images\Cookingutensils.jpg" />
     <Content Include="Content\Images\cups.jpg" />
     <Content Include="Content\Images\Disposableshaver.jpg" />
+    <Content Include="Content\Images\fact1.JPG" />
+    <Content Include="Content\Images\fact12.JPG" />
+    <Content Include="Content\Images\fact21.JPG" />
     <Content Include="Content\Images\flowerpot.jpg" />
     <Content Include="Content\Images\hardhat.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -251,6 +256,7 @@
     </Content>
     <Content Include="Content\Images\skincarecontainer.jpg" />
     <Content Include="Content\Images\solution.png" />
+    <Content Include="Content\Images\solution1.JPG" />
     <Content Include="Content\Images\Toothbrush.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

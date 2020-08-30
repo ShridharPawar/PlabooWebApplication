@@ -10,24 +10,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="~/Scripts/jquery-3.4.1.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
 
 
 
 
     <style>
+          .navbar {
+        background-color: black !important;
+    }
 
-        .navbar {
-            background-color: black !important;
-        }
-
-        .navbar-toggle {
-            background-color: lightyellow;
-        }
-
-
-
+       
         .inner {
             overflow: hidden;
         }
@@ -171,14 +164,12 @@
             min-height: 100%;
         }
 
-         .navbar-inverse{
-           height:50px;
-       }
+        
     </style>
 </head>
 
 <body>
-    <img src="~/Content/Images/plastic.jpg" id="bg" alt="">
+    @*<img src="~/Content/Images/plastic.jpg" id="bg" alt="">*@
 
     <!-- <video controls="controls" autoplay muted loop id="bg">
             <source src="~/Content/Images/underwaterbubbles2.mp4" type="video/mp4" />
@@ -243,7 +234,7 @@
 
                 var modalDialog = $("#resizemodal");
                 /* Applying the top margin on modal dialog to align it vertically center */
-                modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 2.5));
+                modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 3.5));
                  $("#item1")[0].innerHTML = "<b>Item: </b>" + description;
                 $("#reason1")[0].innerHTML = "<b>Why Harmful? </b>" + reason;
                 $("#alternative1")[0].innerHTML = "<b>Alternative: </b>" + alternative;

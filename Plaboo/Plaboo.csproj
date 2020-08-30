@@ -203,14 +203,10 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Images\adolescentsaction.JPG" />
     <Content Include="Content\Images\Alternative.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\Images\bg1.jpg" />
-    <Content Include="Content\Images\bg2.jpg" />
     <Content Include="Content\Images\challenge1.JPG" />
-    <Content Include="Content\Images\challenge2.JPG" />
     <Content Include="Content\Images\charger.jpg" />
     <Content Include="Content\Images\clingwrap.jpg" />
     <Content Include="Content\Images\containers.jpg">
@@ -220,7 +216,6 @@
     <Content Include="Content\Images\cups.jpg" />
     <Content Include="Content\Images\Disposableshaver.jpg" />
     <Content Include="Content\Images\fact1.JPG" />
-    <Content Include="Content\Images\fact12.JPG" />
     <Content Include="Content\Images\fact21.JPG" />
     <Content Include="Content\Images\flowerpot.jpg" />
     <Content Include="Content\Images\hardhat.jpg">
@@ -241,7 +236,6 @@
     <Content Include="Content\Images\Plaboo.jpeg" />
     <Content Include="Content\Images\plastic.JPG" />
     <Content Include="Content\Images\plasticUtensils.jpg" />
-    <Content Include="Content\Images\problem.jpg" />
     <Content Include="Content\Images\Quiz.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -254,7 +248,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\Images\skincarecontainer.jpg" />
-    <Content Include="Content\Images\solution.png" />
     <Content Include="Content\Images\solution1.JPG" />
     <Content Include="Content\Images\Toothbrush.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -262,7 +255,6 @@
     <Content Include="Content\Images\toothpaste.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\Images\underwaterbubbles.mp4" />
     <Content Include="Content\Images\underwaterbubbles2.mp4" />
     <Content Include="Content\Images\waterbottle.jpg" />
     <Content Include="Content\Images\yogamat.jpg" />

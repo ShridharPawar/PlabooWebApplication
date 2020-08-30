@@ -1,1 +1,5 @@
-# PlabooWebApplication
+- This repository contains our main web development solution as well as the Mathematical Model developed for one of the features.
+- The Mathematical model is in a '.py' file which is developed in Jupyter Notebook. Hence, Jupyter notebook or any other relevant software like pycharm can be used to view the mathematical model. Various regression and prediction models are used.
+- Other than the 'Mathematical model' folder, other files and folders are used purely for the development of our website 'Plaboo'.
+- Visual Studio should be used to run this project.
+- Just clone the whole repository (it contains all the files needed) and open the solution in 'Visual Studio 2019', and you are good to go to access the website.

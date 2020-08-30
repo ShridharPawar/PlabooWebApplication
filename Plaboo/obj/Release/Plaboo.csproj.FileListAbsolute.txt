@@ -115,7 +115,6 @@ D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\hardh
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\Journal.jpg
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\mediacase.jpg
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\mold.jpg
-D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\Plaboo.JPG
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\Quiz.jpg
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\rugs.jpg
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\shoppingbags.jpg

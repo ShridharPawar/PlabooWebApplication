@@ -6,7 +6,14 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+   <style>
+       .navbar-inverse{
+           height:55px;
+       }
+   </style>
 
 </head>
 <body>
@@ -20,9 +27,18 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <!-- <li>@Html.ActionLink("Home", "Index", "Home")</li>-->
+                    <li>
+                        <img  src="~/Content/Images/Plaboo.jpeg"
+                             style="position:relative;top:-5px;width:50px;height:40px;">
+                    </li>
+                
+                    <li><a style="top:-5px;" href="@Url.Action("Index", "Home")"><i class="fas fa-globe-asia"></i><span> Home</span></a></li>
+                    <li><a style="top:-5px;" href="@Url.Action("HomeCards", "Home")"><i class="fab fa-wpexplorer"></i><span> Explore</span></a></li>
+                    <li><a style="top:-5px;" href="@Url.Action("Index", "Alternatives")"><i class="fas fa-directions"></i><span> Alternatives</span></a></li>
+
                     <!--<li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>-->
+    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>-->
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

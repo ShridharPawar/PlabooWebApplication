@@ -238,9 +238,8 @@
     </Content>
     <Content Include="Content\Images\parentsplastic.JPG" />
     <Content Include="Content\Images\phonecase.jpg" />
-    <Content Include="Content\Images\Plaboo.JPG">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Content\Images\Plaboo.jpeg" />
+    <Content Include="Content\Images\plastic.JPG" />
     <Content Include="Content\Images\plasticUtensils.jpg" />
     <Content Include="Content\Images\problem.jpg" />
     <Content Include="Content\Images\Quiz.jpg">

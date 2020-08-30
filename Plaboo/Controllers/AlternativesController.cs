@@ -11,6 +11,7 @@ using Plaboo.Models;
 
 namespace Plaboo.Controllers
 {
+    [RequireHttps]
     public class AlternativesController : Controller
     {
         private PlabooContext db = new PlabooContext();

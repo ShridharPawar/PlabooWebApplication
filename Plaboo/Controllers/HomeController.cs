@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace Plaboo.Controllers
 {
+    [RequireHttps]
     public class HomeController : Controller
     {
 

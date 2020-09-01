@@ -17,7 +17,9 @@
     <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.2.0/mapbox-gl-geocoder.css' type='text/css' />
 
     <style>
-
+        #homenav{
+           color:black;
+        }
         /*.navbar-inverse {
             height: 55px;
         }*/
@@ -26,7 +28,7 @@
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top col-xs-12 col-sm-12 col-12">
-        <div class="container">
+        <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
@@ -43,17 +45,17 @@
                     <!-- <li>@Html.ActionLink("Home", "Index", "Home")</li>-->
                     
 
-                    <li><a style="top:0px;" href="@Url.Action("Index", "Home")"><i class="fas fa-globe-asia"></i><span> Home</span></a></li>
-                    <li><a style="top:0px;" href="@Url.Action("HomeCards", "Home")"><i class="fab fa-wpexplorer"></i><span> Explore</span></a></li>
-                    <li><a style="top:0px;" href="@Url.Action("Index", "Alternatives")"><i class="fas fa-directions"></i><span> Alternatives</span></a></li>
+                    <li><a id="homenav" style="top:0px;" href="@Url.Action("Index", "Home")"><i class="fas fa-globe-asia"></i><span> Home</span></a></li>
+                    <li><a id="homenav" style="top:0px;" href="@Url.Action("HomeCards", "Home")"><i class="fab fa-wpexplorer"></i><span> Explore</span></a></li>
+                    <li><a id="homenav" style="top:0px;" href="@Url.Action("Index", "Alternatives")"><i class="fas fa-directions"></i><span> Alternatives</span></a></li>
 
                    
                 </ul>
-                @Html.Partial("_LoginPartial")
+                @*@Html.Partial("_LoginPartial")*@
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div class="container-fluid body-content" style="padding-left:0px;padding-right:0px;">
         @RenderBody()
         <hr />
         <!--<footer>

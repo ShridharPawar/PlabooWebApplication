@@ -203,9 +203,13 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap1.css" />
+    <Content Include="Content\bootstrap2.css" />
+    <Content Include="Content\bootstrap4.css" />
     <Content Include="Content\Images\Alternative.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Images\challenge.mp4" />
     <Content Include="Content\Images\challenge1.JPG" />
     <Content Include="Content\Images\charger.jpg" />
     <Content Include="Content\Images\clingwrap.jpg" />
@@ -235,6 +239,7 @@
     <Content Include="Content\Images\phonecase.jpg" />
     <Content Include="Content\Images\Plaboo.jpeg" />
     <Content Include="Content\Images\plastic.JPG" />
+    <Content Include="Content\Images\plasticbag.mp4" />
     <Content Include="Content\Images\plasticUtensils.jpg" />
     <Content Include="Content\Images\Quiz.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -243,6 +248,7 @@
     <Content Include="Content\Images\rugs.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Images\seabirds.mp4" />
     <Content Include="Content\Images\seasoning.jpg" />
     <Content Include="Content\Images\shoppingbags.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

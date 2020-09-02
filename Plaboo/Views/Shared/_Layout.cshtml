@@ -19,7 +19,13 @@
     <style>
         #homenav{
            color:black;
+           font-family:'Comic Sans MS';
         }
+
+         #homenav:hover{
+           background-color:lightblue;
+        }
+
         /*.navbar-inverse {
             height: 55px;
         }*/
@@ -57,11 +63,24 @@
     </div>
     <div class="container-fluid body-content" style="padding-left:0px;padding-right:0px;">
         @RenderBody()
-        <hr />
-        <!--<footer>
+        
+        <div id="solution" style="background-color:black;margin-top:30px;">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-4">
+                    <img style="width:200px;height:120px;margin-top:20px;margin-bottom:20px;" src="~/Content/Images/Plaboo.jpeg" />
+                </div>
+                <div class="col-m-6"></div>
+              
+            </div>
+        </div>
+            <hr />
+            <!--<footer>
             <p>&copy; @DateTime.Now.Year - Plaboo</p>
         </footer>-->
-    </div>
+        </div>
+
+
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

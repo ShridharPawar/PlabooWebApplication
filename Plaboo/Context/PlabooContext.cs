@@ -14,5 +14,7 @@ namespace Plaboo.Context
         }
         public DbSet<Plastic> Plastics { get; set; }
 
+        public DbSet<Quiz> Quizzes { get; set; }
+
     }
 }

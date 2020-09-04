@@ -17,5 +17,9 @@ namespace Plaboo.Models
         public string Image { get; set; }
 
         public int Harmindex { get; set; }
+
+        public string Classification { get; set; }
+
+        public string HarmMeasure { get; set; }
     }
 }

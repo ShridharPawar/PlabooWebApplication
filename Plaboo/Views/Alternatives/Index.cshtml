@@ -62,7 +62,7 @@
             font-family: 'Comic Sans MS';
         }
 
-        #harmindex1 {
+        #item1 {
             animation: blinking 1.5s infinite;
             font-size: 15px;
         }
@@ -144,7 +144,7 @@
             </div>
         </div>*@
     <div class="container-fluid">
-        <div class="row" style="background-color:azure;">
+        <div class="row" style="background-color:azure;text-align:center">
             <div class="col-md-4">
 
             </div>
@@ -167,27 +167,32 @@
             </div>
         </div>
         @*<div class="row" style="background-color:azure;">
-            <div class="col-md-4">
+                <div class="col-md-4">
 
-            </div>
-            <div class="col-md-1" style="text-align:left;"><p style="font-family:'Comic Sans MS'"><b>All</b></p></div>
-            <div class="col-md-1" style="text-align:left;">
-                <p style="font-family:'Comic Sans MS';text-align:left;"><b>Travel</b></p>
-            </div>
-            <div class="col-md-1" style="text-align:left;">
-                <p style="font-family:'Comic Sans MS'"><b>Bathroom</b></p>
-            </div>
-            <div class="col-md-1" style="text-align:left;">
-                <p style="font-family:'Comic Sans MS'"><b>Leisure</b></p>
-            </div>
-            <div class="col-md-1" style="text-align:left;"><p style="font-family:'Comic Sans MS'"><b>Kitchen</b></p></div>
-            <div class="col-md-3">
+                </div>
+                <div class="col-md-1" style="text-align:left;"><p style="font-family:'Comic Sans MS'"><b>All</b></p></div>
+                <div class="col-md-1" style="text-align:left;">
+                    <p style="font-family:'Comic Sans MS';text-align:left;"><b>Travel</b></p>
+                </div>
+                <div class="col-md-1" style="text-align:left;">
+                    <p style="font-family:'Comic Sans MS'"><b>Bathroom</b></p>
+                </div>
+                <div class="col-md-1" style="text-align:left;">
+                    <p style="font-family:'Comic Sans MS'"><b>Leisure</b></p>
+                </div>
+                <div class="col-md-1" style="text-align:left;"><p style="font-family:'Comic Sans MS'"><b>Kitchen</b></p></div>
+                <div class="col-md-3">
 
-            </div>
-        </div>*@
+                </div>
+            </div>*@
 
     </div>
-    
+    <div class="row">
+            <div class="col-md-12">
+                <p style="text-align:center;font-family:'Comic Sans MS';color:midnightblue;margin-top:30px;font-size:1.5em;">
+                Tap on the images to see Alternatives!</p>
+            </div>
+        </div>
     <div class="container">
         <div id="alldiv" class="row justify-content-center">
 
@@ -197,7 +202,7 @@
                 <div class="col-md-3">
                     <div class="inner" style="text-align:center">
                         <img id="imageid" desc="@item.Description" alternative="@item.Alternative" src=@item.Image
-                             harmindex="@item.Harmindex" reason="@item.Reason" data-toggle="tooltip" data-html="true"
+                             harmindex="@item.HarmMeasure" reason="@item.Reason" data-toggle="tooltip" data-html="true"
                              title="Click me"
                              class="card-img-top imgsize img-circle" alt="Missing img">
                         <p style="font-family:'Comic Sans MS'"><b>@item.Description</b></p>
@@ -218,7 +223,7 @@
                     <div class="col-md-3">
                         <div class="inner" style="text-align:center">
                             <img id="imageid" desc="@item.Description" alternative="@item.Alternative" src=@item.Image
-                                 harmindex="@item.Harmindex" reason="@item.Reason" data-toggle="tooltip" data-html="true"
+                                 harmindex="@item.HarmMeasure" reason="@item.Reason" data-toggle="tooltip" data-html="true"
                                  title="Click me"
                                  class="card-img-top imgsize img-circle" alt="Missing img">
                             <p style="font-family:'Comic Sans MS'"><b>@item.Description</b></p>
@@ -239,7 +244,7 @@
                     <div class="col-md-3">
                         <div class="inner" style="text-align:center">
                             <img id="imageid" desc="@item.Description" alternative="@item.Alternative" src=@item.Image
-                                 harmindex="@item.Harmindex" reason="@item.Reason" data-toggle="tooltip" data-html="true"
+                                 harmindex="@item.HarmMeasure" reason="@item.Reason" data-toggle="tooltip" data-html="true"
                                  title="Click me"
                                  class="card-img-top imgsize img-circle" alt="Missing img">
                             <p style="font-family:'Comic Sans MS'"><b>@item.Description</b></p>
@@ -260,7 +265,7 @@
                     <div class="col-md-3">
                         <div class="inner" style="text-align:center">
                             <img id="imageid" desc="@item.Description" alternative="@item.Alternative" src=@item.Image
-                                 harmindex="@item.Harmindex" reason="@item.Reason" data-toggle="tooltip" data-html="true"
+                                 harmindex="@item.HarmMeasure" reason="@item.Reason" data-toggle="tooltip" data-html="true"
                                  title="Click me"
                                  class="card-img-top imgsize img-circle" alt="Missing img">
                             <p style="font-family:'Comic Sans MS'"><b>@item.Description</b></p>
@@ -281,19 +286,19 @@
                     <div class="col-md-3">
                         <div class="inner" style="text-align:center">
                             <img id="imageid" desc="@item.Description" alternative="@item.Alternative" src=@item.Image
-                                 harmindex="@item.Harmindex" reason="@item.Reason" data-toggle="tooltip" data-html="true"
+                                 harmindex="@item.HarmMeasure" reason="@item.Reason" data-toggle="tooltip" data-html="true"
                                  title="Click me"
                                  class="card-img-top imgsize img-circle" alt="Missing img">
                             <p style="        font-family: 'Comic Sans MS'
 "><b>@item.Description</b></p>
 
-                        </div>
-                    </div>
-                }
-            }
+</div>
+</div>
+}
+}
         </div>
 
- 
+
     </div>
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
          aria-hidden="true">
@@ -301,6 +306,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 style="color:black; font-family:'Comic Sans MS'" class="modal-title">Do you know?</h4>
+                    @*<h4 id="harmindex1" style="color:black; font-family:'Comic Sans MS'" class="modal-title">Harmindex:</h4>*@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -308,20 +314,20 @@
                 <div class="modal-body">
                     <p class="mcontent" id="item1">Item:</p>
 
-                    <p class="mcontent" id="harmindex1">Harmindex:</p>
+                    <p class="mcontent" id="carharm">Energy:</p>
 
                     <p class="mcontent" id="reason1">Reason:</p>
 
                     <p class="mcontent" id="alternative1">Alternative:</p>
                 </div>
-                <div class="modal-footer" style="text-align:left;">
-                    <p style="        color: black;
-        font-family: 'Comic Sans MS'">
-                        * Plastic Harm Scale refers to the level of severe impact
-                        the plastic item has on the environment. This number is on a scale of 1 to 5 which is calculated
-                        using our Mathematical Model.
-                    </p>
-                </div>
+                @*<div class="modal-footer" style="text-align:left;">
+                                <p style="        color: black;
+                    font-family: 'Comic Sans MS'">
+                                    * Plastic Harm Scale refers to the level of severe impact
+                                    the plastic item has on the environment. This number is on a scale of 1 to 5 which is calculated
+                                    using our Mathematical Model.
+                                </p>
+                            </div>*@
             </div>
         </div>
     </div>
@@ -332,6 +338,24 @@
     <script>
         $(document).ready(function () {
 
+            function alignModal(reason, alternative, harmindex,description) {
+
+                var modalDialog = $("#resizemodal");
+                /* Applying the top margin on modal dialog to align it vertically center */
+                modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 3.5));
+                
+                 $("#item1")[0].innerHTML = "<b>Item: </b>" + description;
+                $("#reason1")[0].innerHTML = "<b>Why Harmful? </b>" + reason;
+                $("#alternative1")[0].innerHTML = "<b>Alternative: </b>" + alternative;
+                $("#carharm")[0].innerHTML = "<b>Energy Consumed: </b>" + harmindex;
+            }
+            $(".imgsize").click(function (e) {
+                alignModal($(this).attr('reason'), $(this).attr('alternative'),
+                    $(this).attr('harmindex'),$(this).attr('desc'));
+                $("#exampleModalCenter").modal('show');
+
+
+            });
         
 
             $("#kitchen").click(function (e) {
@@ -374,29 +398,7 @@
                 $("#kitchendiv").hide();
             });
 
-            function alignModal(reason, alternative, harmindex,description) {
-
-                var modalDialog = $("#resizemodal");
-                /* Applying the top margin on modal dialog to align it vertically center */
-                modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 3.5));
-                 $("#item1")[0].innerHTML = "<b>Item: </b>" + description;
-                $("#reason1")[0].innerHTML = "<b>Why Harmful? </b>" + reason;
-                $("#alternative1")[0].innerHTML = "<b>Alternative: </b>" + alternative;
-                $("#harmindex1")[0].innerHTML = "<b>Plastic Harm Scale*: </b>" + harmindex;
-                // var reason1 = $("#reason1");
-                // reason1[0].lastChild.data = "Reason: " + reason;
-                //var alternative1 = $("#alternative1");
-                //alternative1[0].lastChild.data = "Alternative: " + alternative;
-                //var harmindex1 = $("#harmindex1");
-                //harmindex1[0].lastChild.data = "Plastic Harm Scale: " + harmindex + " out of 5";
-            }
-            $(".imgsize").click(function (e) {
-                alignModal($(this).attr('reason'), $(this).attr('alternative'),
-                    $(this).attr('harmindex'),$(this).attr('desc'));
-                $("#exampleModalCenter").modal('show');
-
-
-            });
+            
         });
     </script>
 

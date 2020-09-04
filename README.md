@@ -20,4 +20,5 @@
 4. Run the IIS Server and you are good to access the website.
    
  ![screenshot](Screenshots/run2.PNG)
+
 5. If you want to deploy the website on Azure, then create app service as well as database on Azure. After that, install SQL Server Management Studio and connect it to Azure server. Once this is done, the website is good to access!

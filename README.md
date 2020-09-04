@@ -6,13 +6,18 @@
 - Steps to follow:
 1. Download the repository.
 2. Migrate the database since I have used the code-first approach. Type :
+
    A) Open package manager console
+   
    ![screenshot](Screenshots/migration1.PNG)
+   
    ![screenshot](Screenshots/migration2.PNG)
+   
    B) In the console, type: 'Enable-Migrations'
    C) Then type: 'Add-Migration init'
    D) Then type: 'Update-Database -verbose'
 3. After the database is migrated, run the sql script which is in the same repository. This sql script is a wrangled script.
 4. Run the IIS Server and you are good to access the website.
-   ![screenshot](Screenshots/run2.PNG)
+   
+ ![screenshot](Screenshots/run2.PNG)
 5. If you want to deploy the website on Azure, then create app service as well as database on Azure. After that, install SQL Server Management Studio and connect it to Azure server. Once this is done, the website is good to access!

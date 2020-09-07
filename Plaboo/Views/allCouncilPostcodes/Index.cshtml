@@ -1,0 +1,98 @@
+﻿@model IEnumerable<Plaboo.Models.allCouncilPostcode>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<head>
+    <style>
+        .navbar {
+            background-color: white !important;
+        }
+
+        .hero-image {
+            background-image: url('../../Content/Images/citycouncil.jpeg');
+            height: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero-image" style="height: 550px">
+        <div class="hero-text" style="text-align:center;transform: translate(-50%, -50%); position:absolute;left:50%;top:50%;">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <input style="width:250px;margin-right:20px;height:50px;" class="form-control" id="postcode" aria-describedby="emailHelp" placeholder="Enter postcode">
+                    </div>
+                    <div class="col-md-6" style="">
+
+                        <button id="search" type="submit" style="height:50px;" class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="searchResults"></div>
+</body>
+
+<script>
+    $(document).ready(function () {
+     var url = '@Url.Action("RatePartial", "councilRates")';
+
+        $("#search").click(function () {
+            
+            var model = @Html.Raw(Json.Encode(Model));
+            var council = "";
+            $(model).each(function (index) {
+               
+                var a = 0;
+                if ($(this)[0].postcode == $("#postcode").val())
+                {
+                    council = $(this)[0].council;
+                   
+                }
+            });
+
+            debugger;
+            var b = 1;
+            $('#searchResults').load(url, { searchText: council });
+         });
+
+
+
+
+    });
+</script>
+
+
+
+@*@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.council)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.postcode }) |
+                @Html.ActionLink("Details", "Details", new { id=item.postcode }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.postcode })
+            </td>
+        </tr>
+    }*@
+
+

@@ -171,7 +171,9 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Context\PlabooContext.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\allCouncilPostcodesController.cs" />
     <Compile Include="Controllers\AlternativesController.cs" />
+    <Compile Include="Controllers\councilRatesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PlasticsController.cs" />
@@ -199,8 +201,14 @@
     <Compile Include="Migrations\202009040420215_init4.Designer.cs">
       <DependentUpon>202009040420215_init4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009051307436_init5.cs" />
+    <Compile Include="Migrations\202009051307436_init5.Designer.cs">
+      <DependentUpon>202009051307436_init5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\allCouncilPostcode.cs" />
+    <Compile Include="Models\councilRate.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Plastic.cs" />
@@ -471,6 +479,17 @@
     <Content Include="Views\Quizs\Details.cshtml" />
     <Content Include="Views\Quizs\Edit.cshtml" />
     <Content Include="Views\Quizs\Index.cshtml" />
+    <Content Include="Views\allCouncilPostcodes\Create.cshtml" />
+    <Content Include="Views\allCouncilPostcodes\Delete.cshtml" />
+    <Content Include="Views\allCouncilPostcodes\Details.cshtml" />
+    <Content Include="Views\allCouncilPostcodes\Edit.cshtml" />
+    <Content Include="Views\allCouncilPostcodes\Index.cshtml" />
+    <Content Include="Views\councilRates\Create.cshtml" />
+    <Content Include="Views\councilRates\Delete.cshtml" />
+    <Content Include="Views\councilRates\Details.cshtml" />
+    <Content Include="Views\councilRates\Edit.cshtml" />
+    <Content Include="Views\councilRates\Index.cshtml" />
+    <Content Include="Views\councilRates\RatePartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -495,6 +514,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009040420215_init4.resx">
       <DependentUpon>202009040420215_init4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009051307436_init5.resx">
+      <DependentUpon>202009051307436_init5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

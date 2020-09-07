@@ -10,22 +10,23 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="~/Scripts/jquery-3.4.1.min.js"></script>
-    
+
 
 
 
 
     <style>
-          .navbar {
-        background-color: white !important;
-    }
 
-       
+        .navbar {
+            background-color: white !important;
+        }
+
+
         .inner {
             overflow: hidden;
         }
 
-        
+
         .modal.fade .modal-dialog {
             opacity: 0;
             -webkit-transition: all 0.5s ease-in-out;
@@ -43,17 +44,17 @@
         }
 
         .modal-header {
-            background-color: cornsilk;
+            background-color: azure;
             color: white;
         }
 
         .modal-body {
-            background-color: cornsilk;
+            background-color: azure;
             color: white;
         }
 
         .modal-footer {
-            background-color: cornsilk;
+            background-color: azure;
             color: white;
         }
 
@@ -98,38 +99,34 @@
         }
 
         /*.imgsize {
-            height: 180px;
-            width: 200px;
-            margin-top: 40px;
-            
-            border: 2px solid #555;
-        }*/
-          .imgsize {
+                    height: 180px;
+                    width: 200px;
+                    margin-top: 40px;
+
+                    border: 2px solid #555;
+                }*/
+        .imgsize {
             height: 100px;
             width: 110px;
             margin-top: 40px;
             /*border: 4px inset #555;
-            
-            animation: example 3s infinite;*/
+
+                    animation: example 3s infinite;*/
         }
 
-          /*@@keyframes example {
-  from {border: 4px inset #555;}
-  to {border: 4px inset #ed5d2e;}
-}*/
+        /*@@keyframes example {
+          from {border: 4px inset #555;}
+          to {border: 4px inset #ed5d2e;}
+        }*/
 
 
 
-         
-   img:hover{
-    -webkit-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
-    box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
-}
 
-           
-
-        
+        img:hover {
+            -webkit-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+            -moz-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+            box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+        }
     </style>
 </head>
 
@@ -188,11 +185,12 @@
 
     </div>
     <div class="row">
-            <div class="col-md-12">
-                <p style="text-align:center;font-family:'Comic Sans MS';color:midnightblue;margin-top:30px;font-size:1.5em;">
-                Tap on the images to see Alternatives!</p>
-            </div>
+        <div class="col-md-12">
+            <p style="text-align:center;font-family:'Comic Sans MS';color:midnightblue;margin-top:30px;font-size:1.5em;">
+                Tap on the images to see Alternatives!
+            </p>
         </div>
+    </div>
     <div class="container">
         <div id="alldiv" class="row justify-content-center">
 
@@ -333,74 +331,76 @@
     </div>
 
 </body>
-    </html>
+</html>
 
-    <script>
-        $(document).ready(function () {
+<script>
+    $(document).ready(function () {
 
-            function alignModal(reason, alternative, harmindex,description) {
+        function alignModal(reason, alternative, harmindex, description) {
 
-                var modalDialog = $("#resizemodal");
-                /* Applying the top margin on modal dialog to align it vertically center */
-                modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 3.5));
-                
-                 $("#item1")[0].innerHTML = "<b>Item: </b>" + description;
-                $("#reason1")[0].innerHTML = "<b>Why Harmful? </b>" + reason;
-                $("#alternative1")[0].innerHTML = "<b>Alternative: </b>" + alternative;
-                $("#carharm")[0].innerHTML = "<b>Energy Consumed: </b>" + harmindex;
-            }
-            $(".imgsize").click(function (e) {
-                alignModal($(this).attr('reason'), $(this).attr('alternative'),
-                    $(this).attr('harmindex'),$(this).attr('desc'));
-                $("#exampleModalCenter").modal('show');
+            var modalDialog = $("#resizemodal");
+            /* Applying the top margin on modal dialog to align it vertically center */
+            modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 3.5));
+
+            $("#item1")[0].innerHTML = "<b>Item: </b>" + description;
+            $("#reason1")[0].innerHTML = "<b>Why Harmful? </b>" + reason;
+            $("#alternative1")[0].innerHTML = "<b>Alternative: </b>" + alternative;
+            $("#carharm")[0].innerHTML = "<b>Energy Consumed: </b>" + harmindex;
+        }
+        $(".imgsize").click(function (e) {
+            alignModal($(this).attr('reason'), $(this).attr('alternative'),
+                $(this).attr('harmindex'), $(this).attr('desc'));
+            $("#exampleModalCenter").modal('show');
 
 
-            });
-        
-
-            $("#kitchen").click(function (e) {
-                $("#alldiv").hide();
-                $("#traveldiv").hide();
-                $("#leisurediv").hide();
-                $("#bathroomdiv").hide();
-                $("#kitchendiv").show();
-            });
-
-              $("#all").click(function (e) {
-                $("#alldiv").show();
-                $("#traveldiv").hide();
-                $("#leisurediv").hide();
-                $("#bathroomdiv").hide();
-                $("#kitchendiv").hide();
-              });
-
-              $("#travel").click(function (e) {
-                $("#alldiv").hide();
-                $("#traveldiv").show();
-                $("#leisurediv").hide();
-                $("#bathroomdiv").hide();
-                $("#kitchendiv").hide();
-              });
-
-              $("#leisure").click(function (e) {
-                $("#alldiv").hide();
-                $("#traveldiv").hide();
-                $("#leisurediv").show();
-                $("#bathroomdiv").hide();
-                $("#kitchendiv").hide();
-              });
-
-              $("#bathroom").click(function (e) {
-                $("#alldiv").hide();
-                $("#traveldiv").hide();
-                $("#leisurediv").hide();
-                $("#bathroomdiv").show();
-                $("#kitchendiv").hide();
-            });
-
-            
         });
-    </script>
 
- 
+
+        $("#kitchen").click(function (e) {
+            $("#alldiv").hide();
+            $("#traveldiv").hide();
+            $("#leisurediv").hide();
+            $("#bathroomdiv").hide();
+            $("#kitchendiv").show();
+        });
+
+        $("#all").click(function (e) {
+            $("#alldiv").show();
+            $("#traveldiv").hide();
+            $("#leisurediv").hide();
+            $("#bathroomdiv").hide();
+            $("#kitchendiv").hide();
+        });
+
+        $("#travel").click(function (e) {
+            $("#alldiv").hide();
+            $("#traveldiv").show();
+            $("#leisurediv").hide();
+            $("#bathroomdiv").hide();
+            $("#kitchendiv").hide();
+        });
+
+        $("#leisure").click(function (e) {
+            $("#alldiv").hide();
+            $("#traveldiv").hide();
+            $("#leisurediv").show();
+            $("#bathroomdiv").hide();
+            $("#kitchendiv").hide();
+        });
+
+        $("#bathroom").click(function (e) {
+            $("#alldiv").hide();
+            $("#traveldiv").hide();
+            $("#leisurediv").hide();
+            $("#bathroomdiv").show();
+            $("#kitchendiv").hide();
+        });
+
+
+    });
+</script>
+
+@*<div class='tableauPlaceholder' id='viz1599308384001' style='position: relative'><noscript><a href=''><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Gl&#47;GlobalRecyclingRate1&#47;recyclingrate&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='GlobalRecyclingRate1&#47;recyclingrate' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Gl&#47;GlobalRecyclingRate1&#47;recyclingrate&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>
+<script type='text/javascript'>var divElement = document.getElementById('viz1599308384001'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>*@
+
 

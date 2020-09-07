@@ -16,5 +16,8 @@ namespace Plaboo.Context
 
         public DbSet<Quiz> Quizzes { get; set; }
 
+        public DbSet<councilRate> councilRates { get; set; }
+
+        public DbSet<allCouncilPostcode> allCouncilPostcodes { get; set; }
     }
 }

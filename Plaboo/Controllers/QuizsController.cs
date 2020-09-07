@@ -124,5 +124,10 @@ namespace Plaboo.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult Trial()
+        {
+            return PartialView();
+        }
     }
 }

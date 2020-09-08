@@ -19,6 +19,7 @@ namespace Plaboo.Controllers
         {
             ViewBag.Rank = db.councilRates.Where(x => x.council.Equals(searchText)).Select(x=>x.rank).FirstOrDefault();
             ViewBag.Rate = db.councilRates.Where(x => x.council.Equals(searchText)).Select(x => x.rate).FirstOrDefault();
+            ViewBag.Council = searchText;
             return PartialView();
         }
 

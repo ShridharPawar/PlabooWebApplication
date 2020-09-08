@@ -1,25 +1,74 @@
-﻿
-    <head>
-        <style>
-            .stats {
-                height: 50%;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                position: relative;
-                width: 100%;
-                background-color:azure;
-            }
-    </style >
-    </head >
+﻿@{
+    var Rank = ViewBag.Rank;
+}
 
-    <div class="stats" style="height:550px;margin-top:50px;" >
-    <div class="hero-text" style="text-align:center;transform: translate(-50%, -20%); position:absolute;left:50%;top:20%;" >
+<head>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <style>
 
-    <h2 > Yarra City Council <br/> Diversion Rate</h2 >
-    
-    </div >
-    </div >
+        .stats {
+            height: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            width: 100%;
+            background-color: azure;
+        }
 
+        text {
+            font-family: "Verdana", sans-serif;
+        }
+
+        #chart {
+            max-width: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stats" style="height:400px;margin-top:50px;">
+        <div class="hero-text" style="text-align:center;transform: translate(-50%, -20%); position:absolute;left:50%;top:20%;">
+
+            <h1><b>@ViewBag.Council <br /> Diversion Rate</b> </h1>
+            <div id="chart"></div>
+            <h1 style="margin-top:-40px;"><b>#@Rank in 79 Councils</b></h1>
+            <script src="~/Scripts/gauge.js"></script>
+                
+            <script>
+                function randNumberBounds(min, max) {
+                    var Rate1 = '@ViewBag.Rate';
+                    debugger;
+                    return parseInt(Rate1);
+                }
+
+                (function () {
+                    var gauge = gaugeChart()
+                        .width(260)
+                        .height(200)
+                        .innerRadius(50)
+                        .outerRadius(80);
+
+                    d3.select("#chart").datum([randNumberBounds(0, 100)]).call(gauge);
+
+                    function resize() {
+                        var gWidth = Math.min(d3.select("#chart").node().offsetWidth, 260);
+                        gauge.width(gWidth).innerRadius(gWidth / 4).outerRadius((gWidth / 4) + 40);
+                        d3.select("#chart").call(gauge);
+                    }
+
+                    resize();
+                    window.addEventListener("resize", resize);
+
+                    var button = document.getElementById("random");
+                    button.addEventListener("click", function () {
+                        d3.select("#chart").datum([randNumberBounds(0, 100)]).call(gauge);
+                    });
+                })()
+            </script>
+        </div>
+    </div>
+</body>
 
 

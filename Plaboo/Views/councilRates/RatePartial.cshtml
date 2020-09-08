@@ -40,7 +40,7 @@
     <div class="stats" style="height:400px;margin-top:50px;">
         <div class="hero-text" style="text-align:center;transform: translate(-50%, -20%); position:absolute;left:50%;top:20%;">
 
-            <h1><b>@ViewBag.Council <br /> Diversion Rate</b> </h1>
+            <h1><b>@ViewBag.Council <br /> Recycling Rate</b> </h1>
             <div id="chart"></div>
             <h1 style="margin-top:-40px;"><b>#@Rank in 79 Councils</b></h1>
             <script src="~/Scripts/gauge.js"></script>
@@ -48,7 +48,7 @@
             <script>
                 function randNumberBounds(min, max) {
                     var Rate1 = '@ViewBag.Rate';
-                    debugger;
+                    
                     return parseInt(Rate1);
                 }
 

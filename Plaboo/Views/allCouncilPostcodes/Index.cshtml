@@ -124,15 +124,26 @@
        $("#search").click(function () {
            
           
-            var model = @Html.Raw(Json.Encode(Model));
-            var council = "";
-            $(model).each(function (index) {
-               if ($(this)[0].postcode == $("#postcode").val())
+           var model = @Html.Raw(Json.Encode(Model));
+           var council = "";
+           
+           for (var item in model)
+           {
+              
+               if (model[item].postcode == $("#postcode").val())
                {
-                   council = $(this)[0].council;
-                }
-            });
-            debugger;
+                  
+                   council = model[item].council;
+                   break;
+               }
+           }
+            //$(model).each(function (index) {
+            //   if ($(this)[0].postcode == $("#postcode").val())
+            //   {
+            //       council = $(this)[0].council;
+            //    }
+           //});
+           
             if (council == "")
             {
                  alignModal();

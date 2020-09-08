@@ -235,6 +235,7 @@
     <Content Include="Content\Images\challenge.mp4" />
     <Content Include="Content\Images\challenge1.JPG" />
     <Content Include="Content\Images\charger.jpg" />
+    <Content Include="Content\Images\citycouncil.jpeg" />
     <Content Include="Content\Images\clingwrap.jpg" />
     <Content Include="Content\Images\clingwrap.png" />
     <Content Include="Content\Images\containers.jpg">

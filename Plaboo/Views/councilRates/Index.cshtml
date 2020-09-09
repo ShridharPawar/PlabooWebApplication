@@ -5,36 +5,66 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.rate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.rank)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.rate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.rank)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.council }) |
-            @Html.ActionLink("Details", "Details", new { id=item.council }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.council })
-        </td>
-    </tr>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+<head>
+    <style>
+        .navbar {
+            background-color: white !important;
+        }
+
+       
+    </style>
+</head>
+
+<div class="row" style="margin:40px;">
+    <table class="table table-striped table-bordered" data-order='[[2, "asc"]]' >
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.council)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.rate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.rank)
+                </th>
+                @*<th></th>*@
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.council)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.rate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.rank)
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+@section Scripts {
+
+    <script src="~/Scripts/DataTables/jquery.dataTables.js"></script>
+    <script src="~/Scripts/DataTables/dataTables.bootstrap.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.table').DataTable({   "stripeClasses": [ 'odd-row', 'even-row' ]});
+         
+        });
+        
+    </script>
 }
-
-</table>
+<link href="~/Content/DataTables/css/dataTables.bootstrap.min.css" rel="stylesheet" />

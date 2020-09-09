@@ -108,16 +108,8 @@ D:\MonashSem4\PlaBOOProject\Plaboo\Plaboo\obj\Release\Plaboo.csproj.CopyComplete
 D:\MonashSem4\PlaBOOProject\Plaboo\Plaboo\obj\Release\Plaboo.dll
 D:\MonashSem4\PlaBOOProject\Plaboo\Plaboo\obj\Release\Plaboo.pdb
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\Alternative.jpg
-D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\containers.jpg
-D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\hardhat.jpg
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\Journal.jpg
-D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\mediacase.jpg
-D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\mold.jpg
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\Quiz.jpg
-D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\rugs.jpg
-D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\shoppingbags.jpg
-D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\Toothbrush.jpg
-D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Content\Images\toothpaste.jpg
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Plaboo.dll.config
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Plaboo.dll
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Plaboo.pdb
@@ -231,4 +223,3 @@ D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Release\Plaboo.cspro
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Release\Plaboo.csproj.CopyComplete
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Release\Plaboo.dll
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Release\Plaboo.pdb
-D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Release\Plaboo.csprojAssemblyReference.cache

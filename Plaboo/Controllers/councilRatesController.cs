@@ -24,8 +24,7 @@ namespace Plaboo.Controllers
         }
 
 
-        // GET: councilRates
-        public ActionResult Index()
+       public ActionResult Index()
         {
             return View(db.councilRates.ToList());
         }

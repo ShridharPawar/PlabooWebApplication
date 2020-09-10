@@ -20,17 +20,20 @@
 </head>
 
 <div class="row" style="margin:40px;">
-    <table class="table table-striped table-bordered" data-order='[[2, "asc"]]' >
+    <table class="table table-striped table-bordered" data-order='[[0, "asc"]]' >
         <thead>
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.council)
+                    Rank
+                    @*@Html.DisplayNameFor(model => model.council)*@
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.rate)
+                    Council
+                    @*@Html.DisplayNameFor(model => model.rate)*@
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.rank)
+                    Rate
+                    @*@Html.DisplayNameFor(model => model.rank)*@
                 </th>
                 @*<th></th>*@
             </tr>
@@ -38,18 +41,19 @@
         <tbody>
             @foreach (var item in Model)
             {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.council)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.rate)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.rank)
-                    </td>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.rank)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.council)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.rate)
+                </td>
 
-                </tr>
+
+            </tr>
             }
         </tbody>
     </table>

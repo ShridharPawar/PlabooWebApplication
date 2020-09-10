@@ -26,6 +26,7 @@
             background-size: cover;
             position: relative;
             width: 100%;
+            
         }
 
          .modal.fade .modal-dialog {
@@ -63,12 +64,20 @@
             color: black;
             font-family: 'Comic Sans MS';
         }
+
+              @@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
     </style>
 </head>
 
 <body>
 
-    <div class="hero-image" style="height: 550px">
+    <div class="hero-image responsive" style="height: 330px">
         <div class="hero-text" style="text-align:center;transform: translate(-50%, -50%); position:absolute;left:50%;top:50%;">
 
             <div class="row">
@@ -104,6 +113,7 @@
             </div>
         </div>
     </div>
+    <div id="trial" style="height:200px;"></div>
     <div id="searchResults"></div>
 
 
@@ -149,7 +159,7 @@
                  alignModal();
                  $("#exampleModalCenter").modal('show');
             }
-            else { $('#searchResults').load(url, { searchText: council }); $('html, body').animate({scrollTop:$(window).height()/1.5}, 'slow');}
+            else { $('html, body').animate({scrollTop:$(window).height()/1.5}, 'slow'); $("#trial").hide();$('#searchResults').load(url, { searchText: council }); }
             
          });
 

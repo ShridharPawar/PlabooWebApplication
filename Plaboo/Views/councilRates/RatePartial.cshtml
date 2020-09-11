@@ -28,9 +28,9 @@
             }
 
             #top3:hover {
-                box-shadow: 10px 10px 5px #000000;
-                -moz-box-shadow: 0px 10px 5px #000000;
-                -webkit-box-shadow: 0px 10px 5px #000000;
+                -webkit-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+            -moz-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+            box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
             }
         </style>
     </head>
@@ -38,7 +38,7 @@
 <body>
  
     <div class="stats" style="height:400px;margin-top:50px;margin-bottom:50px;">
-        <div class="hero-text" style="text-align:center;transform: translate(-50%, -20%); position:absolute;left:50%;top:20%;">
+        <div class="hero-text" style="text-align: center; transform: translate(-50%, -20%); position: absolute; left: 50%; top: 20%;">
 
             <h1><b>@ViewBag.Council <br /> Recycling Rate</b> </h1>
             <div id="chart" style="margin-top:30px;"></div>
@@ -77,9 +77,14 @@
     </div>
 
     <div class="row">
-        <div class="col-md-12" style="margin-top:10px;">
-            <div class="col-md-6">
-
+        <div class="col-md-12" style="margin-top:30px;">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <p style="font-family:'Times New Roman';font-size:20px;background-color:azure;">
+                    <b>What is Recycling Rate?</b><br />“Recycling Rate” is a measure to assess the proportion of disposable or recyclable waste items. 
+                    Some products may not be recyclable because the processing center has been polluted or cannot handle such recyclable materials.
+                    <br />*Recycling rate = Annual total waste recycled/ Annual total waste generation*
+                </p>
             </div>
             <div class="col-md-6">
                 <img style="height:230px;width:350px;" id="top3" src="~/Content/Images/top3councils.PNG" />
@@ -97,3 +102,8 @@
     </div>
 </body>
 
+<script>
+    $(document).ready(function () {
+        $('html, body').animate({scrollTop:$(window).height()/1.5}, 'slow');
+    });
+</script>

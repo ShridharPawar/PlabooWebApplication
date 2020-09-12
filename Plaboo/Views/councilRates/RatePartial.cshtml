@@ -4,8 +4,9 @@
 
     <head>
         
-        @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-        <script src="https://d3js.org/d3.v4.min.js"></script>*@
+       
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+        <script src="https://d3js.org/d3.v4.min.js"></script>
 
         <style>
 
@@ -32,13 +33,31 @@
             -moz-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
             box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
             }
+            
+              .img-responsive {
+        width: 100%;
+        height: auto;
+        
+    }
+
+              .last {
+    border: 2px solid red;
+ 
+  }
+
+             
         </style>
     </head>
 
 <body>
  
     <div class="stats" style="height:400px;margin-top:50px;margin-bottom:50px;">
-        <div class="hero-text" style="text-align: center; transform: translate(-50%, -20%); position: absolute; left: 50%; top: 20%;">
+        <div class="hero-text" style="    text-align: center;
+        transform: translate(-50%, -20%);
+        position: absolute;
+        left: 50%;
+        top: 20%;
+    ">
 
             <h1><b>@ViewBag.Council <br /> Recycling Rate</b> </h1>
             <div id="chart" style="margin-top:30px;"></div>
@@ -77,29 +96,66 @@
     </div>
 
     <div class="row">
-        <div class="col-md-12" style="margin-top:30px;">
-            <div class="col-md-2"></div>
-            <div class="col-md-4">
-                <p style="font-family:'Times New Roman';font-size:20px;background-color:azure;">
-                    <b>What is Recycling Rate?</b><br />“Recycling Rate” is a measure to assess the proportion of disposable or recyclable waste items. 
-                    Some products may not be recyclable because the processing center has been polluted or cannot handle such recyclable materials.
-                    <br />*Recycling rate = Annual total waste recycled/ Annual total waste generation*
-                </p>
+        
+            <div class="col-md-12" >
+                <div class="col-md-2"></div>
+               
+                    <div class="col-md-4">
+                        <p style="font-family:'Times New Roman';font-size:20px;background-color:azure;margin-top:60px;">
+                            <b>What is Recycling Rate?</b><br />'Recycling Rate' is a measure to assess the proportion of disposable or recyclable waste items.
+                            Some products may not be recyclable because the processing center has been polluted or cannot handle such recyclable materials.
+                            <br />*Recycling rate = Annual total waste recycled/ Annual total waste generation*
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-responsive" id="top3" src="~/Content/Images/top3councils.jpeg" />
+                    </div>
+               
+                <div class="col-md-2"></div>
+                <div class="col-md-12" style="margin-top:20px;">
+                    <div class="col-md-6">
+                    </div>
+                    <div class="col-md-6" style="text-align:left;">
+                        <button id="allCouncils" style="margin-left:13px;" type="button" class="btn btn-primary"
+                                onclick="location.href='@Url.Action("Index", "councilRates")'">
+                            <i class="fa fa-cog fa-spin"></i> View Full Result
+                        </button>
+                    </div>
+
+                </div>
             </div>
-            <div class="col-md-6">
-                <img style="height:230px;width:350px;" id="top3" src="~/Content/Images/top3councils.PNG" />
+           
+        </div>
+
+        <div class="row" style="margin-top:100px;">
+
+            <div class="col-md-12" style="margin-top:20px;">
+                <h1 style="color:indianred;font-size:37px;text-align:center">Make Victoria Recycling Great Again</h1>
             </div>
             <div class="col-md-12" style="margin-top:20px;">
+                <div class="col-md-1">
+
+                </div>
                 <div class="col-md-6">
+                    <img class="img-responsive" src="~/Content/Images/totalRecycle.png" />
                 </div>
-                <div class="col-md-6" style="text-align:left;">
-                    <button id="allCouncils" style="margin-left:13px;" type="button" class="btn btn-success"
-                            onclick="location.href='@Url.Action("Index", "councilRates")'">View Full Result</button>
+
+                <div class="col-md-3 align-items-center justify-content-center" style="text-align:left;margin-top:20px;margin-left:5px;">
+                    <p class="center" style="background-color:azure;font-family:'Times New Roman';font-size:22px;">
+                        <b>Did you know</b>, for every 10,000 tonnes (which is around increase 1% recycling rate)  of waste recycled, 9.2 jobs are created. As seen in the graph,
+                        the recycling rate in Victoria had been stable (but not very impressive), so together, let's all pledge to 'Make Victoria Recycling Great Again!'
+                    </p>
+                    <button type="button" class="btn btn-primary flip" style="margin-left: 0px; margin-top: 0px;width:170px;"
+                            onclick="location.href='@Url.Action("RecyclingSuggestions", "Home")'">
+                        <i class="fa fa-cog fa-spin"></i> Learn More
+                    </button>
                 </div>
-                
+                <div class="col-md-1">
+
+                </div>
             </div>
+
         </div>
-    </div>
 </body>
 
 <script>

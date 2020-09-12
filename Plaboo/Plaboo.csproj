@@ -389,6 +389,9 @@
     <Content Include="Content\Images\bag.png" />
     <Content Include="Content\Images\bathroom.png" />
     <Content Include="Content\Images\bottle.png" />
+    <Content Include="Content\Images\carousel1.png" />
+    <Content Include="Content\Images\carousel2.png" />
+    <Content Include="Content\Images\carousel3.png" />
     <Content Include="Content\Images\challenge.mp4" />
     <Content Include="Content\Images\challenge1.JPG" />
     <Content Include="Content\Images\citycouncil.jpeg" />
@@ -419,6 +422,7 @@
     </Content>
     <Content Include="Content\Images\quiz1.jpg" />
     <Content Include="Content\Images\Recycle.jpg" />
+    <Content Include="Content\Images\recycle1.jpg" />
     <Content Include="Content\Images\rugs.png" />
     <Content Include="Content\Images\seabirds2.mp4" />
     <Content Include="Content\Images\seasoning.png" />
@@ -691,6 +695,7 @@
     <Content Include="Views\councilRates\Edit.cshtml" />
     <Content Include="Views\councilRates\Index.cshtml" />
     <Content Include="Views\councilRates\RatePartial.cshtml" />
+    <Content Include="Views\Home\RecyclingSuggestions.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

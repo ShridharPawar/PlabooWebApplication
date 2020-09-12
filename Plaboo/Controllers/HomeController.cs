@@ -10,6 +10,11 @@ namespace Plaboo.Controllers
     public class HomeController : Controller
     {
 
+
+        public ActionResult RecyclingSuggestions()
+        {
+            return View();
+        }
         public ActionResult HomeCards()
         {
             return View();

@@ -101,18 +101,19 @@
                 <div class="col-md-2"></div>
                
                     <div class="col-md-4">
-                        <p style="font-family:'Times New Roman';font-size:22px;background-color:azure;margin-top:0px;">
+                        <p style="font-family:'Calibri';font-size:22px;background-color:azure;margin-top:0px;">
                             <b>What is Recycling Rate?</b><br />'Recycling Rate' is a measure to assess the proportion of disposable or recyclable waste items.
                             Some products may not be recyclable because the processing center has been polluted or cannot handle such recyclable materials.
                             <br /><b>Recycling Rate</b> = Annual total waste recycled/ Annual total waste generation
                         </p>
                     </div>
                     <div class="col-md-4">
-                        <img class="img-responsive" id="top3" src="~/Content/Images/top3councils.jpeg" />
+                        <img class="img-responsive" onclick="location.href='@Url.Action("Index", "councilRates")'" id="top3" 
+                             src="~/Content/Images/top3councils.jpeg" />
                     </div>
                
                 <div class="col-md-2"></div>
-                <div class="col-md-12" style="margin-top:20px;">
+                @*<div class="col-md-12" style="margin-top:20px;">
                     <div class="col-md-6">
                     </div>
                     <div class="col-md-6" style="text-align:left;">
@@ -122,7 +123,7 @@
                         </button>
                     </div>
 
-                </div>
+                </div>*@
             </div>
            
         </div>
@@ -141,7 +142,7 @@
                 </div>
 
                 <div class="col-md-4 align-items-center justify-content-center" style="text-align:left;margin-top:20px;margin-left:5px;">
-                    <p class="center" style="background-color:azure;font-family:'Times New Roman';font-size:22px;">
+                    <p class="center" style="background-color:azure;font-family:'Calibri';font-size:22px;">
                         <b>Did you know</b>, for every 10,000 tonnes (which is around 1% increase in recycling rate)  of waste recycled, 9.2 jobs are created. As seen in the graph,
                         the recycling rate in Victoria had been stable (but not very impressive), so together, let's all pledge to 'Make Victoria Recycling Great Again!'
                     </p>
@@ -160,6 +161,8 @@
 
 <script>
     $(document).ready(function () {
-        $('html, body').animate({scrollTop:$(window).height()/1.5}, 'slow');
+        $('html, body').animate({ scrollTop: $(window).height() / 1.5 }, 'slow');
+
+
     });
 </script>

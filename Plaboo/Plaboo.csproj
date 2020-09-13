@@ -53,6 +53,9 @@
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.WindowsAzure.Configuration, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.3.2.3\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -128,6 +131,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Context\PlabooContext.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\allCouncilPostcodesController.cs" />
     <Compile Include="Controllers\AlternativesController.cs" />
     <Compile Include="Controllers\councilRatesController.cs" />
@@ -148,6 +152,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\allCouncilPostcode.cs" />
     <Compile Include="Models\councilRate.cs" />
+    <Compile Include="Models\LogOnViewModel.cs" />
     <Compile Include="Models\Plastic.cs" />
     <Compile Include="Models\Quiz.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -320,7 +325,6 @@
     <Content Include="Content\DataTables\swf\flashExport.swf" />
     <Content Include="Content\Images\all.png" />
     <Content Include="Content\Images\Alternative.jpg" />
-    <Content Include="Content\Images\alternative1.jpg" />
     <Content Include="Content\Images\bag.png" />
     <Content Include="Content\Images\bathroom.png" />
     <Content Include="Content\Images\bins.PNG" />
@@ -328,7 +332,6 @@
     <Content Include="Content\Images\carousel1.jpeg" />
     <Content Include="Content\Images\carousel2.jpeg" />
     <Content Include="Content\Images\carousel3.jpeg" />
-    <Content Include="Content\Images\challenge.mp4" />
     <Content Include="Content\Images\challenge1.JPG" />
     <Content Include="Content\Images\citycouncil.jpeg" />
     <Content Include="Content\Images\clingwrap.png" />
@@ -347,10 +350,8 @@
     <Content Include="Content\Images\plaboo.png" />
     <Content Include="Content\Images\plasticUtensils.jpg" />
     <Content Include="Content\Images\popsicle.png" />
-    <Content Include="Content\Images\Quiz.jpg" />
     <Content Include="Content\Images\quiz1.jpg" />
     <Content Include="Content\Images\recycle1.jpg" />
-    <Content Include="Content\Images\renew.PNG" />
     <Content Include="Content\Images\rugs.png" />
     <Content Include="Content\Images\schooleducation.PNG" />
     <Content Include="Content\Images\seasoning.png" />
@@ -485,6 +486,7 @@
     <Content Include="Views\Quizs\Edit.cshtml" />
     <Content Include="Views\Quizs\Index.cshtml" />
     <Content Include="Views\Home\RecyclingSuggestions.cshtml" />
+    <Content Include="Views\Account\LogOn.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

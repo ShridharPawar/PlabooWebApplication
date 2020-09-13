@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace Plaboo.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         public ActionResult RecyclingSuggestions()

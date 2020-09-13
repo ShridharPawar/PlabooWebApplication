@@ -19,7 +19,7 @@
     <style>
         #homenav{
            color:black;
-           font-family:'Comic Sans MS';
+           font-family:'Calibri';
         }
 
          #homenav:hover{
@@ -58,10 +58,10 @@
                     <li><a id="homenav" style="top:0px;" href="@Url.Action("Index", "allCouncilPostcodes")"><i class="fas fa-recycle"></i><span> Recycle</span></a></li>
                     @*<li><a id="homenav" style="top:0px;" href="@Url.Action("HomeCards", "Home")"><i class="fab fa-wpexplorer"></i><span> Explore</span></a></li>*@
                     <li><a id="homenav" style="top:0px;" href="@Url.Action("Index", "Alternatives")"><i class="fas fa-directions"></i><span> Alternatives</span></a></li>
-
+                    <li>@Html.ActionLink("Log Off", "LogOn", "Account", null, new { @class = "actnclass" })</li>
 
                 </ul>
-                @*<li>@Html.ActionLink("Log Off", "LogOn", "Account", null, new { @class = "actnclass" })</li>*@
+               
                 @*@Html.Partial("_LoginPartial")*@
             </div>
         </div>
@@ -88,7 +88,7 @@
                             <img style="width:140px;height:120px;margin-top:20px;margin-bottom:20px;" src="~/Content/Images/plaboo.png" />
                         </div>
                         <div class="col-md-9">
-                            <p style="font-family:'Comic Sans MS';color:white;margin-top:70px;">
+                            <p style="font-family:'Calibri';color:white;margin-top:70px;">
                                 
                                     Copyrights @@ All reserved. Plaboo-2020 Developed by Team Slay
                                 

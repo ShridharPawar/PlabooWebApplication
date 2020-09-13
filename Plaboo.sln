@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plaboo", "Plaboo\Plaboo.csproj", "{914C72EA-AA7E-4182-8E4B-C2FAC2369107}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plaboo", "Plaboo\Plaboo.csproj", "{7339538E-D7D2-44C6-BCA7-26C0A60DC103}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{914C72EA-AA7E-4182-8E4B-C2FAC2369107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{914C72EA-AA7E-4182-8E4B-C2FAC2369107}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{914C72EA-AA7E-4182-8E4B-C2FAC2369107}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{914C72EA-AA7E-4182-8E4B-C2FAC2369107}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7339538E-D7D2-44C6-BCA7-26C0A60DC103}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7339538E-D7D2-44C6-BCA7-26C0A60DC103}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7339538E-D7D2-44C6-BCA7-26C0A60DC103}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7339538E-D7D2-44C6-BCA7-26C0A60DC103}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {E32BC0F4-1516-4F19-B5F2-CDD2F55CEAA5}
+		SolutionGuid = {7FD97822-A03E-4B29-A047-388CCAF043E8}
 	EndGlobalSection
 EndGlobal

@@ -22,5 +22,9 @@ namespace Plaboo.Models
         public string OptionD { get; set; }
 
         public string CorrectAnswer { get; set; }
+
+        public string DifficultyLevel  {get; set; }
+
+        public string Score { get; set; }
     }
 }

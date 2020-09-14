@@ -24,8 +24,15 @@
         height: auto;
     }
 
-    @@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    h1{
+        font-size:37px;
     }
+
+    @@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  h1 {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
 
     .img-responsive {
         width: 100%;
@@ -41,8 +48,8 @@
     }
 
     .img-responsive:hover {
-   transform: scale(1.2);
-}
+        transform: scale(1.2);
+    }
 
     .inner{overflow:hidden;}
 </style>
@@ -94,8 +101,8 @@
 </div>
 
 <div class="row">
-    <div class="col-md-12" style="margin-left: 60px; margin-top: 60px;">
-        <h1 style="font-family:'Calibri';color:indianred;font-size:37px;text-align:center"><b>But How Do We Improve Recycling Rates?</b></h1>
+    <div class="col-md-12" style="margin-top: 60px;">
+        <h1 style="font-family:'Calibri';color:indianred;text-align:center"><b>But How Do We Improve Recycling Rates?</b></h1>
       
     </div>
 </div>
@@ -106,7 +113,7 @@
 
         </div>
         <div class="col-md-4" style="">
-            <p style="font-family:Calibri;font-size:23px;color:black;">
+            <p id="first" style="font-family:Calibri;font-size:23px;color:black;">
                 <b style="color:black;font-size:30px">Focus on school education</b><br />
                 Our youngest citizens are often the most powerful agents of change. Recycling should be encouraged regardless of age. Share valuable information 
                 about acceptable recyclable materials with young people in schools and using social media or websites; And provide answers to waste questions or 

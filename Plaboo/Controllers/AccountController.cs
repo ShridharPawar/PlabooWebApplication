@@ -25,18 +25,18 @@ namespace Plaboo.Controllers
         {
             if (ModelState.IsValid)
             {
-                //FormsAuthentication.SetAuthCookie(model.UserName, false);
-                //return RedirectToAction("Index", "Home");
-                if (model.UserName == CloudConfigurationManager.GetSetting("UName") && model.Password == CloudConfigurationManager.GetSetting("UPw"))
-                {
-                    FormsAuthentication.SetAuthCookie(model.UserName, false);
-                    return RedirectToAction("Index", "Home");
+                FormsAuthentication.SetAuthCookie(model.UserName, false);
+                return RedirectToAction("Index", "Home");
+                //if (model.UserName == CloudConfigurationManager.GetSetting("UName") && model.Password == CloudConfigurationManager.GetSetting("UPw"))
+                //{
+                //    FormsAuthentication.SetAuthCookie(model.UserName, false);
+                //    return RedirectToAction("Index", "Home");
 
-                }
-                else
-                {
-                    ModelState.AddModelError("", "Incorrect username or password");
-                }
+                //}
+                //else
+                //{
+                //    ModelState.AddModelError("", "Incorrect username or password");
+                //}
             }
 
             return View(model);

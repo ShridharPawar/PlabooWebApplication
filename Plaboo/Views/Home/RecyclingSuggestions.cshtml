@@ -1,38 +1,49 @@
 ﻿
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
 
 
-    .navbar {
-        background-color: white !important;
-    }
+      .navbar {
+          background-color: white !important;
+      }
 
 
-    .hero-image {
-        background-image: url('../../Content/Images/3.jpeg');
-        height: 50%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        width: 100%;
-    }
+      .hero-image {
+          background-image: url('../../Content/Images/3.jpeg');
+          height: 50%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
+          width: 100%;
+      }
 
-    .carousel-inner > .item {
-        width: 100%;
-        height: auto;
-    }
+      .carousel-inner > .item {
+          width: 100%;
+          height: auto;
+      }
 
-    h1{
-        font-size:37px;
-    }
+      h1 {
+          font-size: 37px;
+      }
 
-    @@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-  h1 {
-    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
-  }
-}
+      @@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+          h1 {
+              font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+          }
+      }
+
+       p {
+          font-size: 23px;
+      }
+
+      @@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+          p {
+              font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+          }
+      }
 
     .img-responsive {
         width: 100%;
@@ -45,13 +56,325 @@
     #mycarousel {
         width: 100%;
         height: auto;
+        /*min-height:180px;*/
     }
 
     .img-responsive:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 
-    .inner{overflow:hidden;}
+      .inner {
+          overflow: hidden;
+      }
+
+
+
+      .timeline {
+          list-style: none;
+          padding: 20px 0 20px;
+          position: relative;
+      }
+
+          .timeline:before {
+              top: 0;
+              bottom: 0;
+              position: absolute;
+              content: " ";
+              width: 3px;
+              background-color: #eeeeee;
+              left: 50%;
+              margin-left: -1.5px;
+          }
+
+          .timeline > li {
+              margin-bottom: 20px;
+              position: relative;
+              width: 50%;
+              float: left;
+              clear: left;
+          }
+
+              .timeline > li:before,
+              .timeline > li:after {
+                  content: " ";
+                  display: table;
+              }
+
+              .timeline > li:after {
+                  clear: both;
+              }
+
+              .timeline > li:before,
+              .timeline > li:after {
+                  content: " ";
+                  display: table;
+              }
+
+              .timeline > li:after {
+                  clear: both;
+              }
+
+              .timeline > li > .timeline-panel {
+                  width: 95%;
+                  float: left;
+                  border: 1px solid #d4d4d4;
+                  /*border-radius: 2px;*/
+                  /*padding: 20px;*/
+                  position: relative;
+                  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+                  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+              }
+
+                  .timeline > li > .timeline-panel:before {
+                      position: absolute;
+                      top: 26px;
+                      right: -15px;
+                      display: inline-block;
+                      border-top: 15px solid transparent;
+                      border-left: 15px solid #ccc;
+                      border-right: 0 solid #ccc;
+                      border-bottom: 15px solid transparent;
+                      content: " ";
+                  }
+
+                  .timeline > li > .timeline-panel:after {
+                      position: absolute;
+                      top: 27px;
+                      right: -14px;
+                      display: inline-block;
+                      border-top: 14px solid transparent;
+                      border-left: 14px solid #fff;
+                      border-right: 0 solid #fff;
+                      border-bottom: 14px solid transparent;
+                      content: " ";
+                  }
+
+              .timeline > li > .timeline-badge {
+                  color: #fff;
+                  width: 24px;
+                  height: 24px;
+                  line-height: 50px;
+                  font-size: 1.4em;
+                  text-align: center;
+                  position: absolute;
+                  top: 16px;
+                  right: -12px;
+                  /*background-color: #999999;*/
+                  z-index: 100;
+                  /*
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    */
+              }
+
+              .timeline > li.timeline-inverted > .timeline-panel {
+                  float: right;
+              }
+
+                  .timeline > li.timeline-inverted > .timeline-panel:before {
+                      border-left-width: 0;
+                      border-right-width: 15px;
+                      left: -15px;
+                      right: auto;
+                  }
+
+                  .timeline > li.timeline-inverted > .timeline-panel:after {
+                      border-left-width: 0;
+                      border-right-width: 14px;
+                      left: -14px;
+                      right: auto;
+                  }
+
+      .timeline-badge > a {
+          color: #C5C7C5 !important;
+      }
+
+      .timeline-badge a:hover {
+          color: #000 !important;
+      }
+
+      .timeline-title {
+          margin-top: 0;
+          color: inherit;
+      }
+
+      .timeline-body > p,
+      .timeline-body > ul {
+          padding: 20px;
+          margin-bottom: 0;
+      }
+
+          .timeline-body > p + p {
+              margin-top: 5px;
+          }
+
+      .timeline-footer {
+          padding: 20px;
+          background-color: #f4f4f4;
+      }
+
+          .timeline-footer > a {
+              cursor: pointer;
+              text-decoration: none;
+          }
+
+      .tooltip {
+          position: absolute;
+          z-index: 1020;
+          display: block;
+          visibility: visible;
+          padding: 5px;
+          font-size: 11px;
+          opacity: 0;
+          filter: alpha(opacity=0);
+      }
+
+          .tooltip.in {
+              /*opacity:0;
+      filter:alpha(opacity=80);*/
+          }
+
+          .tooltip.top {
+              margin-top: -2px;
+          }
+
+          .tooltip.right {
+              margin-left: 2px;
+          }
+
+          .tooltip.bottom {
+              margin-top: 2px;
+          }
+
+          .tooltip.left {
+              margin-left: -2px;
+          }
+
+          .tooltip.top .tooltip-arrow {
+              bottom: 0;
+              left: 0;
+              margin-left: 0;
+              border-left: 0 solid transparent;
+              border-right: 5px solid transparent;
+              border-top: 0 solid #000;
+          }
+
+          .tooltip.left .tooltip-arrow {
+              bottom: 0;
+              left: 0;
+              margin-left: 0;
+              border-left: 0 solid transparent;
+              border-right: 5px solid transparent;
+              border-top: 0 solid #000;
+          }
+
+          .tooltip.bottom .tooltip-arrow {
+              bottom: 0;
+              left: 0;
+              margin-left: 0;
+              border-left: 0 solid transparent;
+              border-right: 5px solid transparent;
+              border-top: 0 solid #000;
+          }
+
+          .tooltip.right .tooltip-arrow {
+              bottom: 0;
+              left: 0;
+              margin-left: 0;
+              border-left: 0 solid transparent;
+              border-right: 5px solid transparent;
+              border-top: 0 solid #000;
+          }
+
+      .tooltip-inner {
+          width: 200px;
+          padding: 3px 8px;
+          color: #fff;
+          text-align: center;
+          text-decoration: none;
+          background-color: #313131;
+          -webkit-border-radius: 0px;
+          -moz-border-radius: 0px;
+          border-radius: 0px;
+      }
+
+      .tooltip-arrow {
+          position: absolute;
+          width: 0;
+          height: 0;
+      }
+
+      .timeline > li.timeline-inverted {
+          float: right;
+          clear: right;
+          margin-top: 30px;
+          margin-bottom: 30px;
+      }
+
+      .timeline > li:nth-child(2) {
+          margin-top: 60px;
+      }
+
+      .timeline > li.timeline-inverted > .timeline-badge {
+          left: -12px;
+      }
+
+      @@media (max-width: 767px) {
+          ul.timeline:before {
+              left: 40px;
+          }
+
+          ul.timeline > li {
+              margin-bottom: 20px;
+              position: relative;
+              width: 100%;
+              float: left;
+              clear: left;
+          }
+
+              ul.timeline > li > .timeline-panel {
+                  width: calc(100% - 90px);
+                  width: -moz-calc(100% - 90px);
+                  width: -webkit-calc(100% - 90px);
+              }
+
+              ul.timeline > li > .timeline-badge {
+                  left: 28px;
+                  margin-left: 0;
+                  top: 16px;
+              }
+
+              ul.timeline > li > .timeline-panel {
+                  float: right;
+              }
+
+                  ul.timeline > li > .timeline-panel:before {
+                      border-left-width: 0;
+                      border-right-width: 15px;
+                      left: -15px;
+                      right: auto;
+                  }
+
+                  ul.timeline > li > .timeline-panel:after {
+                      border-left-width: 0;
+                      border-right-width: 14px;
+                      left: -14px;
+                      right: auto;
+                  }
+
+          .timeline > li.timeline-inverted {
+              float: left;
+              clear: left;
+              margin-top: 30px;
+              margin-bottom: 30px;
+          }
+
+              .timeline > li.timeline-inverted > .timeline-badge {
+                  left: 28px;
+              }
+      }
 </style>
 
 
@@ -70,18 +393,18 @@
 
             <div class="carousel-inner" style=" background-color: #9bb1e9;">
                 <div class="item active">
-                    <img src="~/Content/Images/carousel1.jpeg" />
-                 
+                    <img src="~/content/images/carousel4.jpeg" />
+
                 </div>
 
                 <div class="item">
-                    <img src="~/Content/Images/carousel2.jpeg" />
-                  
+                    <img src="~/content/images/carousel5.jpeg" />
+
                 </div>
 
                 <div class="item">
-                    <img src="~/Content/Images/carousel3.jpeg" />
-                   
+                    <img src="~/content/images/carousel6.jpeg" />
+
                 </div>
 
             </div>
@@ -100,58 +423,139 @@
     </div>
 </div>
 
-<div class="row">
+@*<div class="row">
     <div class="col-md-12" style="margin-top: 60px;">
         <h1 style="font-family:'Calibri';color:indianred;text-align:center"><b>But How Do We Improve Recycling Rates?</b></h1>
-      
+
     </div>
+</div>*@
+
+
+<div class="container" style="margin-top: 20px;">
+    <div class="page-header text-center">
+        <h1 id="timeline" style="font-family:'Calibri';color:indianred;text-align:center"><b>But How Do We Improve Recycling Rates?</b></h1>
+    </div>
+    <ul class="timeline">
+        <li>
+            <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record" rel="tooltip" title="11 hours ago via Twitter" id=""></i></a></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <img class="img-responsive" src="~/Content/Images/1.jpeg" />
+
+                </div>
+                <div class="timeline-body">
+                    <p style="font-family:Calibri;color:black;">
+                        <b>Learn More</b> <br />
+                        The adolescents are often the most powerful agents of change. Recycling should be encouraged regardless of age. Share valuable information
+                        about acceptable recyclable materials with adolescents in schools and via social media; and provide answers to waste or recycling questions.
+                    </p>
+
+                </div>
+
+                <div class="timeline-footer">
+                    <a style="font-size:22px;color:#0275d8;font-family:Calibri" target="_blank" href="https://www.sustainability.vic.gov.au/School/Get-started">
+                    Getting Involved <i class="fas fa-arrow-circle-right"></i></a>
+                   
+                    
+                </div>
+            </div>
+        </li>
+
+        <li class="timeline-inverted">
+            <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip" title="11 hours ago via Twitter" id=""></i></a></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <img class="img-responsive" src="~/Content/Images/2.jpeg" />
+
+                </div>
+                <div class="timeline-body">
+                    <p style="font-family:Calibri;color:black;"><b>Know More</b> <br />
+                        Imagine teenagers at a concert or in a park. There are a lot of empty plastic bottles around, and picking them up and putting them
+                        in the trash will eventually make them end up in landfills or the ocean. Teenagers can put them in a vending machine, watch them grind into 
+                       plastic particles, melt into plastic threads, and then 3d print them as phone cases.
+                    </p>
+
+                </div>
+
+                <div class="timeline-footer">
+                    <a style="font-size:22px;color:#0275d8;font-family:Calibri" target="_blank" href="https://engage.vic.gov.au/waste/wastetoenergy">
+                        Let's Do It <i class="fas fa-arrow-circle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record" rel="tooltip" title="11 hours ago via Twitter" id=""></i></a></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <img class="img-responsive" src="~/Content/Images/3.jpeg" />
+
+                </div>
+                <div class="timeline-body">
+                    <p style="font-family:Calibri;color:black;">
+                        <b>Do More</b> <br />
+                        The knowledge learned in school and on the Internet can be effectively applied to daily life at home, and recyclable and non-recyclable garbage
+                        cans can be set up at home. Since most adolescents don't think enough about what goes into the trash can, they can't decide whether to recycle 
+                        it or not.
+                    </p>
+
+                </div>
+
+                <div class="timeline-footer">
+                    <a style="font-size:22px;color:#0275d8;font-family:Calibri" target="_blank" href="https://www.recycling.vic.gov.au/can-i-recycle-this">
+                        Know More <i class="fas fa-arrow-circle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </li>
+
+
+
+        <li class="clearfix" style="float: none;"></li>
+    </ul>
 </div>
 
-<div class="row">
-    <div class="col-md-12" style="margin-top:45px;">
-        <div class="col-md-2">
+@*<div class="row">
+        <div class="col-md-12" style="margin-top:45px;">
+            <div class="col-md-2">
 
-        </div>
-        <div class="col-md-4" style="">
-            <p id="first" style="font-family:Calibri;font-size:23px;color:black;">
-                <b style="color:black;font-size:30px">Focus on school education</b><br />
-                Our youngest citizens are often the most powerful agents of change. Recycling should be encouraged regardless of age. Share valuable information 
-                about acceptable recyclable materials with young people in schools and using social media or websites; And provide answers to waste questions or 
-                recycling questions.
-            </p>
-        </div>
-        @*<div class="col-md-1">
+            </div>
+            <div class="col-md-4" style="">
+                <p id="first" style="font-family:Calibri;font-size:23px;color:black;">
+                    <b style="color:black;font-size:30px">Focus on school education</b><br />
+                    Our youngest citizens are often the most powerful agents of change. Recycling should be encouraged regardless of age. Share valuable information
+                    about acceptable recyclable materials with young people in schools and using social media or websites; And provide answers to waste questions or
+                    recycling questions.
+                </p>
+            </div>
 
-        </div>*@
-        <div class="col-md-4">
-            <div class="inner">
-                <img style="" class="img-responsive" src="~/Content/Images/schooleducation.PNG" />
+            <div class="col-md-4">
+                <div class="inner">
+                    <img style="" class="img-responsive" src="~/Content/Images/schooleducation.PNG" />
+                </div>
+            </div>
+            <div class="col-md-2">
+
             </div>
         </div>
-        <div class="col-md-2">
-
-        </div>
     </div>
-</div>
 
-<div class="row">
-    <div class="col-md-12" style="margin-top:45px;">
-        <div class="col-md-2">
+    <div class="row">
+        <div class="col-md-12" style="margin-top:45px;">
+            <div class="col-md-2">
 
-        </div>
-        <div class="col-md-4">
-            <div class="inner">
-                <img style="" class="img-responsive" src="~/Content/Images/concert.PNG" />
+            </div>
+            <div class="col-md-4">
+                <div class="inner">
+                    <img style="" class="img-responsive" src="~/Content/Images/concert.PNG" />
                 </div>
             </div>
 
-            @*<div class="col-md-1">
 
-            </div>*@
             <div class="col-md-4" style="">
                 <p style="font-family:'Calibri';font-size:23px;color:black;">
                     <b style="color:black;font-size:30px">Turning Waste into Treasure</b><br />
-                    Imagine teenagers at a concert or in a park. There are a lot of empty plastic bottles around, and instead of picking them up and putting them 
+                    Imagine teenagers at a concert or in a park. There are a lot of empty plastic bottles around, and instead of picking them up and putting them
                     in the trash, they end up in landfills or pollute the ocean. Teenagers can put them in a vending machine, watch them grind into plastic particles,
                     melt into plastic threads, and then 3d print them as phone cases.
                 </p>
@@ -160,39 +564,37 @@
 
             </div>
         </div>
-</div>
+    </div>
 
-<div class="row">
-    <div class="col-md-12" style="margin-top:45px;">
-        <div class="col-md-2">
+    <div class="row">
+        <div class="col-md-12" style="margin-top:45px;">
+            <div class="col-md-2">
 
-        </div>
-        <div class="col-md-4" style="">
-            <p style="font-family:'Calibri';font-size:23px;color:black;">
-                <b style="color:black;font-size:30px">
-                    Add Recycling Bin at Home
-                </b><br />
-                The knowledge learned in school and on the Internet can be effectively applied to daily life at home, and recyclable and non-recyclable garbage
-                cans can be set up at home, and the distinction can be even more detailed. Since most young people don't think enough about what goes into the
-                trash can, they can't decide whether to recycle it or not.
-            </p>
-        </div>
-        @*<div class="col-md-1">
+            </div>
+            <div class="col-md-4" style="">
+                <p style="font-family:'Calibri';font-size:23px;color:black;">
+                    <b style="color:black;font-size:30px">
+                        Add Recycling Bin at Home
+                    </b><br />
+                    The knowledge learned in school and on the Internet can be effectively applied to daily life at home, and recyclable and non-recyclable garbage
+                    cans can be set up at home, and the distinction can be even more detailed. Since most young people don't think enough about what goes into the
+                    trash can, they can't decide whether to recycle it or not.
+                </p>
+            </div>
 
-        </div>*@
-        <div class="col-md-4">
-            <div class="inner">
-                <img style="" class="img-responsive" src="~/Content/Images/bins.PNG" />
+            <div class="col-md-4">
+                <div class="inner">
+                    <img style="" class="img-responsive" src="~/Content/Images/bins.PNG" />
                 </div>
             </div>
             <div class="col-md-2">
 
             </div>
         </div>
-</div>
+    </div>*@
 
 <div class="row" style="margin-top:60px;">
-  
+
     <div class="col-md-12">
         <div class="col-md-3"></div>
         <div class="col-md-6">

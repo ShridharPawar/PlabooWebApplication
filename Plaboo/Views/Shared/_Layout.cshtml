@@ -44,10 +44,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-               
-                    <img onclick="location.href='@Url.Action("Index", "Home")'" src="~/Content/Images/plaboo.png"
-                         style="position:relative;top:-9px;width:55px;height:55px;">
-               
+
+                <img onclick="location.href='@Url.Action("Index", "Home")'" src="~/Content/Images/plaboo.png"
+                     style="position:relative;top:-9px;width:55px;height:55px;">
+
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -61,27 +61,37 @@
                     <li>@Html.ActionLink("Log Off", "LogOn", "Account", null, new { @class = "actnclass" })</li>
 
                 </ul>
-               
+
                 @*@Html.Partial("_LoginPartial")*@
+            </div>
+
+
+        </div>
+
+        <div class="header">
+
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
             </div>
         </div>
     </div>
+   
     <div class="container-fluid body-content" style="padding-left:0px;padding-right:0px;">
         @RenderBody()
-        
 
-           
-            <footer>
 
-                @*<div id="footer">
+
+        <footer>
+
+            @*<div id="footer">
                     <div class="row">
                         <div class="col-md-12">
                             <img style="width:1500px;height:400px;" src="~/Content/Images/footer.png" />
                         </div>
                     </div>
-                   
+
                 </div>*@
-                @*<div id="solution" style="background-color:black;margin-top:15px;">
+            @*<div id="solution" style="background-color:black;margin-top:15px;">
                     <div class="row">
                         <div class="col-md-2"></div>
                         <div class="col-md-1">
@@ -89,18 +99,18 @@
                         </div>
                         <div class="col-md-9">
                             <p style="font-family:'Calibri';color:white;margin-top:70px;">
-                                
+
                                     Copyrights @@ All reserved. Plaboo-2020 Developed by Team Slay
-                                
+
                             </p>
                         </div>
 
 
                     </div>
                 </div>*@
-             
-            </footer>
-        </div>
+
+        </footer>
+    </div>
 
 
 

@@ -323,8 +323,12 @@
     <Content Include="Content\DataTables\images\sort_desc.png" />
     <Content Include="Content\DataTables\images\sort_desc_disabled.png" />
     <Content Include="Content\DataTables\swf\flashExport.swf" />
+    <Content Include="Content\Images\1.jpeg" />
+    <Content Include="Content\Images\2.jpeg" />
+    <Content Include="Content\Images\3.jpeg" />
     <Content Include="Content\Images\all.png" />
     <Content Include="Content\Images\Alternative.jpg" />
+    <Content Include="Content\Images\arrowdown.PNG" />
     <Content Include="Content\Images\bag.png" />
     <Content Include="Content\Images\bathroom.png" />
     <Content Include="Content\Images\bins.PNG" />
@@ -332,6 +336,9 @@
     <Content Include="Content\Images\carousel1.jpeg" />
     <Content Include="Content\Images\carousel2.jpeg" />
     <Content Include="Content\Images\carousel3.jpeg" />
+    <Content Include="Content\Images\carousel4.jpeg" />
+    <Content Include="Content\Images\carousel5.jpeg" />
+    <Content Include="Content\Images\carousel6.jpeg" />
     <Content Include="Content\Images\challenge1.JPG" />
     <Content Include="Content\Images\citycouncil.jpeg" />
     <Content Include="Content\Images\clingwrap.png" />
@@ -342,6 +349,7 @@
     <Content Include="Content\Images\foodstorage.png" />
     <Content Include="Content\Images\hardhat.png" />
     <Content Include="Content\Images\kitchen.png" />
+    <Content Include="Content\Images\learn.jpeg" />
     <Content Include="Content\Images\leisure.png" />
     <Content Include="Content\Images\mediacase.png" />
     <Content Include="Content\Images\parentsplastic.JPG" />

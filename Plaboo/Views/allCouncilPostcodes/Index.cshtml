@@ -72,68 +72,100 @@
   and (-webkit-min-device-pixel-ratio: 2) {
 
 }
+
+                      .header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+      .progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #4caf50;
+  width: 0%;
+}
     </style>
 </head>
 
 <body>
+    <div class="content">
+        <div class="hero-image responsive" style="height: 460px">
+            <div class="hero-text" style="text-align:center;transform: translate(-50%, -50%); position:absolute;left:50%;top:50%;">
 
-    <div class="hero-image responsive" style="height: 460px">
-        <div class="hero-text" style="text-align:center;transform: translate(-50%, -50%); position:absolute;left:50%;top:50%;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-6">
+                            <input style="width:220px;margin-right:20px;height:40px;" class="form-control" id="postcode" aria-describedby="emailHelp" placeholder="Enter postcode">
+                        </div>
+                        <div class="col-md-6" style="margin-top:2px;">
 
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="col-md-6">
-                        <input style="width:220px;margin-right:20px;height:40px;" class="form-control" id="postcode" aria-describedby="emailHelp" placeholder="Enter postcode">
+                            @*<button id="search" type="submit" style="height:50px;" class="btn btn-primary">Search</button>*@
+                            <a id="search" class="btn btn-primary">
+                                <i class="fa fa-cog fa-spin"></i>
+                                Search
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-md-6" style="margin-top:2px;">
+                </div>
 
-                        @*<button id="search" type="submit" style="height:50px;" class="btn btn-primary">Search</button>*@
-                        <a id="search" class="btn btn-primary"><i class="fa fa-cog fa-spin"></i>
-                             Search
-                        </a>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+             aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" id="resizemodal" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="mcontent" id="popupcontent">Please enter a postcode in Melbourne!</p>
                     </div>
                 </div>
             </div>
-
         </div>
-    </div>
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-         aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" id="resizemodal" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
+        <div id="trial" style="text-align:left;margin-top:30px;">
+            <div class="col-md-12">
+                <div class="col-md-3">
 
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
                 </div>
-                <div class="modal-body">
-                    <p class="mcontent" id="popupcontent">Please enter a postcode in Melbourne!</p>
+                <div class="col-md-6">
+                    <h2 style="font-family:Calibri;background-color:azure;text-align:center">
+                        Search for your postcode and know the recyling rate of your area based on the council you belong to. Also,
+                        learn how you can contribute to improve the recycling rate.
+                    </h2>
+                </div>
+                <div class="col-md-3">
+
                 </div>
             </div>
+
         </div>
+        <div id="searchResults"></div>
+
+
+
     </div>
-    <div id="trial" style="text-align:left;margin-top:30px;">
-        <div class="col-md-12">
-            <div class="col-md-3">
+    <script>
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function () { myFunction() };
 
-            </div>
-            <div class="col-md-6">
-                <h2 style="font-family:Calibri;background-color:azure;text-align:center">
-                    Search for your postcode and know the recyling rate of your area based on the council you belong to. Also,
-                    learn how you can contribute to improve the recycling rate.
-                </h2>
-            </div>
-            <div class="col-md-3">
-
-            </div>
-        </div>
-        
-    </div>
-    <div id="searchResults"></div>
-
-
-
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
 </body>
 
 <script>
@@ -175,7 +207,7 @@
                  alignModal();
                  $("#exampleModalCenter").modal('show');
             }
-            else { /*$('html, body').animate({scrollTop:$(window).height()/1.5}, 'slow');*/ $("#trial").hide();$('#searchResults').load(url, { searchText: council }); }
+            else {  $("#trial").hide();$('#searchResults').load(url, { searchText: council }); }
             
          });
 

@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Plaboo.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class HomeController : Controller
     {
         //this is the HTTP get method to retreive the 'Recycling Suggestions' page

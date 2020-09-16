@@ -15,115 +15,31 @@ namespace Plaboo.Controllers
     {
         private PlabooContext db = new PlabooContext();
 
+        // this method takes the 'postcode' as input from the user and finds the ranking and recycling rate of the council
+        //to which that postcode belongs
         public ActionResult RatePartial(string searchText)
         {
+            //the ranking of the council is fetched from the database using a LINQ query based on the 'postcode' received as a parameter
+            //from the user. viewbag is used to pass the data to the view
             ViewBag.Rank = db.councilRates.Where(x => x.council.Equals(searchText)).Select(x=>x.rank).FirstOrDefault();
+            //the recycling rate of the council is fetched from the database using a LINQ query based on the 'postcode' received as a parameter
+            //from the user. viewbag is used to pass the data to the view
             ViewBag.Rate = db.councilRates.Where(x => x.council.Equals(searchText)).Select(x => x.rate).FirstOrDefault();
+            //viewbag is created to pass the council to the view
             ViewBag.Council = searchText;
+            //partialview is returned to show the details of the council
             return PartialView();
         }
 
 
+       // this is a GET HTPP method to get the details of councils- like their rank, recycling rate etc
        public ActionResult Index()
         {
             return View(db.councilRates.ToList());
         }
 
-        // GET: councilRates/Details/5
-        public ActionResult Details(string id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            councilRate councilRate = db.councilRates.Find(id);
-            if (councilRate == null)
-            {
-                return HttpNotFound();
-            }
-            return View(councilRate);
-        }
-
-        // GET: councilRates/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: councilRates/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "council,rate,rank")] councilRate councilRate)
-        {
-            if (ModelState.IsValid)
-            {
-                db.councilRates.Add(councilRate);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-
-            return View(councilRate);
-        }
-
-        // GET: councilRates/Edit/5
-        public ActionResult Edit(string id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            councilRate councilRate = db.councilRates.Find(id);
-            if (councilRate == null)
-            {
-                return HttpNotFound();
-            }
-            return View(councilRate);
-        }
-
-        // POST: councilRates/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "council,rate,rank")] councilRate councilRate)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(councilRate).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(councilRate);
-        }
-
-        // GET: councilRates/Delete/5
-        public ActionResult Delete(string id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            councilRate councilRate = db.councilRates.Find(id);
-            if (councilRate == null)
-            {
-                return HttpNotFound();
-            }
-            return View(councilRate);
-        }
-
-        // POST: councilRates/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
-        {
-            councilRate councilRate = db.councilRates.Find(id);
-            db.councilRates.Remove(councilRate);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
+        
+        //to dispose off
         protected override void Dispose(bool disposing)
         {
             if (disposing)

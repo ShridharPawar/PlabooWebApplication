@@ -370,6 +370,7 @@
     <Content Include="Content\Images\totalRecycle.png" />
     <Content Include="Content\Images\travel.png" />
     <Content Include="Content\Images\utensils.png" />
+    <Content Include="Content\Images\VICrecycling.gif" />
     <Content Include="Content\Images\yogamat.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -382,6 +383,7 @@
     <Content Include="Content\DataTables\css\common.scss" />
     <None Include="Properties\PublishProfiles\Plaboo - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\confetti.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.min.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap4.js" />

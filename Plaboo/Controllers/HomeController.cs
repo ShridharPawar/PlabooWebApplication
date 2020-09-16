@@ -6,32 +6,22 @@ using System.Web.Mvc;
 
 namespace Plaboo.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class HomeController : Controller
     {
+        //this is the HTTP get method to retreive the 'Recycling Suggestions' page
         public ActionResult RecyclingSuggestions()
         {
             return View();
         }
        
 
+        //this is the HTTP get method to retreive the main home page screen which is shown to the user when the user starts accessing the website
         public ActionResult Index()
         {
             return View();
         }
 
-        //public ActionResult About()
-        //{
-        //    ViewBag.Message = "Your application description page.";
-
-        //    return View();
-        //}
-
-        //public ActionResult Contact()
-        //{
-        //    ViewBag.Message = "Your contact page.";
-
-        //    return View();
-        //}
+       
     }
 }

@@ -6,18 +6,32 @@
 
 
 }
-    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+@*below are the scripts that are being used in this layout*@
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>  @*jquery javascript*@
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://d3js.org/d3.v4.min.js"></script>
-
+<script src='https://cdn.jsdelivr.net/mojs/latest/mo.min.js'></script>
+<script src='https://cdn.jsdelivr.net/mojs-player/latest/mojs-player.min.js'></script>
 
 <head>
     <style>
+    canvas{
+position:absolute;
+	left:0;
+	top:0;
+	z-index:0;
+	border:0px solid #000;
+}
+
+        /*css to change the top navigation bar colour*/
         .navbar {
             background-color: white !important;
         }
 
+        /*css for the hero image*/
         .hero-image {
             background-image: url('../../Content/Images/citycouncil.jpeg');
             height: 50%;
@@ -26,10 +40,10 @@
             background-size: cover;
             position: relative;
             width: 100%;
-            
         }
 
-         .modal.fade .modal-dialog {
+        /*below are the css for the modal dialog box which is being shown when the user does not enter a valid postcode*/
+        .modal.fade .modal-dialog {
             opacity: 0;
             -webkit-transition: all 0.5s ease-in-out;
             transition: all 0.5s;
@@ -65,48 +79,49 @@
             font-family: 'Comic Sans MS';
         }
 
-              @@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  
-  and (-webkit-min-device-pixel-ratio: 2) {
+        /*media query to introduce responsiveness in the mobile phones*/
+        @@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+        }
 
-}
 
-                      .header {
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  width: 100%;
-  background-color: #f1f1f1;
-}
-      .progress-container {
-  width: 100%;
-  height: 8px;
-  background: #ccc;
-}
+        /*this css is to show the progress bar at the top of the screen*/
+        .header {
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+            background-color: #f1f1f1;
+        }
 
-.progress-bar {
-  height: 8px;
-  background: #4caf50;
-  width: 0%;
-}
+        .progress-container {
+            width: 100%;
+            height: 8px;
+            background: #ccc;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: #4caf50;
+            width: 0%;
+        }
     </style>
 </head>
 
 <body>
     <div class="content">
+        @*below is the html for hero image shown at the top of the screen*@
         <div class="hero-image responsive" style="height: 460px">
-            <div class="hero-text" style="text-align:center;transform: translate(-50%, -50%); position:absolute;left:50%;top:50%;">
+            <div class="hero-text" style="text-align: center;transform: translate(-50%, -50%);position: absolute;left: 50%;top: 50%;">
 
                 <div class="row">
                     <div class="col-md-12">
                         <div class="col-md-6">
-                            <input style="width:220px;margin-right:20px;height:40px;" class="form-control" id="postcode" aria-describedby="emailHelp" placeholder="Enter postcode">
+                            @*textbox to let the user enter their postcode*@
+                            <input style="width: 220px; margin-right: 20px; height: 40px;" class="form-control" id="postcode" aria-describedby="emailHelp" placeholder="Enter postcode">
                         </div>
                         <div class="col-md-6" style="margin-top:2px;">
 
-                            @*<button id="search" type="submit" style="height:50px;" class="btn btn-primary">Search</button>*@
+                            @*button to start searching*@
                             <a id="search" class="btn btn-primary">
                                 <i class="fa fa-cog fa-spin"></i>
                                 Search
@@ -117,6 +132,7 @@
 
             </div>
         </div>
+        @*below is the code to show the modal panel popup when the user does not enter a postcode in melbourne*@
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
              aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" id="resizemodal" role="document">
@@ -133,6 +149,7 @@
                 </div>
             </div>
         </div>
+        @*this is the div to show the basic description. this div is hidden when the results of the council are fetched*@
         <div id="trial" style="text-align:left;margin-top:30px;">
             <div class="col-md-12">
                 <div class="col-md-3">
@@ -150,6 +167,10 @@
             </div>
 
         </div>
+
+       
+
+        @*this div will be replaced by the partial view which will retreive the details of the council*@
         <div id="searchResults"></div>
 
 
@@ -158,7 +179,7 @@
     <script>
         // When the user scrolls the page, execute myFunction
         window.onscroll = function () { myFunction() };
-
+        //this javascript is to make the progress bar at the top work according to the scrolling of the page
         function myFunction() {
             var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -170,45 +191,48 @@
 
 <script>
     $(document).ready(function () {
-       var url = '@Url.Action("RatePartial", "councilRates")';
+        $("#js-mojs-player").hide();
+        //url to call the ratepartial action method in the councilrates controller
+        var url = '@Url.Action("RatePartial", "councilRates")';
+
+        //this is to call the modal popup when invalid postcode is inputted
          function alignModal() {
            var modalDialog = $("#resizemodal");
             /* Applying the top margin on modal dialog to align it vertically center */
             modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 3.5));
 
-           
+
         }
 
+        //code to be executed when the 'search' button is clicked
        $("#search").click(function () {
-           
-          
+
+
            var model = @Html.Raw(Json.Encode(Model));
            var council = "";
-           
+
+           //for each postcode existing in the database, check if the postcode is valid and retreive the associated council
            for (var item in model)
            {
-              
+
                if (model[item].postcode == $("#postcode").val())
                {
-                  
+
                    council = model[item].council;
-                   break;
+                   break; //break the for loop if the council is found
                }
            }
-            //$(model).each(function (index) {
-            //   if ($(this)[0].postcode == $("#postcode").val())
-            //   {
-            //       council = $(this)[0].council;
-            //    }
-           //});
-           
+
+           //if the council is not found, then show that the postcode inputted is not valid
             if (council == "")
             {
                  alignModal();
                  $("#exampleModalCenter").modal('show');
             }
+
+           //if the council is found then call the partial view by calling the ratepartial actionmethod
             else {  $("#trial").hide();$('#searchResults').load(url, { searchText: council }); }
-            
+
          });
 
 

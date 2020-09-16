@@ -43,6 +43,22 @@
             .last {
                 border: 2px solid red;
             }
+
+            .party-popper {
+  position: absolute;
+  top: 85%;
+  left: 15%;
+  height:auto;
+}
+.party-popper__emoji {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 2em;
+  -webkit-transform: translate(-50%) rotate(-30deg);
+          transform: translate(-50%) rotate(-30deg);
+  z-index: 1;
+}
         </style>
     </head>
 
@@ -56,15 +72,26 @@
         top: 20%;
     ">
 
+
+
+
             <h1 style="font-family:Calibri;color:indianred"><b>@ViewBag.Council <br /> Recycling Rate</b> </h1>
             <div id="chart" style="margin-top:30px;"></div>
             <h1 style="font-family:Calibri; margin-top:-40px;margin-bottom:10px;font-size:26px;"><b>#@Rank in 79 Councils</b></h1>
+            <div id="party" style="display:none" class="party-popper">
+                <div class="party-popper__emoji">🎉</div>
+            </div>
+            <script src='https://cdn.jsdelivr.net/mojs/latest/mo.min.js'></script>
+            <script src='https://cdn.jsdelivr.net/mojs-player/latest/mojs-player.min.js'></script>
+
+            <script src="~/Scripts/confetti.js"></script>
+            @*javascript to show the gauge*@
             <script src="~/Scripts/gauge.js"></script>
 
             <script>
                 function randNumberBounds() {
                     var Rate1 = '@ViewBag.Rate';
-                    
+
                     return parseInt(Rate1);
                 }
 
@@ -86,7 +113,7 @@
                     resize();
                     window.addEventListener("resize", resize);
 
-                   
+
                 })()
             </script>
         </div>
@@ -145,7 +172,7 @@
 
                 </div>
                 <div class="col-md-6">
-                    <img class="img-responsive" src="~/Content/Images/totalRecycle.png" />
+                    <img class="img-responsive" src="~/Content/Images/VICrecycling.gif" />
                 </div>
 
                 <div class="col-md-4 align-items-center justify-content-center" style="text-align:left;margin-top:20px;margin-left:5px;">
@@ -171,9 +198,14 @@
 </body>
 
 <script>
+   $("._mojs-player_tes6w_4").hide();
+    //javascript - when the button is clicked scroll down to the bottom of the page
     $(document).ready(function () {
         $('html, body').animate({ scrollTop: $(window).height() / 1.5 }, 'slow');
-
+       
+        if (@Rank== 1 || @Rank== 2 || @Rank== 3) {  $("#party").show();$("._mojs-player_tes6w_4").hide(); }
+        $("._mojs-player_tes6w_4").hide();
+         
 
     });
 </script>

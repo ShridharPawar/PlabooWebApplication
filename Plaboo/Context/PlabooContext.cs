@@ -9,6 +9,8 @@ namespace Plaboo.Context
 {
     public class PlabooContext : DbContext
     {
+
+        //this will have individual datasets for every existing table in the database
         public PlabooContext() : base("name=DBConnection")
         {
         }

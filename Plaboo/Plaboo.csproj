@@ -343,6 +343,7 @@
     <Content Include="Content\Images\cookingutensils.png" />
     <Content Include="Content\Images\cottonbuds.png" />
     <Content Include="Content\Images\cup.png" />
+    <Content Include="Content\Images\favicon.ico" />
     <Content Include="Content\Images\foodstorage.png" />
     <Content Include="Content\Images\hardhat.png" />
     <Content Include="Content\Images\kitchen.png" />

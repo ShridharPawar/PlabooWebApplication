@@ -137,7 +137,6 @@
     <Compile Include="Controllers\councilRatesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PlasticsController.cs" />
-    <Compile Include="Controllers\QuizsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -488,13 +487,9 @@
     <Content Include="Views\councilRates\Index.cshtml" />
     <Content Include="Views\councilRates\RatePartial.cshtml" />
     <Content Include="Views\Plastics\Index.cshtml" />
-    <Content Include="Views\Quizs\Create.cshtml" />
-    <Content Include="Views\Quizs\Delete.cshtml" />
-    <Content Include="Views\Quizs\Details.cshtml" />
-    <Content Include="Views\Quizs\Edit.cshtml" />
-    <Content Include="Views\Quizs\Index.cshtml" />
     <Content Include="Views\Home\RecyclingSuggestions.cshtml" />
     <Content Include="Views\Account\LogOn.cshtml" />
+    <Content Include="Views\Home\Quiz.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

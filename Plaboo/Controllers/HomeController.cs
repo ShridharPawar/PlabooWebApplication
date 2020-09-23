@@ -9,6 +9,13 @@ namespace Plaboo.Controllers
     //[Authorize]
     public class HomeController : Controller
     {
+
+        public ActionResult Quiz()
+        {
+            return View();
+        }
+
+
         //this is the HTTP get method to retreive the 'Recycling Suggestions' page
         public ActionResult RecyclingSuggestions()
         {

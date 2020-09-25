@@ -111,7 +111,7 @@ position:absolute;
 <body>
     <div class="content">
         @*below is the html for hero image shown at the top of the screen*@
-        <div class="hero-image responsive" style="height: 460px">
+        <div class="hero-image responsive" style="height: 460px;margin-bottom:30px;">
             <div class="hero-text" style="text-align: center;transform: translate(-50%, -50%);position: absolute;left: 50%;top: 50%;">
                 <h2 style="color:white; font-family: Calibri">
                     Enter your postcode and  know <br /> the Recyling Rate of your Area.
@@ -171,11 +171,171 @@ position:absolute;
 
         </div>*@
 
-       
+
 
         @*this div will be replaced by the partial view which will retreive the details of the council*@
         <div id="searchResults"></div>
+        <div class="row">
 
+            <div class="col-md-12">
+                <div class="col-md-2"></div>
+
+                <div class="col-md-4">
+                    <p style="font-family:'Calibri';font-size:22px;background-color:azure;margin-top:0px;">
+                        <b>What is Recycling Rate?</b><br />'Recycling Rate' is a measure to assess the proportion of disposable or recyclable waste items.
+                        Some products may not be recyclable because the processing center has been polluted or cannot handle such recyclable materials.
+                        <br /><b>Recycling Rate</b> = Annual total waste recycled/ Annual total waste generation
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    @*<img  class="img-responsive" onclick="location.href='@Url.Action("Index", "councilRates")'" id="top3"
+                    src="~/Content/Images/top3councils.jpeg" target="_blank" />*@
+                    <div class="col-md-12" style="text-align:center">
+                        <h3 style="color:indianred"><b>Top Councils in Melbourne</b></h3>
+                    </div>
+                    <div class="row" style="margin:5px;">
+                        <table class="table table-striped table-bordered" data-order='[[0, "asc"]]'>
+                            <thead>
+                                <tr>
+                                    <th style="background-color:skyblue;">
+                                        Rank in Melbourne
+
+                                    </th>
+                                    <th style="background-color:skyblue;">
+                                        Council Name
+
+                                    </th>
+                                    <th style="background-color:skyblue;">
+                                        Recycling Rate
+
+                                    </th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td>
+                                        Strathbogie Shire
+                                    </td>
+                                    <td>
+                                        48%
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        2
+
+                                    </td>
+                                    <td>
+                                        Bass Coast Shire
+                                    </td>
+                                    <td>
+                                        47%
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        3
+                                    </td>
+                                    <td>
+                                        Alpine Shire
+                                    </td>
+                                    <td>
+                                        43%
+                                    </td>
+
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-12">
+                        <a style="font-size:23px;color:#0275d8;font-family:Calibri" href="@Url.Action("Index", "councilRates")">
+                            View Full Results <i class="fas fa-arrow-circle-right"></i>
+                        </a>
+                    </div>
+                    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+                    @section Scripts {
+
+                        <script src="~/Scripts/DataTables/jquery.dataTables.js"></script>
+                        <script src="~/Scripts/DataTables/dataTables.bootstrap.js"></script>
+                        @*this script is to show the datatable to show details of all councils*@
+                        @*<script>
+                            $(document).ready(function () {
+                                $('.table').DataTable({ "stripeClasses": ['odd-row', 'even-row'] });
+
+                            });
+
+                        </script>*@
+                    }
+                    <link href="~/Content/DataTables/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+                </div>
+
+                <div class="col-md-2"></div>
+                @*<div class="col-md-12" style="margin-top:20px;">
+                    <div class="col-md-6">
+                    </div>
+                    <div class="col-md-6" style="text-align:left;">
+                        <button id="allCouncils" style="margin-left:13px;" type="button" class="btn btn-primary"
+                                onclick="location.href='@Url.Action("Index", "councilRates")'">
+                            <i class="fa fa-cog fa-spin"></i> View Full Result
+                        </button>
+                    </div>
+
+                </div>*@
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-4"></div>
+                <div class="col-md-4" style="text-align:center;margin-top:10px;">
+                    <img style="height:50px;width:50px;" src="~/Content/Images/arrowdown.PNG" />
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top:16px;">
+
+            <div class="col-md-12" style="margin-top:20px;">
+                <h1 style="color:indianred;font-size:37px;text-align:center">Make Victoria Recycling Great Again</h1>
+            </div>
+            <div class="col-md-12" style="margin-top:20px;">
+                <div class="col-md-1">
+
+                </div>
+                <div class="col-md-6">
+                    <img class="img-responsive" src="~/Content/Images/VICrecycling.gif" />
+                </div>
+
+                <div class="col-md-4 align-items-center justify-content-center" style="text-align:left;margin-top:20px;margin-left:5px;">
+                    <p class="center" style="background-color:azure;font-family:'Calibri';font-size:22px;">
+                        <b>Did you know</b>, for every 10,000 tonnes (which is around 1% increase in recycling rate)  of waste recycled, 9.2 jobs are created. As seen in the graph,
+                        the recycling rate in Victoria had been stable (but not very impressive), so together, let's all pledge to 'Make Victoria Recycling Great Again!'
+                    </p>
+
+                    <a style="font-size:23px;color:#0275d8;font-family:Calibri" href="@Url.Action("RecyclingSuggestions", "Home")">
+                        How To Improve? <i class="fas fa-arrow-circle-right"></i>
+                    </a>
+                </div>
+                <div class="col-md-1">
+
+
+                </div>
+            </div>
+
+        </div>
 
 
     </div>

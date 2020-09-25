@@ -1,50 +1,71 @@
 ﻿@model IEnumerable<Plaboo.Models.RecyclingCentre>
 
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+        <style>
+            .navbar {
+            background-color: white !important;
+        }
+        </style>
+    </head>
 
 
-@*<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Latitude)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Longitude)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Suburb)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Postcode)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Address)
-        </th>
-        <th></th>
-    </tr>
+    <body>
+        <div id="map" style="height:300px"></div>
+    </body>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Latitude)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Longitude)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Suburb)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Postcode)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Address)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Name }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Name }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Name })
-        </td>
-    </tr>
+
+@section Scripts {
+
+    @Scripts.Render("~/bundles/mapbox")
 }
 
-</table>*@
+@*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Latitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Longitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Suburb)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Postcode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Latitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Longitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Suburb)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Postcode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Name }) |
+                @Html.ActionLink("Details", "Details", new { id=item.Name }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Name })
+            </td>
+        </tr>
+    }
+
+    </table>*@

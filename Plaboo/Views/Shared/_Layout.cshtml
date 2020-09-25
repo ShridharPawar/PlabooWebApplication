@@ -18,6 +18,12 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet' />
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    @* This is for the mapbox map. *@
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     @*This is used for the Geocoding Mapbox API*@
     <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.2.0/mapbox-gl-geocoder.min.js'></script>
     <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.2.0/mapbox-gl-geocoder.css' type='text/css' />
@@ -35,16 +41,15 @@
         .navbar-toggle {
             border-color: lightgreen;
         }
-      
 
-        .dropdown{
-            position:relative;
+
+        .dropdown {
+            position: relative;
         }
 
-        .dropdown:hover .dropdown-menu{
-            display:block;
-            
-        }
+            .dropdown:hover .dropdown-menu {
+                display: block;
+            }
     </style>
 
 
@@ -82,6 +87,7 @@
                     </li>
                     <li><a id="homenav" style="top:0px;" href="@Url.Action("Index", "Alternatives")"><i class="fas fa-directions"></i><span> Alternatives</span></a></li>
                     <li><a id="homenav" style="top:0px;" href="@Url.Action("Quiz", "Home")"><i class="fas fa-question-circle"></i><span> Quiz</span></a></li>
+                    <li><a id="homenav" style="top:0px;" href="@Url.Action("Index", "RecyclingCentres")"><i class="fas fa-question-circle"></i><span> Centre</span></a></li>
                     @*<li>@Html.ActionLink("Log Off", "LogOn", "Account", null, new { @class = "actnclass" })</li>*@
 
                 </ul>

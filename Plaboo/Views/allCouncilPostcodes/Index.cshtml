@@ -33,13 +33,14 @@ position:absolute;
 
         /*css for the hero image*/
         .hero-image {
-            background-image: url('../../Content/Images/citycouncil.jpeg');
+            background-image: url('../../Content/Images/suburb7.jpg');
             height: 50%;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             position: relative;
             width: 100%;
+
         }
 
         /*below are the css for the modal dialog box which is being shown when the user does not enter a valid postcode*/
@@ -112,7 +113,9 @@ position:absolute;
         @*below is the html for hero image shown at the top of the screen*@
         <div class="hero-image responsive" style="height: 460px">
             <div class="hero-text" style="text-align: center;transform: translate(-50%, -50%);position: absolute;left: 50%;top: 50%;">
-
+                <h2 style="color:white; font-family: Calibri">
+                    Enter your postcode and  know <br /> the Recyling Rate of your Area.
+                </h2>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="col-md-6">
@@ -150,7 +153,7 @@ position:absolute;
             </div>
         </div>
         @*this is the div to show the basic description. this div is hidden when the results of the council are fetched*@
-        <div id="trial" style="text-align:left;margin-top:30px;">
+        @*<div id="trial" style="text-align:left;margin-top:30px;">
             <div class="col-md-12">
                 <div class="col-md-3">
 
@@ -166,7 +169,7 @@ position:absolute;
                 </div>
             </div>
 
-        </div>
+        </div>*@
 
        
 
@@ -231,7 +234,7 @@ position:absolute;
             }
 
            //if the council is found then call the partial view by calling the ratepartial actionmethod
-            else {  $("#trial").hide();$('#searchResults').load(url, { searchText: council }); }
+            else {  /*$("#trial").hide();*/$('#searchResults').load(url, { searchText: council }); }
 
          });
 

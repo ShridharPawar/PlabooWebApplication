@@ -25,6 +25,47 @@
                 position: relative;
                 width: 100%;
             }
+
+            /*below are the css for the modal dialog box which is being shown when the user does not enter a valid postcode*/
+        .modal.fade .modal-dialog {
+            opacity: 0;
+            -webkit-transition: all 0.5s ease-in-out;
+            transition: all 0.5s;
+            transform: scale(0) rotate(500deg);
+        }
+
+        .modal.fade.in .modal-dialog {
+            opacity: 1;
+            transform: scale(1) rotate(0deg);
+        }
+
+        .modal-backdrop {
+            background-color: gray;
+        }
+
+        .modal-header {
+            background-color: azure;
+            color: white;
+        }
+
+        .modal-body {
+            background-color: azure;
+            color: white;
+        }
+
+        .modal-footer {
+            background-color: azure;
+            color: white;
+        }
+
+        .mcontent {
+            color: black;
+            font-family: 'Comic Sans MS';
+        }
+
+        /*media query to introduce responsiveness in the mobile phones*/
+        @@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+        }
         </style>
     </head>
 
@@ -40,7 +81,7 @@
                         <div class="col-md-12">
                             <div class="col-md-6">
                                 @*textbox to let the user enter their postcode*@
-                                <input style="width: 220px; margin-right: 20px; height: 40px;" class="form-control" id="suburb" aria-describedby="emailHelp" placeholder="Enter postcode">
+                                <input style="width: 220px; margin-right: 20px; height: 40px;" class="form-control" id="suburb" aria-describedby="emailHelp" placeholder="Enter suburb">
                             </div>
                             <div class="col-md-6" style="margin-top:2px;">
 
@@ -58,18 +99,35 @@
         </div>
 
         <div id="map" style="height:500px;"></div>
+        @*below is the code to show the modal panel popup when the user does not enter a postcode in melbourne*@
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+             aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" id="resizemodal" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="mcontent" id="popupcontent">Please enter a suburb in Melbourne!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 
 
 
 <script>
     var availableTags = [];
-    debugger;
+    
     var model = @Html.Raw(Json.Encode(Model));
            //for each postcode existing in the database, check if the postcode is valid and retreive the associated council
            for (var item in model)
            {
-               debugger;
+             
                availableTags.push(model[item].Suburb);
            }
 
@@ -98,7 +156,7 @@
         //code to be executed when the 'search' button is clicked
        $("#search").click(function () {
            var suburb = $("#suburb").val();
-
+           locations = [];
           //for each postcode existing in the database, check if the postcode is valid and retreive the associated council
            for (var item in model)
            {
@@ -115,9 +173,9 @@
                         locations.push(point);
                }
            }
-
+           
            //if the council is not found, then show that the postcode inputted is not valid
-            if (suburb == "")
+           if (suburb == "" || locations.length==0)
             {
                  alignModal();
                  $("#exampleModalCenter").modal('show');

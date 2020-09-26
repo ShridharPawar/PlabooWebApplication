@@ -21,7 +21,8 @@ namespace Plaboo.Controllers
             return View(db.RecyclingCentres.ToList());
         }
 
-        // GET: RecyclingCentres/Details/5
+      
+      // GET: RecyclingCentres/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)

@@ -1,5 +1,7 @@
 ﻿@model IEnumerable<Plaboo.Models.RecyclingCentre>
 
+
+
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -9,63 +11,191 @@
             .navbar {
             background-color: white !important;
         }
+
+             .hero-image {
+            background-image: url('../../Content/Images/suburb7.jpg');
+            height: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            width: 100%;
+
+        }
         </style>
     </head>
 
 
     <body>
-        <div id="map" style="height:300px"></div>
+        <div class="content">
+            <div class="hero-image responsive" style="height: 460px;margin-bottom:30px;">
+                <div class="hero-text" style="text-align: center;transform: translate(-50%, -50%);position: absolute;left: 50%;top: 50%;">
+                    <h2 style="color:white; font-family: Calibri">
+                        Enter your suburb and  know <br /> the Recyling Centres near you.
+                    </h2>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-6">
+                                @*textbox to let the user enter their postcode*@
+                                <input style="width: 220px; margin-right: 20px; height: 40px;" class="form-control" id="suburb" aria-describedby="emailHelp" placeholder="Enter postcode">
+                            </div>
+                            <div class="col-md-6" style="margin-top:2px;">
+
+                                @*button to start searching*@
+                                <a id="search" class="btn btn-primary">
+                                    <i class="fa fa-cog fa-spin"></i>
+                                    Search
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="map" style="height:300px;"></div>
     </body>
 
 
-@section Scripts {
 
-    @Scripts.Render("~/bundles/mapbox")
-}
+<script>
+   
+       var locations = [];
+        //this is to call the modal popup when invalid postcode is inputted
+         function alignModal() {
+           var modalDialog = $("#resizemodal");
+            /* Applying the top margin on modal dialog to align it vertically center */
+            modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 3.5));
 
-@*<table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Latitude)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Longitude)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Suburb)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Postcode)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Address)
-            </th>
-            <th></th>
-        </tr>
 
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Latitude)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Longitude)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Suburb)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Postcode)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Address)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.Name }) |
-                @Html.ActionLink("Details", "Details", new { id=item.Name }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.Name })
-            </td>
-        </tr>
+        }
+
+        //code to be executed when the 'search' button is clicked
+       $("#search").click(function () {
+
+           
+           var model = @Html.Raw(Json.Encode(Model));
+           var suburb = $("#suburb").val();
+
+          //for each postcode existing in the database, check if the postcode is valid and retreive the associated council
+           for (var item in model)
+           {
+
+               if (model[item].Suburb == $("#suburb").val())
+               {
+                   
+                    var point = {
+                            "latitude": model[item].Latitude,
+                            "longitude": model[item].Longitude,
+                            "description": model[item].Name
+                        };
+                        // Push them all into an array.
+                        locations.push(point);
+               }
+           }
+
+           //if the council is not found, then show that the postcode inputted is not valid
+            if (suburb == "")
+            {
+                 alignModal();
+                 $("#exampleModalCenter").modal('show');
+            }
+
+           //if the council is found then call the partial view by calling the ratepartial actionmethod
+            else {
+                $('html, body').animate({ scrollTop: $(window).height() / 1.5 }, 'slow');
+                showMap();
+
+            }
+
+         });
+
+    function showMap() {
+        const TOKEN = "pk.eyJ1Ijoic2hyaWRoYXJwYXdhciIsImEiOiJjazAyMTQ4MHUwaG52M21wNDk4a29ncTF1In0.cHtu-I1h34aPZp70n4V6iA";
+
+        var data = [];
+
+        for (i = 0; i < locations.length; i++) {
+            
+            var feature = {
+                "type": "Feature",
+                "properties": {
+                    "description": locations[i].description,
+                    "icon": "circle-15"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [locations[i].longitude, locations[i].latitude]
+                }
+            };
+            data.push(feature)
+        }
+        mapboxgl.accessToken = "pk.eyJ1Ijoic2hyaWRoYXJwYXdhciIsImEiOiJjazAyMTQ4MHUwaG52M21wNDk4a29ncTF1In0.cHtu-I1h34aPZp70n4V6iA";
+        var map = new mapboxgl.Map({
+
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v10',
+            zoom: 11,
+            center: [locations[0].longitude, locations[0].latitude]
+        });
+        map.on('load', function () {
+            // Add a layer showing the places.
+
+            map.addLayer({
+                "id": "places",
+                "type": "symbol",
+                "source": {
+                    "type": "geojson",
+                    "data": {
+                        "type": "FeatureCollection",
+                        "features": data
+                    }
+                },
+                "layout": {
+                    "icon-image": "{icon}",
+                    "icon-allow-overlap": true
+                }
+            });
+
+            map.addControl(new mapboxgl.GeolocateControl({
+                positionOptions: {
+                    enableHighAccuracy: true
+                },
+                trackUserLocation: true
+            }));
+            map.addControl(new MapboxGeocoder({
+                accessToken: mapboxgl.accessToken,
+                marker: { color: 'orange' }, mapboxgl: mapboxgl
+            }));;
+            map.addControl(new mapboxgl.NavigationControl());
+            // When a click event occurs on a feature in the places layer, open a popup at the
+            // location of the feature, with description HTML from its properties.
+            map.on('click', 'places', function (e) {
+                var coordinates = e.features[0].geometry.coordinates.slice();
+                var description = e.features[0].properties.description;
+                // Ensure that if the map is zoomed out such that multiple
+                // copies of the feature are visible, the popup appears
+                // over the copy being pointed to.
+                while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                    coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                }
+                new mapboxgl.Popup()
+                    .setLngLat(coordinates)
+                    .setHTML(description)
+                    .addTo(map);
+            });
+            // Change the cursor to a pointer when the mouse is over the places layer.
+            map.on('mouseenter', 'places', function () {
+                map.getCanvas().style.cursor = 'pointer';
+            });
+            // Change it back to a pointer when it leaves.
+            map.on('mouseleave', 'places', function () {
+                map.getCanvas().style.cursor = '';
+            });
+        });
     }
 
-    </table>*@
+
+</script>
+

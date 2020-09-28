@@ -2,31 +2,32 @@
 
 
 
-    <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="~/Scripts/jquery-3.4.1.min.js"></script>
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <link rel="stylesheet" href="/resources/demos/style.css">
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-        <style>
-            .navbar {
-                background-color: white !important;
-            }
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-            .hero-image {
-                background-image: url('../../Content/Images/suburb7.jpg');
-                height: 50%;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                position: relative;
-                width: 100%;
-            }
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-            /*below are the css for the modal dialog box which is being shown when the user does not enter a valid postcode*/
+    <style>
+        .navbar {
+            background-color: white !important;
+        }
+
+        .hero-image {
+            background-image: url('../../Content/Images/suburb7.jpg');
+            height: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            width: 100%;
+        }
+
+        /*below are the css for the modal dialog box which is being shown when the user does not enter a valid postcode*/
         .modal.fade .modal-dialog {
             opacity: 0;
             -webkit-transition: all 0.5s ease-in-out;
@@ -66,11 +67,34 @@
         /*media query to introduce responsiveness in the mobile phones*/
         @@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
         }
-        </style>
-    </head>
 
 
-    <body>
+
+        .row {
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: 15px
+        }
+
+        .card {
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: 20px
+        }
+
+        @@media only screen and (min-width: 600px) and (max-width: 1200px) {
+            /* For tablets: */
+            .pad {
+                margin-left: 7%
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    @using (Html.BeginForm("Index", "RecyclingCentres", FormMethod.Post))
+    {
         <div class="content">
             <div class="hero-image responsive" style="height: 460px;margin-bottom:30px;">
                 <div class="hero-text" style="text-align: center;transform: translate(-50%, -50%);position: absolute;left: 50%;top: 50%;">
@@ -81,15 +105,17 @@
                         <div class="col-md-12">
                             <div class="col-md-6">
                                 @*textbox to let the user enter their postcode*@
-                                <input style="width: 220px; margin-right: 20px; height: 40px;" class="form-control" id="suburb" aria-describedby="emailHelp" placeholder="Enter suburb">
+                                <input style="width: 220px; margin-right: 20px; height: 40px;" class="form-control" id="suburb"
+                                       aria-describedby="emailHelp" name="suburb" placeholder="Enter suburb">
                             </div>
                             <div class="col-md-6" style="margin-top:2px;">
 
-                                @*button to start searching*@
-                                <a id="search" class="btn btn-primary">
-                                    <i class="fa fa-cog fa-spin"></i>
-                                    Search
-                                </a>
+
+                                @*<a id="search" class="btn btn-primary">
+                                        <i class="fa fa-cog fa-spin"></i>
+                                        Search
+                                    </a>*@
+                                <input type="submit" value="Search" id="search" class="btn btn-primary" />
                             </div>
                         </div>
                     </div>
@@ -97,9 +123,49 @@
                 </div>
             </div>
         </div>
+    }
 
-        <div id="map" style="height:500px;"></div>
-        @*below is the code to show the modal panel popup when the user does not enter a postcode in melbourne*@
+    @*<div id="map" style="height:500px;"></div>*@
+    @*below is the code to show the modal panel popup when the user does not enter a postcode in melbourne*@
+
+    @if (Model.Count() < 2)
+    {
+        <div class="card">
+            <div class="row">
+                <div class="text-center">
+                    <h2>These are the recycling centers near you</h2>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-8">
+                    <div id="map" style="width: 100%; height: 400px;"></div>
+                </div>
+                <div class="col-lg-4 pre-scrollable" style="height:400px">
+
+                    @foreach (var result in Model)
+                    {
+                        <div class="row">
+                            <p>@result.Name</p>
+                            <p>@result.Address</p>
+                            <a class="button" href="https://www.google.com/maps/search/?api=1&query=@result.Address" target="_blank">Get Directions</a>
+                            <hr />
+                        </div>
+                    }
+
+                </div>
+                
+            </div>
+        </div>
+    }
+
+
+
+
+
+
+
+
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
              aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" id="resizemodal" role="document">
@@ -121,29 +187,24 @@
 
 
 <script>
+
     var availableTags = [];
-    
+
     var model = @Html.Raw(Json.Encode(Model));
-           //for each postcode existing in the database, check if the postcode is valid and retreive the associated council
-           for (var item in model)
-           {
-             
-               availableTags.push(model[item].Suburb);
-           }
+          
+    var array = @Html.Raw(Json.Encode(@ViewBag.availabletags));
+    for (var i = 0; i < array.length; i++) {
+        debugger;
+        availableTags.push(array[i]);
+        }
 
     $("#suburb").autocomplete({
-        
-      source: availableTags
+        source: availableTags
+       
     });
 
 
-
-
-
-
-
-
-       var locations = [];
+    var locations = [];
         //this is to call the modal popup when invalid postcode is inputted
          function alignModal() {
            var modalDialog = $("#resizemodal");
@@ -153,40 +214,63 @@
 
         }
 
-        //code to be executed when the 'search' button is clicked
-       $("#search").click(function () {
-           var suburb = $("#suburb").val();
-           locations = [];
+
+    if (model.length < 2)
+    {
+        debugger;
+        var model2 = @Html.Raw(Json.Encode(Model));
+        var a = 3;
+         locations = [];
           //for each postcode existing in the database, check if the postcode is valid and retreive the associated council
-           for (var item in model)
+           for (var item in model2)
            {
 
-               if (model[item].Suburb == $("#suburb").val())
-               {
-                   
+
                     var point = {
-                            "latitude": model[item].Latitude,
-                            "longitude": model[item].Longitude,
-                            "description": model[item].Name
+                            "latitude": model2[item].Latitude,
+                            "longitude": model2[item].Longitude,
+                            "description": model2[item].Name
                         };
                         // Push them all into an array.
                         locations.push(point);
-               }
-           }
-           
-           //if the council is not found, then show that the postcode inputted is not valid
-           if (suburb == "" || locations.length==0)
-            {
+               
+        }
+         $('html, body').animate({ scrollTop: $(window).height() / 1.5 }, 'slow');
+        showMap();
+
+    }
+
+
+
+        //code to be executed when the 'search' button is clicked
+    $("#search").click(function (e) {
+        debugger;
+        var suburb = $("#suburb").val();
+        var Found = false;
+         for (var item in array)
+         {
+             if (array[item] == suburb)
+             {
+                 Found = true;
+                 break;
+
+                     
+             }
+         }
+
+        if (!Found)
+        {
+            e.preventDefault();
                  alignModal();
                  $("#exampleModalCenter").modal('show');
-            }
+         }
 
-           //if the council is found then call the partial view by calling the ratepartial actionmethod
-            else {
-                $('html, body').animate({ scrollTop: $(window).height() / 1.5 }, 'slow');
-                showMap();
+         
+            //else {
+            //    $('html, body').animate({ scrollTop: $(window).height() / 1.5 }, 'slow');
+            //    showMap();
 
-            }
+            //}
 
          });
 
@@ -196,12 +280,12 @@
         var data = [];
 
         for (i = 0; i < locations.length; i++) {
-            
+
             var feature = {
                 "type": "Feature",
                 "properties": {
                     "description": locations[i].description,
-                    "icon": "rocket-15",
+                    "icon": "town-hall-15",
                     "iconSize": "[60, 60]",
                      "marker-color": "#3bb2d0",
       "marker-size": "large",

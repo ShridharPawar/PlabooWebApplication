@@ -159,6 +159,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\allCouncilPostcode.cs" />
+    <Compile Include="Models\CentreViewModel.cs" />
     <Compile Include="Models\councilRate.cs" />
     <Compile Include="Models\LogOnViewModel.cs" />
     <Compile Include="Models\Plastic.cs" />

@@ -18,11 +18,28 @@ namespace Plaboo.Controllers
         // GET: RecyclingCentres
         public ActionResult Index()
         {
+            ViewBag.availabletags = db.RecyclingCentres.Select(x => x.Suburb).ToList().ToArray();
             return View(db.RecyclingCentres.ToList());
+
         }
 
-      
-      // GET: RecyclingCentres/Details/5
+        public List<string> AutoComplete()
+        {
+            return db.RecyclingCentres.Select(x=>x.Suburb).ToList();
+
+        }
+
+        [HttpPost]
+        public ActionResult Index(FormCollection formcollection)
+        {
+            var suburbstring = formcollection["suburb"];
+            ViewBag.availabletags = db.RecyclingCentres.Select(x => x.Suburb).ToList().ToArray();
+            return View(db.RecyclingCentres.Where(x=>x.Suburb == suburbstring).ToList());
+
+        }
+
+
+        // GET: RecyclingCentres/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)

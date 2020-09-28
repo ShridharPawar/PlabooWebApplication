@@ -18,7 +18,7 @@ namespace Plaboo.Controllers
         // GET: RecyclingCentres
         public ActionResult Index()
         {
-            ViewBag.availabletags = db.RecyclingCentres.Select(x => x.Suburb).ToList().ToArray();
+            ViewBag.availabletags = db.RecyclingCentres.Select(x => x.Suburb).Distinct().ToList().ToArray();
             return View(db.RecyclingCentres.ToList());
 
         }
@@ -33,7 +33,7 @@ namespace Plaboo.Controllers
         public ActionResult Index(FormCollection formcollection)
         {
             var suburbstring = formcollection["suburb"];
-            ViewBag.availabletags = db.RecyclingCentres.Select(x => x.Suburb).ToList().ToArray();
+            ViewBag.availabletags = db.RecyclingCentres.Select(x => x.Suburb).Distinct().ToList().ToArray();
             return View(db.RecyclingCentres.Where(x=>x.Suburb == suburbstring).ToList());
 
         }

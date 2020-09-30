@@ -18,7 +18,7 @@
         }
 
         .hero-image {
-            background-image: url('../../Content/Images/wastecentre1.jpeg');
+            background-image: url('../../Content/Images/centre2.jpg');
             height: 50%;
             background-position: center;
             background-repeat: no-repeat;
@@ -184,15 +184,17 @@
 
                         @foreach (var result in Model)
                         {
-                            <div class="row">
-                                <p><b>@result.Name</b></p>
-                                <p>@result.Address</p>
-                                <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=@result.Address" target="_blank">
-                                    Get Directions
-                                    <i class="fas fa-directions"></i>
-                                </a>
-                                <hr />
-                            </div>
+                        <div class="row">
+                            <p><b>@result.Name</b></p>
+                            <p>@result.DetailedAddress</p>
+                            <p><i class="fas fa-phone-volume"></i>- @result.Contact</p>
+                            <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=@result.Address" target="_blank">
+                                Get Directions
+                                <i class="fas fa-directions"></i>
+                            </a>
+
+                            <hr />
+                        </div>
                         }
 
                     </div>

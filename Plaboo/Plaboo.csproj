@@ -157,9 +157,12 @@
     <Compile Include="Migrations\202009250809067_init3.designer.cs">
       <DependentUpon>202009250809067_init3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009301206008_init4.cs" />
+    <Compile Include="Migrations\202009301206008_init4.designer.cs">
+      <DependentUpon>202009301206008_init4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\allCouncilPostcode.cs" />
-    <Compile Include="Models\CentreViewModel.cs" />
     <Compile Include="Models\councilRate.cs" />
     <Compile Include="Models\LogOnViewModel.cs" />
     <Compile Include="Models\Plastic.cs" />
@@ -530,6 +533,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009250809067_init3.resx">
       <DependentUpon>202009250809067_init3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009301206008_init4.resx">
+      <DependentUpon>202009301206008_init4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

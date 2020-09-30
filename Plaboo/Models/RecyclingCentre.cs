@@ -16,5 +16,9 @@ namespace Plaboo.Models
         public string Suburb { get; set; }
         public string Postcode { get; set; }
         public string Address { get; set; }
+
+        public string DetailedAddress { get; set; }
+
+        public string Contact { get; set; }
     }
 }

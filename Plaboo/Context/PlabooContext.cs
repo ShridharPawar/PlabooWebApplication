@@ -22,6 +22,6 @@ namespace Plaboo.Context
 
         public DbSet<allCouncilPostcode> allCouncilPostcodes { get; set; }
 
-        public DbSet<RecyclingCentre> RecyclingCentres { get; set; }
+       public DbSet<RecyclingCentre> RecyclingCentres { get; set; }
     }
 }

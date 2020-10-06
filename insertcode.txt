@@ -824,7 +824,7 @@ insert into RecyclingCentres values ('Cobram Landfill','-35.9553275','145.696043
 insert into RecyclingCentres values ('Cosgrove Landfill','-36.3474025','145.599398','Cosgrove','3631','Cosgrove Lemnos Road','Cosgrove Lemnos Road, Cosgrove, Victoria, 3631','0408 996 173');
 insert into RecyclingCentres values ('Dartmoor Transfer Station ','-37.902175','141.229587','Dartmoor','3304','209 Bowds Lane','209 Bowds Lane, Dartmoor, Victoria, 3304','0403 602 969');
 insert into RecyclingCentres values ('Drysdale Landfill','-38.171209000000005','144.626976','Drysdale','3222','Becks Road','Becks Road, Drysdale, Victoria, 3222','(03) 5251 2935');
-insert into RecyclingCentres values ('Eaglehawk Eco Centre','-36.72753701','144.2457443','Eaglehawk','3556','191 Upper California Gully Road','191-193 Upper California Gully Road (known as Upper Road), near Victoria Street, Eaglehawk, Victoria, 3556','(03) 5434 6000.');
+insert into RecyclingCentres values ('Eaglehawk Eco Centre','-36.72753701','144.2457443','Eaglehawk','3556','191 Upper California Gully Road','191-193 Upper California Gully Road (known as Upper Road), near Victoria Street, Eaglehawk, Victoria, 3556','(03) 5434 6000');
 insert into RecyclingCentres values ('Fyansford Waste Disposal and Recycling Centre','-38.14333414','144.30732749999999','Fyansford','3218','Corner Hamilton Highway and Papermills Road','Lower Paper Mills Road, Fyansford, Victoria, 3218','(03) 5224 2251');
 insert into RecyclingCentres values ('Grantville Landfill and Transfer Station','-38.420836','145.5196345','Grantville','3984','Corner Bass Highway and Stanley Road','1685 Bass Highway, Grantville, Victoria, 3984','(03) 5678 8739');
 insert into RecyclingCentres values ('Hamilton Landfill','-37.748077','141.99613200000002','Hamilton','3300','Corner Elijah Street and Dale Street','68 Elijah St, Hamilton, Victoria, 3300','(03) 5573 0444');
@@ -852,7 +852,7 @@ insert into RecyclingCentres values ('Devil Bend Landfill','-38.295004','145.076
 insert into RecyclingCentres values ('Corio Landfill and Waste Disposal','-36.927507500000004','145.808526','Corio','3214','Bell Road','Bell Road, Corio, Victoria, 3214','1300 267 4696');
 insert into RecyclingCentres values ('Cleanaway Tullamarine','-37.67453','144.8644615','Tullamarine','3043','Western Avenue','206-300 Western Ave, Tullamarine, Victoria, 3043','(03) 9335 8880');
 insert into RecyclingCentres values ('Stawell Transfer Station','-37.099284000000004','142.73591299999998','Stawell','3380','36 Lavett Road','36 Lavett Road, Stawell, Victoria, 3380','(03) 5358 8700');
-insert into RecyclingCentres values ('Cobungra Landfill ','-37.097218','147.42257450000002','Cobungra','3898','Great Alpine Road','Great Alpine Road, Cobungra, Victoria, 3898','(03) 5722 9498.');
+insert into RecyclingCentres values ('Cobungra Landfill ','-37.097218','147.42257450000002','Cobungra','3898','Great Alpine Road','Great Alpine Road, Cobungra, Victoria, 3898','(03) 5722 9498');
 insert into RecyclingCentres values ('Carisbrook Landfill','-35.9324025','145.2011095','Carisbrook','3464','Potts Lane','Potts Lane, Carisbrook, Victoria, 3464','(03) 5456 2500');
 insert into RecyclingCentres values ('Yaapeet Landfill','-35.780281','142.0449675','Yaapeet','3424','Rainbow Road','Rainbow Road, Yaapeet, Victoria, 3424','(03) 5395 1377');
 insert into RecyclingCentres values ('Sunbury Landfill and Resource Recovery Centre','-36.42262','146.10839850000002','Sunbury','3429','Riddell Road','515 Riddell Rd, Sunbury, Victoria, 3429','(03) 9744 2974');
@@ -863,11 +863,11 @@ insert into RecyclingCentres values ('Wonthaggi Landfill','-38.6218555','145.580
 insert into RecyclingCentres values ('Erica Transfer Station','-37.983219','146.37197','Erica','3825','Mathiesons Road','Mathiesons Road, Erica, Victoria, 3825','0400 251 620');
 insert into RecyclingCentres values ('Lardner Transfer Station','-38.224022','145.863762','Lardner','3821','Simpsons Road','Simpson Road, Lardner, Victoria, 3821','(03) 5626 1399');
 insert into RecyclingCentres values ('Neerim South Transfer Station','-38.0093575','145.968221','Neerim South','3831','Neerim East Road','Neerim East Road, Neerim South, Victoria, 3841','0438 281 444');
-insert into RecyclingCentres values ('Goornong Transfer Station','-36.616467','144.5156445','Goornong','3557','39 English''s Road','39 English''s Road, Goornong, Victoria, 3557','(03) 5434 6000');
+insert into RecyclingCentres values ('Goornong Transfer Station','-36.616467','144.5156445','Goornong','3557','39 English Road','39 English Road, Goornong, Victoria, 3557','(03) 5434 6000');
 insert into RecyclingCentres values ('Colbinabbin Transfer Station','-36.5967305','144.800405','Colbinabbin','3559','Cemetery Road','89 Cemetery Road, Colbinabbin, Victoria, 3559','(03) 5480 7214');
 insert into RecyclingCentres values ('Echuca Environment Centre','-36.186796','144.769274','Echuca','3564','Echuca-Kyabram Road','510 McKenzie Road, Echuca, Victoria, 3564','(03) 5480 7214');
 insert into RecyclingCentres values ('Gunbower Transfer Station','-35.9627165','144.3768235','Gunbower','3566','Murray Valley Highway','4134 Murray Valley Highway (east of town), Gunbower, Victoria, 3563','(03) 5480 7214');
-insert into RecyclingCentres values ('Lockington Landfill','-36.334210999999996','144.506564','Lockington','3563','Corner Keane Road and Donnell Road','1671 O''Donnell Road (corner Keane Road), Lockington, Victoria, 3563','(03) 5480 7214');
+insert into RecyclingCentres values ('Lockington Landfill','-36.334210999999996','144.506564','Lockington','3563','Corner Keane Road and Donnell Road','1671 Donnell Road (corner Keane Road), Lockington, Victoria, 3563','(03) 5480 7214');
 insert into RecyclingCentres values ('Kyabram - Mt Scobie Resource Recovery Centre','-36.3120565','144.9806935','Kyabram','3619','Corner Curr Road and Everard Road','479 Everard Road (corner Curr Road), Kyabram, Victoria, 3619','(03) 5480 7214');
 insert into RecyclingCentres values ('Rochester Transfer Station','-36.3512675','144.71021100000002','Rochester','3561','High Street','139 High Street, Rochester (Cnr Sullivan St), Rochester, Victoria,  3561','(03) 5480 7214');
 insert into RecyclingCentres values ('Toolleen Transfer Station','-36.72103','144.685451','Toolleen','3551','Cornella Toolleen Road (behind Store)','22 Cornella Toolleen Road (behind store), Toolleen, Victoria, 3551','(03) 5480 7214');
@@ -875,7 +875,7 @@ insert into RecyclingCentres values ('Darebin Resource Recovery Centre','-37.720
 insert into RecyclingCentres values ('Cohuna Transfer Station','-35.834484','144.228175','Cohuna','3568','Chuggs Road','Chuggs Road, Cohuna, Victoria, 3568','(03) 5450 9333');
 insert into RecyclingCentres values ('Kerang Transfer Station','-35.720029499999995','143.92593','Kerang','3579','Kerang-Murrabit Road','Kerang-murrabit Road, Kerang, Victoria, 3579','(03) 5450 9333');
 insert into RecyclingCentres values ('Lalbert Transfer Station','-35.673526','143.37430700000002','Lalbert','3542','Wood Avenue','Wood Avenue, Lalbert, Victoria, 3542','(03) 5450 9333');
-insert into RecyclingCentres values ('Yinnar Transfer Station','-38.3623305','146.338472','Yinnar South','3869','Whitelaw''s Track','260 Whitelaws Track, Yinnar South, Victoria, 3869','1300 367 700');
+insert into RecyclingCentres values ('Yinnar Transfer Station','-38.3623305','146.338472','Yinnar South','3869','Whitelaw Track','260 Whitelaws Track, Yinnar South, Victoria, 3869','1300 367 700');
 insert into RecyclingCentres values ('Citywide Waste Management','-37.802408500000006','144.915142','Kensington','3003','West Melbourne','437 Dynon Rd, West Melbourne,Victoria, 3003','(03) 9283 2011');
 insert into RecyclingCentres values ('Broadford Transfer Station','-37.2269435','145.0755385','Broadford','3658','Mia Mia Road','Mia Mia Road, Broadford, Victoria, 3658','(03) 5734 6200');
 insert into RecyclingCentres values ('Pyalong Transfer Station','-37.114740000000005','144.86527949999999','Pyalong','3521','Ladderhill Road','Ladderhill Road, Pyalong, Victoria, 3521','(03) 5734 6200');
@@ -899,7 +899,7 @@ insert into RecyclingCentres values ('Heyfield Transfer Station','-37.961432','1
 insert into RecyclingCentres values ('Lochsport Transfer Station','-38.063736999999996','147.55159','Loch Sport','3851','Progress Road','Progress Road, Loch Sport, Victoria, 3851','1300 366 244');
 insert into RecyclingCentres values ('Seaspray Landfill','-38.365577','147.1916345','Seaspray','3851','Tip Road','Tip Rd, Seaspray, Victoria, 3851','1300 366 244');
 insert into RecyclingCentres values ('Montrose Waste Disposal and Recycling Centre','-37.816441999999995','145.3241745','Montrose','3765','69 Canterbury Road','69-71 Canterbury Rd, Montrose, Victoria, 3765','1800 001 444');
-insert into RecyclingCentres values ('Mount Beauty Transfer Station','-36.728697','147.1753705','Mount Beauty','3699','Madison''s Lane','Madison''s Lane, Mount Beauty, Victoria, 3699','0448 514 064');
+insert into RecyclingCentres values ('Mount Beauty Transfer Station','-36.728697','147.1753705','Mount Beauty','3699','Madison Lane','Madison Lane, Mount Beauty, Victoria, 3699','0448 514 064');
 insert into RecyclingCentres values ('Myrtleford Landfill and Recycling Centre','-36.5443325','146.761327','Myrtleford','3741','6 Morrisons Lane','Morrisons Lane, Myrtleford, Vcitoria, 3741','(03) 5755 0555');
 insert into RecyclingCentres values ('Porepunkah Recycling Centre','-36.7009635','146.957142','Porepunkah','3740','159 Roberts Creek Road','159 Roberts Creek Road, Porepunkah, Victoria, 3740','0418 396 122');
 insert into RecyclingCentres values ('Ararat Transfer Station','-37.2972165','142.9299145','Ararat','3377','Surface Hill Road','Surface Hill Rd, Ararat, Victoria, 3377','(03) 5355 0200');
@@ -928,7 +928,7 @@ insert into RecyclingCentres values ('Skipton Transfer Station','-37.67641500000
 insert into RecyclingCentres values ('Daylesford Landfill','-37.3317865','144.12999299999998','Daylesford','3460','32 Ajax Road','32 Ajax Road, Daylesford, Victoria, 3460','(03) 5348 2306');
 insert into RecyclingCentres values ('Omeo Landfill','-37.10068','147.603675','Omeo','3898','Margetts Lane','Margett Street, Omeo, Victoria, 3898','0429 865 358');
 insert into RecyclingCentres values ('Glen Landfill Pty Ltd','-38.140848999999996','145.1991845','Langwarrin','3910','75 Quarry Road','75 Quarry Rd, Langwarrin, Victoria, 3910','0414 399 631');
-insert into RecyclingCentres values ('Jarrads Road Transfer Station','-37.742672','141.52293899999998','Merino','3310','Jarrads Road','Jarrad''s Road, Merino, Victoria, 3310','0432 460 527');
+insert into RecyclingCentres values ('Jarrads Road Transfer Station','-37.742672','141.52293899999998','Merino','3310','Jarrad Road','Jarrad Road, Merino, Victoria, 3310','0432 460 527');
 insert into RecyclingCentres values ('Rokewood Landfill','-37.912254','143.7118965','Rokewood','3330','Corner Meadows Road and Dalys Road','Corner Meadows Road and Dalys Road, Rokewood, Victoria, 3330','(03) 5220 7111');
 insert into RecyclingCentres values ('Trentham Landfill','-37.401005','144.3186465','Trentham','3458','Myrniong Trentham Road','Cosmo Road, Trentham, Victoria,3458','(03) 5348 2306');
 insert into RecyclingCentres values ('Dimboola Transfer Station','-36.4499705','142.0475505','Dimboola','3414','Warracknabeal Road','Warracknabeal Road, Dimboola, Victoria, 3414','(03) 5333 7770');
@@ -944,7 +944,7 @@ insert into RecyclingCentres values ('Sunbury Tip','-37.5502105','144.6856355','
 insert into RecyclingCentres values ('Beechworth Transfer Station','-36.3742755','146.67828899999998','Beechworth','3747','1620 Diffey Rd','1620 Diffey Rd, Beechworth, Victoria, 3747','1300 365 003');
 insert into RecyclingCentres values ('Knox Transfer Station and Recycling Facility','-37.8826495','145.213433','Wantirna South','3152','251 George Street','251 George St, Wantirna South, Victoria, 3152','(03) 9887 4222');
 insert into RecyclingCentres values ('Moe Transfer Station','-38.201272499999995','146.309733','Newborough','3825','Haunted Hills Road','Haunted Hills Rd, Newborough, Victoria, 3825','1300 367 700');
-insert into RecyclingCentres values ('Dingee Landfill','-36.3560395','144.2387575','Dingee','3571','Lawry''s Road','Lawrys Road, Dingee, Victoria, 3571','(03) 5494 1200');
+insert into RecyclingCentres values ('Dingee Landfill','-36.3560395','144.2387575','Dingee','3571','Lawry Road','Lawry Road, Dingee, Victoria, 3571','(03) 5494 1200');
 insert into RecyclingCentres values ('Inglewood Landfill','-36.566775','143.876544','Inglewood','3517','Inglewood-Salisbury Rd','Inglewood-Salisbury Rd, Inglewood,  Vicoria, 3517','(03) 5494 1200');
 insert into RecyclingCentres values ('Wedderburn Transfer Station','-36.422782','143.60524650000002','Wedderburn','3518','Godfrey Street','Godfrey St, Wedderburn, Victoria, 3518','(03) 5494 1200');
 insert into RecyclingCentres values ('Kyneton Transfer Station','-37.2253975','144.4579','Kyneton','3444','140 Redesdale Road','140 Redesdale Rd, Kyneton, Victoria, 3444','(03) 5422 3661');
@@ -1000,7 +1000,7 @@ insert into RecyclingCentres values ('Patchewallock Landfill','-35.3708505','142
 insert into RecyclingCentres values ('Rupanyup Landfill','-36.615909499999994','142.63438100000002','Rupanyup','3388','Rupanyup-Warracknabeal Road','Rupanyup-Warracknabeal Road, Rupanyup, Victoria, 3388','(03) 5398 0100');
 insert into RecyclingCentres values ('Warracknabeal Landfill','-36.2275335','142.40690800000002','Warracknabeal','3393','Golf Links Road','Golf Links Road, Warracknabeal, Victoria, 3393','(03) 5398 0100');
 insert into RecyclingCentres values ('Tungamah Waste Transfer and Resource Recovery Centre','-36.148410999999996','145.882225','Tungamah','3728','Tungamah Road','Tungamah Road,  Tungamah,  Vicoria, 3728','(03) 5871 9222');
-insert into RecyclingCentres values ('Shepparton Waste Transfer and Resource Recovery Centre','-36.347751','145.38834450000002','Shepparton','3630','125 Wanganui Road','125 Wanganui Road, Shepparton, Victoria, 3630','(03) 5832 9348.');
+insert into RecyclingCentres values ('Shepparton Waste Transfer and Resource Recovery Centre','-36.347751','145.38834450000002','Shepparton','3630','125 Wanganui Road','125 Wanganui Road, Shepparton, Victoria, 3630','(03) 5832 9348');
 insert into RecyclingCentres values ('Ardmona Waste Transfer and Resource Recovery Centre','-36.4028835','145.3134105','Ardmona','3629','Corner Midland Highway and Turnbull Road','Corner of the Midland Highway and Turnbull Road, Ardmona, Victoria, 3629','(03) 5825 2214');
 insert into RecyclingCentres values ('Rushworth Waste Transfer and Resource Recovery Centre','-36.601321999999996','145.00084750000002','Rushworth','3612','Nine Mile Road','186 Nine Mile Road, Rushworth, Victoria, 3612','1300 666 535');
 insert into RecyclingCentres values ('Wallan Waste Transfer and Resource Recovery Centre','-37.4173575','145.0011505','Wallan','3756','Freeway Drive (Wallan Industrial Estate)','4-5 Freeway Drive Wallan Industrial Estate, Wallan, Victoria, 3756','(03) 5734 6200');
@@ -1018,7 +1018,7 @@ insert into RecyclingCentres values ('Graytown Collection Point','-36.8344855','
 insert into RecyclingCentres values ('Shepparton Material Recovery Facility','-36.377390000000005','145.42443799999998','Shepparton','3630','Old Dookie Road','75 Old Dookie Road, Shepparton, Victoria, 3630','(03) 5832 9700');
 insert into RecyclingCentres values ('Inverloch Waste Transfer Station','-38.631083000000004','145.75128','Inverloch','3996','Old Ford Road','Old Ford Rd, Inverloch, Victoria, 3996','(03) 0408 131 072');
 insert into RecyclingCentres values ('Deans Marsh Transfer Station','-38.429679','143.878265','Pennyroyal','3235','110 Pennyroyal Station Road','110 Pennyroyal Station Road, Pennyroyal, Victoria, 3235','(03) 5261 0600');
-insert into RecyclingCentres values ('Barton''s Waste Transfer Station','-38.368913','142.448346','Warrnambool','3280','Harrington Road','20 Harrington Rd, Warrnambool, Victoria, 3280','1800 012 212');
+insert into RecyclingCentres values ('Barton Waste Transfer Station','-38.368913','142.448346','Warrnambool','3280','Harrington Road','20 Harrington Rd, Warrnambool, Victoria, 3280','1800 012 212');
 insert into RecyclingCentres values ('Drouin Waste Recyclers','-38.1222125','145.83264350000002','Drouin','3818','81 Weerong Road','81 Weerong Rd, Drouin, Victoria, 3818','(03) 5625 5252');
 insert into RecyclingCentres values ('Corryong Landfill','-37.992771999999995','145.427179','Corryong','3707','Sugarloaf Road','Sugarloaf Road, Corryong, Victoria, 3707','1300 365 222');
 insert into RecyclingCentres values ('Kingston Waste Transfer Station','-37.990344','145.10429299999998','Mordiallic','3195','24-30 Fonceca Street','24-30 Fonceca Street, Mordialloc, Victoria, 3195','(03) 9580 4842');
@@ -1028,7 +1028,7 @@ insert into RecyclingCentres values ('Eastern Recycling and Waste Transfer Centr
 insert into RecyclingCentres values ('Lindenow South Transfer Station','-37.815193','147.422472','Lindenow South','3875','Snobbs Lane','Snobbs Lane, Lindenow South, Victoria, 3875','0428 176 993');
 insert into RecyclingCentres values ('Marlo Transfer Station','-37.792265','148.534665','Marlo','3888','Tip Road','16 Tip Road, Marlo, Victoria, 3888','0428 991 363');
 insert into RecyclingCentres values ('Newmerella Transfer Station','-37.767077','148.443671','Newmerella','3886','215 Back Coringle Road','Coringle Road, Newmerella, Victroua, 3886','(03) 5153 9500');
-insert into RecyclingCentres values ('Norm''s Waste Disposal','-37.745354','142.001452','Hamilton','3300','47 Pioneer Street','47 Pioneer St, Hamilton, Victoria, 3300','0419 507 517');
+insert into RecyclingCentres values ('Norm Waste Disposal','-37.745354','142.001452','Hamilton','3300','47 Pioneer Street','47 Pioneer St, Hamilton, Victoria, 3300','0419 507 517');
 insert into RecyclingCentres values ('Bruthen Transfer Station','-37.696258','147.836406','Bruthen','3885','112 Great Alpine Road','112 Great Alpine Road, Bruthen, Victoria, 3885','0429 855 981');
 insert into RecyclingCentres values ('Ballarat Waste Transfer Station','-37.565166999999995','143.8152975','Alfredton','3350','Gillies Street South','119 Gillies Street South, Alfredton, Victoria, 3350','(03) 5320 5500');
 insert into RecyclingCentres values ('Trentham Waste Transfer Station and Resource Centre','-37.4009695','144.3184815','Trentham','3458','145 Blackwood Road','145 Blackwood Road, Trentham, Victoria, 3458','(03) 5348 2306');
@@ -1046,8 +1046,8 @@ insert into RecyclingCentres values ('Underbool Waste Facility','-35.178526','14
 insert into RecyclingCentres values ('Walpeup Waste Facility','-35.145371999999995','142.033246','Walpeup','3507','Murphy Road','Murphy Road, Walpeup, Victoria, 3507','(03) 5018 8100  ');
 insert into RecyclingCentres values ('Cob and Co Recyclers','-38.371188000000004','142.454941','Warrnambool','3280','25 Dickson Street','25 Dickson St, Warrnambool, Victoria, 3280','(03) 5561 0881');
 insert into RecyclingCentres values ('Pakenham Waste Transfer Station','-38.098182','145.4987685','Pakenham','3810','7/30-32 Exchange Dr','7/30-32 Exchange Dr, Pakenham, Victoria, 3810','13 73 29');
-insert into RecyclingCentres values ('Cleanaway Dandenong South NWO Liquid Waste Services','-38.029984999999996','145.199259','Dandenong','3175','19/21 Berends Drive','19/21 Berends Dr, Dandenong South, Victoria, 3175','13 13 39');
-insert into RecyclingCentres values ('Dandenong Resource and Recovery Facility','-38.0218495','145.192464','Dandenong','3175','72 - 74 Ordish Road','72 - 74 Ordish Road, Dandenong, Victoria, 3175','13 13 39');
+insert into RecyclingCentres values ('Cleanaway Dandenong South NWO Liquid Waste Services','-38.029984999999996','145.199259','Dandenong South','3175','19/21 Berends Drive','19/21 Berends Dr, Dandenong South, Victoria, 3175','13 13 39');
+insert into RecyclingCentres values ('Dandenong Resource and Recovery Facility','-38.0218495','145.192464','Dandenong South','3175','72 - 74 Ordish Road','72 - 74 Ordish Road, Dandenong, Victoria, 3175','13 13 39');
 insert into RecyclingCentres values ('Dargo Waste Transfer Station','-37.457305','147.236564','Dargo','3862','King Road','Kings Road, Dargo, Victria, 3862','1300 366 244');
 insert into RecyclingCentres values ('Hyland Highway Landfill','-38.2773475','146.558154','Loy Yang','3844','Hyland Highway','Hyland Hwy, Loy Yang, Vicotria, 3844','1300 367 700');
 insert into RecyclingCentres values ('Nangiloc Waste Transfer Station','-34.503828000000006','142.30881100000002','Nangiloc','3494','Castle Crossing Road','Castle Crossing Road, Nangiloc, Victoria,3494','(03) 5018 8100  ');
@@ -1080,12 +1080,12 @@ insert into RecyclingCentres values ('Dunkeld Waste Transfer Station','-37.66955
 insert into RecyclingCentres values ('Glenthompson Waste Transfer Station','-37.623723999999996','142.551352','Glenthompson','3293','Boundary Road','Boundary Road, Glenthompson, Victoria, 3293 ','(03) 5573 0444');
 insert into RecyclingCentres values ('Penshurst Waste Transfer Station','-37.856321','142.31959799999998','Penshurst','3289','5408 Hamilton Highway','5408 Hamilton Highway, Penshurst, Victoria, 3289','(03) 5573 0444');
 insert into RecyclingCentres values ('Hi-Quality Sunbury Quarry and Landfill','-37.60627051','144.7840747','Bulla','3428','600 Sunbury Road','600 Sunbury Rd, Bulla, Victoria, 3428','(03) 9307 1000');
-insert into RecyclingCentres values ('Ace Waste','-38.02062988','145.19250490000002','Dandenong  South','3175','64-68 Ordish Road','64 Ordish Rd, Dandenong South, Victoria 3175','(03) 8784 4200');
+insert into RecyclingCentres values ('Ace Waste','-38.02062988','145.19250490000002','Dandenong South','3175','64-68 Ordish Road','64 Ordish Rd, Dandenong South, Victoria 3175','(03) 8784 4200');
 insert into RecyclingCentres values ('Transpacific Campbellfield','-37.66772461','144.96490480000003','Campbellfield','3061','126 Barry Parade','126 Barry Rd, Campbellfield, Victoria, 3061','(03) 9358 8908');
-insert into RecyclingCentres values ('Transpacific Dandenong','-38.02618408','145.1923218','Dandenong','3175','88-94 Ordish Road','88-94 Ordish Road, Dandenong South, Victotia, 3175','(03) 9706 4683');
+insert into RecyclingCentres values ('Transpacific Dandenong','-38.02618408','145.1923218','Dandenong South','3175','88-94 Ordish Road','88-94 Ordish Road, Dandenong South, Victotia, 3175','(03) 9706 4683');
 insert into RecyclingCentres values ('Transpacific Portland','-38.38439941','141.5957031','Portland','3305','20 Schultz Avenue','20 Schultz Avenue, Portland, Victoria, 3305','(03) 5522 2200');
 insert into RecyclingCentres values ('Waste 2 Water Technologies ','-37.64050293','144.9641113','Somerton','3062','41-43 Freight Drive','41-43 Freight Drive, Somerton, Victoria, 3062','1300 009 298');
-insert into RecyclingCentres values ('PGM Refiners Recycling Facility','-37.98999023','145.1953125','Dandenong','3175','7 Mills Road','7 Mills Rd, Dandenong, Victoria, 3175','(03) 8794 4000');
+insert into RecyclingCentres values ('PGM Refiners Recycling Facility','-37.98999023','145.1953125','Dandenong South','3175','7 Mills Road','7 Mills Rd, Dandenong South, Victoria, 3175','(03) 8794 4000');
 insert into RecyclingCentres values ('Container Save','-38.10028076','145.1519165','Seaford','3198','14 Stephenson Road','14 Stephenson Rd, Seaford, Victoria, 3198','(03) 9775 0111');
 insert into RecyclingCentres values ('Drumsavers','-38.10198975','145.16790769999997','Carrum Downs','3201','Unit 2/28 Concord Cres','Unit 2/28 Concord Cres, Carrum Downs, Victoria, 3201','(03) 9775 0883');
 insert into RecyclingCentres values ('Envirodrum','-37.65777588','144.9564819','Campbellfield','3061','46 Jessica Road','46 Jesica Road, Campbellfield, Victoria, 3061','(03) 9357 9793');
@@ -1097,8 +1097,8 @@ insert into RecyclingCentres values ('CMA EcoCycle','-37.64660645','144.93847659
 insert into RecyclingCentres values ('Greenlife Oil ','-37.751220700000005','144.83990480000003','Sunshine North','3020','78-82 Spalding Avenue','78-82 Spalding Avenue Sunshine North, Victoria, 3020','(03) 9310 7955');
 insert into RecyclingCentres values ('Nationwide Oil ','-38.02978516','145.1964722','Dandenong South','3175','19-21 Berends Drive','19-21 Berends Drive, Dandenong South, Victoria, 3175','(03) 9706 4411');
 insert into RecyclingCentres values ('Central Recycling Pty Ltd ','-37.23120117','144.4542847','Kyneton','3444','Redesdale Road','Redesdale Rd, Kyneton, Victoria, 3444','(03) 5422 3661');
-insert into RecyclingCentres values ('Organic Environmental Solutions','-38.03179932','145.1973267','Dandenong South','3164','26-28 Souffi Place','26-28 Souffi Place, Dandenong South, Victoria, 3175','1300 723 988');
+insert into RecyclingCentres values ('Organic Environmental Solutions','-38.03179932','145.1973267','Dandenong South','3175','26-28 Souffi Place','26-28 Souffi Place, Dandenong South, Victoria, 3175','1300 723 988');
 insert into RecyclingCentres values ('Transpacific Thomastown','-37.69000244','145.0053101','Thomastown','3074','11 Chaffey Street','11 Chaffey Street, Thomastown, Victoria, 3074','(03) 8684 8910');
-insert into RecyclingCentres values ('Renex','-38.02697754','145.19311519999997','Dandenong South','3164','109-131 Ordish Road','109-131 Ordish Rd, Dandenong South, Victoria, 3175','(03) 8787 0444');
-insert into RecyclingCentres values ('Transpacific South Dandenong','-38.02270508','145.19207759999998','Dandenong South','3164','76 Ordish Road','76 Ordish Road, Dandenong South, Victoria, 3164','13 13 39');
+insert into RecyclingCentres values ('Renex','-38.02697754','145.19311519999997','Dandenong South','3175','109-131 Ordish Road','109-131 Ordish Rd, Dandenong South, Victoria, 3175','(03) 8787 0444');
+insert into RecyclingCentres values ('Transpacific South Dandenong','-38.02270508','145.19207759999998','Dandenong South','3175','76 Ordish Road','76 Ordish Road, Dandenong South, Victoria, 3175','13 13 39');
 insert into RecyclingCentres values ('Cleanaway South Geelong Transfer Station','-38.16878428','144.36866730000003','South Geelong','3220','22 Wood Street','22 Wood Street, South Geelong, Victoria, 3220','13 13 39');

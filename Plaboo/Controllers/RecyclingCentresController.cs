@@ -15,7 +15,7 @@ namespace Plaboo.Controllers
     {
         private PlabooContext db = new PlabooContext();
 
-        // GET: RecyclingCentres
+        //GET: RecyclingCentres
         public ActionResult Index()
         {
             ViewBag.availabletags = db.RecyclingCentres.Select(x => x.Suburb).Distinct().ToList().ToArray();
@@ -25,7 +25,7 @@ namespace Plaboo.Controllers
 
         public List<string> AutoComplete()
         {
-            return db.RecyclingCentres.Select(x=>x.Suburb).ToList();
+            return db.RecyclingCentres.Select(x => x.Suburb).ToList();
 
         }
 
@@ -34,27 +34,12 @@ namespace Plaboo.Controllers
         {
             var suburbstring = formcollection["suburb"];
             ViewBag.availabletags = db.RecyclingCentres.Select(x => x.Suburb).Distinct().ToList().ToArray();
-            return View(db.RecyclingCentres.Where(x=>x.Suburb == suburbstring).ToList());
+            return View(db.RecyclingCentres.Where(x => x.Suburb == suburbstring).ToList());
 
         }
 
 
-        // GET: RecyclingCentres/Details/5
-        public ActionResult Details(string id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            RecyclingCentre recyclingCentre = db.RecyclingCentres.Find(id);
-            if (recyclingCentre == null)
-            {
-                return HttpNotFound();
-            }
-            return View(recyclingCentre);
-        }
 
-        
 
         protected override void Dispose(bool disposing)
         {

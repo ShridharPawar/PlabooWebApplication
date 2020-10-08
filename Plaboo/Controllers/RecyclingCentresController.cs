@@ -34,7 +34,16 @@ namespace Plaboo.Controllers
         {
             var suburbstring = formcollection["suburb"];
             ViewBag.availabletags = db.RecyclingCentres.Select(x => x.Suburb).Distinct().ToList().ToArray();
-            return View(db.RecyclingCentres.Where(x => x.Suburb == suburbstring).ToList());
+            if (suburbstring == "")
+            {
+                return View(db.RecyclingCentres.ToList());
+            }
+            else 
+            {
+                return View(db.RecyclingCentres.Where(x => x.Suburb == suburbstring).ToList());
+            }
+          
+           
 
         }
 

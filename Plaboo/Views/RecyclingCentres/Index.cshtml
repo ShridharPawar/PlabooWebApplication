@@ -525,8 +525,8 @@
                         @*<div id="map" style="height:500px;"></div>*@
                         @*below is the code to show the modal panel popup when the user does not enter a postcode in melbourne*@
 
-                        @if (Model.Count() < 30)
-                                {
+                        @*@if (Model.Count() < 30)
+                                {*@
                         <div class="card" style="background-color:azure;">
                             <div id="maprow" class="row">
                                 <div class="text-center">
@@ -559,7 +559,7 @@
 
                             </div>
                         </div>
-                                }
+                                @*}*@
 
 
                         <div class="container" style="margin-top: 20px;">
@@ -707,7 +707,7 @@
             </div>
         </div>
     </div>
-    </div>
+  
 </body>
 
 
@@ -740,30 +740,51 @@
 
         }
 
+    
+    if (model.length < 20) {
 
-    if (model.length < 30)
-    {
-       
         var model2 = @Html.Raw(Json.Encode(Model));
-        var a = 3;
-         locations = [];
-          //for each postcode existing in the database, check if the postcode is valid and retreive the associated council
-           for (var item in model2)
-           {
+        
+        locations = [];
+        //for each postcode existing in the database, check if the postcode is valid and retreive the associated council
+        for (var item in model2) {
 
 
-                    var point = {
-                            "latitude": model2[item].Latitude,
-                            "longitude": model2[item].Longitude,
-                            "description": model2[item].Name
-                        };
-                        // Push them all into an array.
-                        locations.push(point);
-               
+            var point = {
+                "latitude": model2[item].Latitude,
+                "longitude": model2[item].Longitude,
+                "description": model2[item].Name
+            };
+            // Push them all into an array.
+            locations.push(point);
+
         }
-         $('html, body').animate({ scrollTop: $(window).height() / 1.5 }, 'slow');
+        $('html, body').animate({ scrollTop: $(window).height() / 1.5 }, 'slow');
         showMap();
 
+    }
+
+    else
+    {
+        
+         var model3 = @Html.Raw(Json.Encode(Model));
+        
+        locations = [];
+        //for each postcode existing in the database, check if the postcode is valid and retreive the associated council
+        for (var item in model3) {
+
+
+            var point = {
+                "latitude": model3[item].Latitude,
+                "longitude": model3[item].Longitude,
+                "description": model3[item].Name
+            };
+            // Push them all into an array.
+            locations.push(point);
+
+        }
+        $('html, body').animate({ scrollTop: $(window).height() / 1.5 }, 'slow');
+        showMap();
     }
 
 
@@ -772,6 +793,10 @@
     $("#search").click(function (e) {
         
         var suburb = $("#suburb").val();
+        if (suburb == "") {
+            var z = 0;
+        }
+        else {
         var Found = false;
          for (var item in array)
          {
@@ -782,7 +807,7 @@
 
                      
              }
-         }
+        }
 
         if (!Found)
         {
@@ -790,7 +815,7 @@
                  alignModal();
                  $("#exampleModalCenter").modal('show');
          }
-
+       }
          
             //else {
             //    $('html, body').animate({ scrollTop: $(window).height() / 1.5 }, 'slow');

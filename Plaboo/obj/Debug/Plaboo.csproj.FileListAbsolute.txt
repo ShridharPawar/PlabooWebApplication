@@ -78,7 +78,6 @@ D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\System.Web.WebPages.
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Newtonsoft.Json.xml
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Antlr3.Runtime.pdb
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Debug\Plaboo.csprojAssemblyReference.cache
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Debug\Plaboo.Migrations.init.resources
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Debug\Plaboo.Migrations.init1.resources
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Debug\Plaboo.Migrations.init2.resources

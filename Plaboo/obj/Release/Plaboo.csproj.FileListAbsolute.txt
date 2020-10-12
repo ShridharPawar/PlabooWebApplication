@@ -171,3 +171,6 @@ D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Release\Plaboo.pdb
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Release\Plaboo.Migrations.init2.resources
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Release\Plaboo.Migrations.init3.resources
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Release\Plaboo.csprojAssemblyReference.cache
+D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Release\Plaboo.Migrations.init4.resources
+D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Release\Plaboo.Migrations.init5.resources
+D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Release\Plaboo.Migrations.init6.resources

@@ -1,0 +1,423 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+
+
+
+
+
+    <style>
+
+
+          .card {
+            display: inline-block;
+            }
+
+
+        html, body {
+            
+            font-family: Calibri,sans-serif;
+            color: #222;
+            background-color: ghostwhite;
+             overflow-y: scroll;
+        }
+
+
+
+
+        .navbar {
+            background-color: white !important;
+
+        }
+
+           .hero-image {
+            background-image: url('../../Content/Images/parentsplastic.JPG');
+            height: 50%;
+              background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            width: 100%;
+        }
+
+        .imgtransform:hover {
+            transform: scale(1.1);
+        }
+
+              .imgtransform {
+        
+        transition: all 1.1s ease;
+    }
+
+
+        .padding {
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+        }
+
+        .welcome1 {
+            width: 90%;
+            margin: 0 auto;
+            padding-top: 2rem;
+        }
+
+
+            .welcome1 hr {
+                border-top: 2px solid #b4b4b4;
+                width: 95%;
+                margin-top: .3rem;
+                margin-bottom: 1rem;
+            }
+
+
+
+
+
+        .imgsize {
+            height: 270px;
+            width: 225px;
+        }
+
+        .card-container {
+            perspective: 500rem;
+            position: relative;
+            height: 315px;
+            margin: 20px;
+            width: 0px;
+        }
+
+
+        .card-img-top {
+            padding-bottom: 2rem;
+            @*padding: 20px;*@
+            height: 290px;
+            width: 225px;
+         }
+
+        .card {
+            padding: 20px;
+            border: 1px solid #555;
+            box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+            width: 100%;
+            margin: 0 auto; /* Added */
+            float: none; /* Added */
+            margin-bottom: 10px; /* Added */
+        }
+
+        .headerset {
+            padding-top: 250px;
+            box-sizing: border-box;
+        }
+
+        .headerset h2 {
+            font-size: 30px;
+            color:black;
+        }
+
+        .headerset h1{
+            font-size: 33px;
+            color:black;
+        }
+
+        @@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+            background-color: #f1f1f1;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 8px;
+            background: #ccc;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: #4caf50;
+            width: 0%;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="content">
+        <!--Background image-->
+        <div class="hero-image" style="height:600px" id="topimg">
+            <div class="text-center text-white headerset">
+                @*<div class="w-75 p-3" style="background-color: #abd4e7;">*@
+                <div class="w-75 p-3" style="background-color: #abd4e7;">
+                    <h2 style="color:black;font-family: Calibri">
+                        In Australia, household waste is becoming a major problem due to the population <br /> growth,
+                        with each person contributing about half a ton each year.
+                    </h2>
+                </div>
+                <br />
+                @*<a class="btn btn-primary" href="#welcome" role="button"><b>Learn More</b></a>*@
+            </div>
+            </div>
+
+
+        <!--Welcome section-->
+        <div id="welcome">
+
+            <div class="row welcome1">
+
+                <div class="col-md-12" style="text-align:center">
+
+                    <h1 style="color:indianred;font-family:Calibri">It Starts With You</h1>
+                    <hr>
+                </div>
+                <div class="col-md-12" style="text-align:center">
+
+                    <p class="lead" style="font-family:Calibri;color:black;">
+                        As the population grows, so does the waste per person, in fact Australians produce 540kg of household waste per person, every year!!
+                        Each household spends $1,266 on goods purchased but were never used and around $600
+                        worth of food is wasted by each household every year. Saving the environment starts with you.
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!--3 column selection-->
+        <div style="background-color: #b3e0ef;">
+            @*"background-color: #a8dbf7;"*@
+            <div class="row padding text-center" style="padding-top:40px;">
+                <div class="col-md-12">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <i class=""></i>
+                            <div class="inner">
+                                <img src="~/Content/Images/homeplastic.jpg" class="card-img-top imgsize center imgtransform" alt="Missing img">
+                            </div>
+                            <h2 style="color:indianred;">Did You Know?</h2>
+                            <p style="color:black;font-family:Calibri;font-size:18px;text-align:center">Recent Greenpeace analysis found that Australians alone use over 9.7 billion single-use plastic bags annually.If the current generation initiates to say 'No To Plastic', this number can be gradually reduced.</p>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <i class=""></i>
+                            <div class="inner">
+                                <img src="~/Content/Images/recycle1.jpg" class="card-img-top imgsize center imgtransform" alt="Missing img">
+                            </div>
+                            <h2 style="color:indianred;">Recycled Waste</h2>
+                            <p style="color:black;font-family:Calibri;font-size:18px;">In Victoria, on an average only 30% of waste is recycled. Insuffient recycling can have severe impacts like- pollution, overflow of landfills, destruction of natural habitats.</p>
+                        </div>
+
+                        <div class="col-sm-12 col-md-4">
+                            <i class=""></i>
+                            <div class="inner">
+                                <img src="~/Content/Images/challenge.jpeg" class="card-img-top imgsize center imgtransform" alt="Missing img">
+                            </div>
+                            <h2 style="color:indianred;">The Challenge</h2>
+                            <p style="color:black;font-family:Calibri;font-size:18px;">The adolescents of Australia are concerned about the plastic pollution and 
+                            waste management issue but are unsure how to deal with it since there aren't enough platforms to guide them in the right direction.</p>
+                        </div>
+                        <a class="btn btn-primary" href="#services" role="button"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+        <!--Our services-->
+        <div id="services">
+            <div class="padding">
+                <div class="row welcome1 text-center">
+                    <div class="col-md-12">
+                        <h1 style="color:indianred;">What Can We Do?</h1>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--cards-->
+
+        <div class="padding">
+            <div class="row padding">
+
+                <div class="row text-center padding">
+                    <div class="col-md-12" style="overflow-x:scroll;">
+
+                        <div class="card-deck">
+
+
+
+                            <div class="card">
+                                <img class="card-img-top imgsize center imgtransform" src="~/Content/Images/compare.jpg">
+                                <div class="card-body">
+                                    <h4 style="color:indianred;" class="card-title">Compare Suburbs</h4>
+                                    <p style="font-size:18px;" class="card-text">
+                                        By clicking on 'Explore', you will be able to find the recycling rate of your
+                                        suburb and compare it with other suburbs to see how they perform.
+                                    </p>
+                                    <button type="button" class="btn btn-primary flip" style="margin-left: 0px; margin-top: 0px;width:110px;"
+                                            onclick="location.href='@Url.Action("Index", "allCouncilPostcodes")'">
+                                        Explore
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img class="card-img-top imgsize center imgtransform" src="~/Content/Images/centre.jpg">
+                                <div class="card-body">
+                                    <h4 style="color:indianred;font-size:23px;" class="card-title">Waste Management Suggestions</h4>
+                                    <p style="font-size:18px;" class="card-text">
+                                        By clicking on 'Learn More', you will be able to find nearby
+                                        waste management centres to discard plastic products and learn how to increase the recycling rate.
+                                    </p>
+                                    <button type="button" class="btn btn-primary flip" style="margin-left: 0px; margin-top: 0px;width:110px;"
+                                            onclick="location.href='@Url.Action("Index", "RecyclingCentres")'">
+                                        Learn More
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img class="card-img-top imgsize center imgtransform" src="~/Content/Images/altern.jpg" alt="Missing img">
+                                <div class="card-body">
+                                    <h4 style="color:indianred;" class="card-title">Switch To Alternatives</h4>
+                                    <p style="font-size:18px;" class="card-text">By clicking on 'Switch Now', you will be able to see the plastic alternatives for the items you use daily and switch to them for a better environment.</p>
+
+                                    <button type="button" class="btn btn-primary flip" style="width:110px;"
+                                            onclick="location.href='@Url.Action("Index", "Alternatives")'">
+                                        Switch Now
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img class="card-img-top imgsize center imgtransform" src="~/Content/Images/quizz.jpg">
+                                <div class="card-body">
+                                    <h4 style="color:indianred;" class="card-title">Quiz</h4>
+                                    <p style="font-size:18px;" class="card-text">
+                                        By clicking on 'Take quiz', you will be able to test your knowledge about plastic
+                                        pollution and recycling while gaining knowledge about their impacts.
+                                    </p>
+                                    <button type="button" class="btn btn-primary flip" style="margin-left: 0px; margin-top: 0px;width:110px;"
+                                            onclick="location.href='@Url.Action("Quiz", "Home")'">
+                                        Take Quiz
+                                    </button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Map and Video-->
+
+        <div class="padding">
+            <div class="row welcome1 text-center">
+                <div class="col-md-12">
+                    <h1 style="color:indianred;">Recycling in Australia</h1>
+                    <hr />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+
+
+                @*<div class='tableauPlaceholder' id='viz1600044354498' style='max-height: 560px;max-width: 950px;text-align: center;'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;RZ&#47;RZQWK6JNK&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;RZQWK6JNK' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;RZ&#47;RZQWK6JNK&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>
+                <script type='text/javascript'>var divElement = document.getElementById('viz1600044354498'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>*@
+                <div class='tableauPlaceholder' id='viz1600076671212' style='max-height: 560px;max-width: 950px;text-align: center;'><noscript><a href=''><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;Recyle_state&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Recyle_state&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;Recyle_state&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>
+                <script type='text/javascript'>var divElement = document.getElementById('viz1600076671212'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+
+        <hr />
+        <div class="row" style="">
+
+
+            <div class="col-md-12" style="text-align:center;">
+
+                <div class="embed-responsive embed-responsive-4by3" style="padding-bottom:600px;">
+                    <iframe style="max-height:560px;max-width: 950px;text-align:center;transform: translate(-50%, -50%);left:50%;top:60%;bottom:20%;"
+                            class="embed-responsive-item"
+                            src="https://www.youtube.com/embed/qM8uvAZ2wU0?start=3"></iframe>
+
+                </div>
+                <br />
+                <a class="btn btn-primary" href="#topimg" role="button">Back To Top</a>
+                <br>
+                <br>
+            </div>
+        </div>
+
+    </div>
+
+
+        <script>
+            // When the user scrolls the page, execute myFunction
+            window.onscroll = function () { myFunction() };
+
+            function myFunction() {
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrolled = (winScroll / height) * 100;
+                document.getElementById("myBar").style.width = scrolled + "%";
+            }
+
+            $(document).ready(function () {
+                // Add smooth scrolling to all links
+                $("a").on('click', function (event) {
+
+                    // Make sure this.hash has a value before overriding default behavior
+                    if (this.hash !== "") {
+                        // Prevent default anchor click behavior
+                        event.preventDefault();
+
+                        // Store hash
+                        var hash = this.hash;
+
+                        // Using jQuery's animate() method to add smooth page scroll
+                        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 800, function () {
+
+                            // Add hash (#) to URL when done scrolling (default click behavior)
+                            window.location.hash = hash;
+                        });
+                    } // End if
+                });
+            });</script>
+
+
+
+</body>
+</html>

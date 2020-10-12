@@ -1,0 +1,202 @@
+﻿
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    @*below are the scripts needed in this view, which includes the bootstrap as well as fontawesome icons*@
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+
+    <style>
+
+        body {
+                background-color: ghostwhite;
+            }
+
+        @*.hero-image {
+            background-image: url('../../Content/Images/bs.JPG');
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            width: 100%;
+        }*@
+
+     /*.hero-image {
+         background-image: url('../../Content/Images/quizcover.JPG');
+         background-size: 100% 100%;
+         background-attachment: fixed;
+         width: 100%;
+         height: 550px;
+     }*/
+
+      .hero-image {
+         background-image: url('../../Content/Images/quizcover.JPG');
+        
+         background-attachment: fixed;
+         
+         
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            width: 100%;
+     }
+     .headerset {
+         padding-top: 50px;
+         box-sizing: border-box;
+     }
+
+
+        /*to change the top navigation bar colour*/
+        .navbar {
+            background-color: white !important;
+        }
+
+        #firstquiz {
+            text-align: center;
+            margin-top: 90px;
+        }
+
+        /*#secondquiz {
+            text-align: center;
+            margin-top: 30px;
+        }*/
+
+        #secondquiz {
+            text-align: center;
+            margin-top: 90px;
+        }
+
+        /*#chart_container {
+            width: 500px;
+            height: 300px;
+            border: 1px solid #ddd;
+            padding: 5px;
+            border-radius: 5px;
+            margin-top: 50px;
+        }*/
+
+
+    </style>
+</head>
+
+<body>
+    <!--Background image-->
+
+    <div class="content">
+        <div class="hero-image" style="height:550px">
+            <div class="container-fluid text-center text-white headerset">
+                <h1 style="font-family:Calibri;color:indianred">Quiz Time!</h1>
+                <p style="font-size:23px;font-family:Calibri;color:black;text-align:center;">
+                    Our environment is facing multiple dangers, and plastic pollution is one of them. Tonnes of plastic is dumped into the oceans and this takes centuries
+                    to discard. Recycling the waste will benefit the environment and saving the environment starts with you. <br /><br />
+                </p>
+                <a class="btn btn-primary" style="font-family:Calibri" href="#firstquiz" role="button">Take the Plastic Pollution Quiz</a>
+                <a class="btn btn-primary" style="font-family:Calibri" href="#secondquiz" role="button">Take the Recycling Quiz</a>
+            </div>
+        </div>
+    </div>
+
+
+
+  
+    <div id="firstquiz">
+        <iframe id="interactApp5f6aa1f59b9c5e001486f3ad" width="800" height="750" style="border:none;max-width:100%;margin:0;" allowTransparency="true" frameborder="0" src="https://quiz.tryinteract.com/#/5f6aa1f59b9c5e001486f3ad?method=iframe"></iframe>
+    </div>
+    <div id="secondquiz">
+        <iframe id="interactApp5f6c57ae2511740014827c88" width="800" height="750" style="border:none;max-width:100%;margin:0;" allowTransparency="true" frameborder="0" src="https://quiz.tryinteract.com/#/5f6c57ae2511740014827c88?method=iframe"></iframe>
+    </div>
+
+
+    @*<script>
+
+
+
+            var ctx = $("#bar_chart");
+            var bacChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+
+                    labels: [
+                            "Strathbogie Shire",
+                            "Bass Coast Shire",
+                            "Alpine Shire"
+                        ],
+                    datasets: [{
+                    label: 'Top 3 Councils in Melbourne',
+                    data: [48, 47, 43],
+                        ticks: {min:0},
+                    backgroundColor: "#96D18E",
+                    borderColor: "#96D18E",
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    scales: { yAxes: [{ ticks: {  max: 100,
+                    min: 0,
+                    stepSize: 20 },scaleLabel: {
+            display: true,
+            labelString: 'Recycling Rate'
+          } }] },
+                    legend: { display: true },
+
+                },
+
+            });
+
+
+
+
+
+
+        </script>*@
+
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+
+    </script>
+
+
+
+</body>
+</html>
+
+
+
+
+

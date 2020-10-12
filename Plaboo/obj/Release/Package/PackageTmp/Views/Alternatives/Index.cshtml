@@ -1,0 +1,400 @@
+﻿@model IEnumerable<Plaboo.Models.Plastic>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    @*below are the scripts needed in this view, which includes the bootstrap as well as fontawesome icons*@
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+
+
+
+
+    <style>
+        /*to change the top navigation bar colour*/
+        .navbar {
+            background-color: white !important;
+        }
+
+           html, body {
+            
+            background-color: ghostwhite;
+           
+        }
+
+        .inner {
+            overflow: hidden;
+        }
+
+        /*below css are to show the modal popup when a plastic item is selected by the user*/
+        .modal.fade .modal-dialog {
+            opacity: 0;
+            -webkit-transition: all 0.5s ease-in-out;
+            transition: all 0.5s;
+            transform: scale(0) rotate(500deg);
+        }
+
+        .modal.fade.in .modal-dialog {
+            opacity: 1;
+            transform: scale(1) rotate(0deg);
+        }
+
+        .modal-backdrop {
+            background-color: gray;
+        }
+
+        .modal-header {
+            background-color: azure;
+            color: white;
+        }
+
+        .modal-body {
+            background-color: azure;
+            color: white;
+        }
+
+        .modal-footer {
+            background-color:  azure;
+            color: white;
+        }
+
+        .mcontent {
+            color: black;
+            font-family: 'Calibri';
+        }
+
+        /*to blink the 'item' content*/
+        #item1 {
+            animation: blinking 1.5s infinite;
+            font-size: 15px;
+        }
+
+        /*to add the blinking css*/
+        @@keyframes blinking {
+            0% {
+                color: red;
+            }
+
+            47% {
+                color: #000;
+            }
+
+            62% {
+                color: transparent;
+            }
+
+            97% {
+                color: transparent;
+            }
+
+            100% {
+                color: #000;
+            }
+        }
+
+        #bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        
+        .imgsize {
+            height: 100px;
+            width: 110px;
+            margin-top: 40px;
+            
+        }
+
+       
+        /*to add the shadow effect to the image*/
+img:hover {
+            -webkit-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+            -moz-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+            box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    @*below is the container-fluid to show the categories (classifications)*@
+    <div class="container-fluid">
+        <div class="row" style="background-color:azure;text-align:center">
+            <div class="col-md-4">
+
+            </div>
+            @*to show the all icon image*@
+            <div class="col-md-1"> <img style="height:70px;width:70px;margin-top:30px;margin-bottom:10px;border:1px solid black;" id="all" src="~/Content/Images/all.png" /></div>
+            @*to show the bathroom icon*@
+            <div class="col-md-1">
+                <img style="height: 70px;width: 80px;margin-top: 30px;margin-bottom: 10px;border: 1px solid black;" id="bathroom" src="~/Content/Images/bathroom.png" />
+            </div>
+            @*to show the kitchen icon*@
+            <div class="col-md-1"> <img style="height:70px;width:70px;margin-top:30px;margin-bottom:10px;border:1px solid black;" id="kitchen" src="~/Content/Images/kitchen.png" /></div>
+            <div class="col-md-1">
+                <img style="height: 70px;width: 70px;margin-top: 30px;margin-bottom: 10px;border:1px solid black;" id="leisure" src="~/Content/Images/leisure.png" />
+            </div>
+            <div class="col-md-1">
+                <img style="height: 70px;width: 70px;margin-top: 30px;margin-bottom: 10px;border:1px solid black;" id="travel" src="~/Content/Images/travel.png" />
+            </div>
+
+
+
+            <div class="col-md-3">
+
+            </div>
+        </div>
+
+
+    </div>
+    @*the div class to show the description*@
+    <div class="row">
+        <div class="col-md-12">
+
+            <p style="text-align:center;font-family:'Calibri';color:midnightblue;margin-top:30px;font-size:1.5em;">
+                Tap on the images to see alternatives for your plastic items!
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div id="alldiv" class="row justify-content-center">
+
+
+            @*retreive all the images from the database using the forach loop*@
+            @foreach (var item in Model)
+            {
+
+                <div class="col-md-3">
+                    <div class="inner" style="text-align:center">
+                        <img id="imageid" desc="@item.Description" alternative="@item.Alternative" src=@item.Image
+                             harmindex="@item.HarmMeasure" reason="@item.Reason" data-toggle="tooltip" data-html="true"
+                             title="Click me"
+                             class="card-img-top imgsize img-circle" alt="Missing img">
+                        <p style="font-family:'Calibri'"><b>@item.Description</b></p>
+
+                    </div>
+                </div>
+            }
+
+        </div>
+
+        @*to show the kitchen items*@
+        <div id="kitchendiv" class="row justify-content-center" style="display:none">
+
+            @foreach (var item in Model)
+            {
+                if (item.Classification.Equals("Kitchen"))
+                {
+
+                    <div class="col-md-3">
+                        <div class="inner" style="text-align:center">
+                            <img id="imageid" desc="@item.Description" alternative="@item.Alternative" src=@item.Image
+                                 harmindex="@item.HarmMeasure" reason="@item.Reason" data-toggle="tooltip" data-html="true"
+                                 title="Click me"
+                                 class="card-img-top imgsize img-circle" alt="Missing img">
+                            <p style="font-family:'Calibri'"><b>@item.Description</b></p>
+
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+
+        @*to show all the travel items*@
+        <div id="traveldiv" class="row justify-content-center" style="display: none">
+
+            @foreach (var item in Model)
+            {
+                if (item.Classification.Equals("Travel"))
+                {
+
+                    <div class="col-md-3">
+                        <div class="inner" style="text-align:center">
+                            <img id="imageid" desc="@item.Description" alternative="@item.Alternative" src=@item.Image
+                                 harmindex="@item.HarmMeasure" reason="@item.Reason" data-toggle="tooltip" data-html="true"
+                                 title="Click me"
+                                 class="card-img-top imgsize img-circle" alt="Missing img">
+                            <p style="font-family:'Calibri'"><b>@item.Description</b></p>
+
+                        </div>
+                    </div>
+                }
+            }
+            <div id="extraspace" style="height:320px;"></div>
+        </div>
+
+        @*to show the leisure items*@
+        <div id="leisurediv" class="row justify-content-center" style="display:none">
+
+            @foreach (var item in Model)
+            {
+                if (item.Classification.Equals("Leisure"))
+                {
+
+                    <div class="col-md-3">
+                        <div class="inner" style="text-align:center">
+                            <img id="imageid" desc="@item.Description" alternative="@item.Alternative" src=@item.Image
+                                 harmindex="@item.HarmMeasure" reason="@item.Reason" data-toggle="tooltip" data-html="true"
+                                 title="Click me"
+                                 class="card-img-top imgsize img-circle" alt="Missing img">
+                            <p style="font-family:'Calibri'"><b>@item.Description</b></p>
+
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+
+        @*to show the bathroom items*@
+        <div id="bathroomdiv" class="row justify-content-center" style=" display: none ">
+
+            @foreach (var item in Model)
+            {
+                if (item.Classification.Equals("Bathroom"))
+                {
+
+                    <div class="col-md-3">
+                        <div class="inner" style="text-align:center">
+                            <img id="imageid" desc="@item.Description" alternative="@item.Alternative" src=@item.Image
+                                 harmindex="@item.HarmMeasure" reason="@item.Reason" data-toggle="tooltip" data-html="true"
+                                 title="Click me"
+                                 class="card-img-top imgsize img-circle" alt="Missing img">
+                            <p style="        font-family: 'Calibri'
+"><b>@item.Description</b></p>
+
+    </div>
+    </div>
+}
+}
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="text-align:center;margin-top:30px;">
+                <button type="button" class="btn btn-primary flip" style="width:110px;"
+                        onclick="location.href='@Url.Action("Index", "Home")'">
+                    <i class="fas fa-globe-asia"></i> Home
+                </button>
+            </div>
+        </div>
+
+
+    </div>
+    @*to show the modal popup showing details about the plastic items*@
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" id="resizemodal" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 style="color:black; font-family:'Calibri'" class="modal-title">Do you know?</h4>
+                    @*<h4 id="harmindex1" style="color:black; font-family:'Calibri'" class="modal-title">Harmindex:</h4>*@
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="mcontent" id="item1">Item:</p>
+
+                    <p class="mcontent" id="carharm">Energy:</p>
+
+                    <p class="mcontent" id="reason1">Reason:</p>
+
+                    <p class="mcontent" id="alternative1">Alternative:</p>
+                </div>
+                @*<div class="modal-footer" style="text-align:left;">
+                                <p style="        color: black;
+                    font-family: 'Calibri'">
+                                    * Plastic Harm Scale refers to the level of severe impact
+                                    the plastic item has on the environment. This number is on a scale of 1 to 5 which is calculated
+                                    using our Mathematical Model.
+                                </p>
+                            </div>*@
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    $(document).ready(function () {
+
+        //code to show the modal popup when any item is selected
+        function alignModal(reason, alternative, harmindex, description) {
+
+            var modalDialog = $("#resizemodal");
+            /* Applying the top margin on modal dialog to align it vertically center */
+            modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 3.5));
+
+            $("#item1")[0].innerHTML = "<b>Item: </b>" + description;
+            $("#reason1")[0].innerHTML = "<b>Why Harmful? </b>" + reason;
+            $("#alternative1")[0].innerHTML = "<b>Alternative: </b>" + alternative;
+            $("#carharm")[0].innerHTML = "<b>Energy Consumed: </b>" + harmindex;
+        }
+
+        //show the respective divs only when the buttons are clicked
+        $(".imgsize").click(function (e) {
+            alignModal($(this).attr('reason'), $(this).attr('alternative'),
+                $(this).attr('harmindex'), $(this).attr('desc'));
+            $("#exampleModalCenter").modal('show');
+
+
+        });
+
+
+        $("#kitchen").click(function (e) {
+            $("#alldiv").hide();
+            $("#traveldiv").hide();
+            $("#leisurediv").hide();
+            $("#bathroomdiv").hide();
+            $("#kitchendiv").show();
+        });
+
+        $("#all").click(function (e) {
+            $("#alldiv").show();
+            $("#traveldiv").hide();
+            $("#leisurediv").hide();
+            $("#bathroomdiv").hide();
+            $("#kitchendiv").hide();
+        });
+
+        $("#travel").click(function (e) {
+            $("#alldiv").hide();
+            $("#traveldiv").show();
+            $("#leisurediv").hide();
+            $("#bathroomdiv").hide();
+            $("#kitchendiv").hide();
+        });
+
+        $("#leisure").click(function (e) {
+            $("#alldiv").hide();
+            $("#traveldiv").hide();
+            $("#leisurediv").show();
+            $("#bathroomdiv").hide();
+            $("#kitchendiv").hide();
+        });
+
+        $("#bathroom").click(function (e) {
+            $("#alldiv").hide();
+            $("#traveldiv").hide();
+            $("#leisurediv").hide();
+            $("#bathroomdiv").show();
+            $("#kitchendiv").hide();
+        });
+
+
+    });
+</script>
+
+
+
+

@@ -168,7 +168,7 @@
                     </h2>
                 </div>
                 <br />
-                <a class="btn btn-primary" href="#welcome" role="button"><b>Learn More</b></a>
+                @*<a class="btn btn-primary" href="#welcome" role="button"><b>Learn More</b></a>*@
             </div>
             </div>
 
@@ -180,7 +180,7 @@
 
                 <div class="col-md-12" style="text-align:center">
 
-                    <h1 style="color:indianred;">It Starts With You</h1>
+                    <h1 style="color:indianred;font-family:Calibri">It Starts With You</h1>
                     <hr>
                 </div>
                 <div class="col-md-12" style="text-align:center">
@@ -270,25 +270,16 @@
 
                         <div class="card-deck">
 
-                            <div class="card">
-                                <img class="card-img-top imgsize center imgtransform" src="~/Content/Images/altern.jpg" alt="Missing img">
-                                <div class="card-body">
-                                    <h4 style="color:indianred;" class="card-title">Switch To Alternatives</h4>
-                                    <p style="font-size:18px;" class="card-text">By clicking on 'Switch Now', you will be able to see the plastic alternatives for the items you use daily and switch to them for a better environment.</p>
 
-                                    <button type="button" class="btn btn-primary flip" style="width:110px;"
-                                            onclick="location.href='@Url.Action("Index", "Alternatives")'">
-                                        Switch Now
-                                    </button>
-                                </div>
-                            </div>
 
                             <div class="card">
                                 <img class="card-img-top imgsize center imgtransform" src="~/Content/Images/compare.jpg">
                                 <div class="card-body">
-                                    <h4 style="color:indianred;" class="card-title">Compare Your Recyling Rate</h4>
-                                    <p style="font-size:18px;" class="card-text">By clicking on 'Explore', you will be able to find the recycling rate of your 
-                                    council and compare it with other councils to see how they perform.</p>
+                                    <h4 style="color:indianred;" class="card-title">Compare Suburbs</h4>
+                                    <p style="font-size:18px;" class="card-text">
+                                        By clicking on 'Explore', you will be able to find the recycling rate of your
+                                        suburb and compare it with other suburbs to see how they perform.
+                                    </p>
                                     <button type="button" class="btn btn-primary flip" style="margin-left: 0px; margin-top: 0px;width:110px;"
                                             onclick="location.href='@Url.Action("Index", "allCouncilPostcodes")'">
                                         Explore
@@ -310,7 +301,18 @@
                                     </button>
                                 </div>
                             </div>
+                            <div class="card">
+                                <img class="card-img-top imgsize center imgtransform" src="~/Content/Images/altern.jpg" alt="Missing img">
+                                <div class="card-body">
+                                    <h4 style="color:indianred;" class="card-title">Switch To Alternatives</h4>
+                                    <p style="font-size:18px;" class="card-text">By clicking on 'Switch Now', you will be able to see the plastic alternatives for the items you use daily and switch to them for a better environment.</p>
 
+                                    <button type="button" class="btn btn-primary flip" style="width:110px;"
+                                            onclick="location.href='@Url.Action("Index", "Alternatives")'">
+                                        Switch Now
+                                    </button>
+                                </div>
+                            </div>
                             <div class="card">
                                 <img class="card-img-top imgsize center imgtransform" src="~/Content/Images/quizz.jpg">
                                 <div class="card-body">

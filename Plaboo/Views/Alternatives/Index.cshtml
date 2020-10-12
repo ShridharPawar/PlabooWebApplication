@@ -161,6 +161,7 @@ img:hover {
     @*the div class to show the description*@
     <div class="row">
         <div class="col-md-12">
+
             <p style="text-align:center;font-family:'Calibri';color:midnightblue;margin-top:30px;font-size:1.5em;">
                 Tap on the images to see alternatives for your plastic items!
             </p>
@@ -272,10 +273,18 @@ img:hover {
                             <p style="        font-family: 'Calibri'
 "><b>@item.Description</b></p>
 
-</div>
-</div>
+    </div>
+    </div>
 }
 }
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="text-align:center;margin-top:30px;">
+                <button type="button" class="btn btn-primary flip" style="width:110px;"
+                        onclick="location.href='@Url.Action("Index", "Home")'">
+                    <i class="fas fa-globe-asia"></i> Home
+                </button>
+            </div>
         </div>
 
 

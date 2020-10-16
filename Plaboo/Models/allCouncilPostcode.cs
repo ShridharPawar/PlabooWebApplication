@@ -8,6 +8,7 @@ namespace Plaboo.Models
 {
     public class allCouncilPostcode
     {
+        //attributes of the allcouncilpostcode data table
         [Key]
         public string postcode { get; set; }
         public string council { get; set; }

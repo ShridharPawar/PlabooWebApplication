@@ -19,7 +19,7 @@ namespace Plaboo.Controllers
         // GET: This is a get method to get all details of the plastic items in the database
         public ActionResult Index()
         {
-            return View(db.Plastics.ToList());
+            return View(db.Plastics.ToList());  //return all plastics to the model
         }
 
 

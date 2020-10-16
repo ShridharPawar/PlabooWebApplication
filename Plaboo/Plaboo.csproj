@@ -345,11 +345,11 @@
     <Content Include="Content\Images\1.jpeg" />
     <Content Include="Content\Images\2.jpeg" />
     <Content Include="Content\Images\3.jpeg" />
-    <Content Include="Content\Images\all.png" />
+    <Content Include="Content\Images\all1.png" />
     <Content Include="Content\Images\altern.jpg" />
     <Content Include="Content\Images\arrowdown.PNG" />
     <Content Include="Content\Images\bag.png" />
-    <Content Include="Content\Images\bathroom.png" />
+    <Content Include="Content\Images\bathroom1.png" />
     <Content Include="Content\Images\bottle.png" />
     <Content Include="Content\Images\centre.jpg" />
     <Content Include="Content\Images\centre1.jpg" />
@@ -364,8 +364,8 @@
     <Content Include="Content\Images\foodstorage.png" />
     <Content Include="Content\Images\hardhat.png" />
     <Content Include="Content\Images\homeplastic.JPG" />
-    <Content Include="Content\Images\kitchen.png" />
-    <Content Include="Content\Images\leisure.png" />
+    <Content Include="Content\Images\kitchen1.png" />
+    <Content Include="Content\Images\leisure1.png" />
     <Content Include="Content\Images\mapbox-icon.png" />
     <Content Include="Content\Images\mediacase.png" />
     <Content Include="Content\Images\parentsplastic.JPG" />
@@ -389,7 +389,7 @@
     <Content Include="Content\Images\toothpaste.png" />
     <Content Include="Content\Images\top3councils.jpeg" />
     <Content Include="Content\Images\totalRecycle.png" />
-    <Content Include="Content\Images\travel.png" />
+    <Content Include="Content\Images\travel1.png" />
     <Content Include="Content\Images\utensils.png" />
     <Content Include="Content\Images\VICrecycling.gif" />
     <Content Include="Content\Images\yogamat.png" />

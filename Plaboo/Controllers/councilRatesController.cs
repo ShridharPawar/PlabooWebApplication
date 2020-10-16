@@ -35,7 +35,7 @@ namespace Plaboo.Controllers
        // this is a GET HTPP method to get the details of councils- like their rank, recycling rate etc
        public ActionResult Index()
         {
-            return View(db.councilRates.ToList());
+            return View(db.councilRates.ToList());  //return all councilrates to the model
         }
 
         

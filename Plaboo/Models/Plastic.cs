@@ -7,6 +7,7 @@ namespace Plaboo.Models
 {
     public class Plastic
     {
+        //attributes of the plastic data table
         public int Plasticid { get; set; }
         public string Description { get; set; }
 

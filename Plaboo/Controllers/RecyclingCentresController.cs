@@ -13,36 +13,40 @@ namespace Plaboo.Controllers
 {
     public class RecyclingCentresController : Controller
     {
-        private PlabooContext db = new PlabooContext();
+        private PlabooContext db = new PlabooContext();   //db context instance
 
         //GET: RecyclingCentres
         //This will return all distinct suburbs of the recycling centers to shpw it to the users using mapbox
         public ActionResult Index()
         {
             ViewBag.availabletags = db.RecyclingCentres.Select(x => x.Suburb).Distinct().ToList().ToArray(); //used LINQ to select the distinct
-            //suburbs from the database 
-            return View(db.RecyclingCentres.ToList());
+            //suburbs from the database and pass it to the view to show them
+            return View(db.RecyclingCentres.ToList()); //return the model to the view
 
         }
 
+        //action for suburb autocomplete
         public List<string> AutoComplete()
         {
-            return db.RecyclingCentres.Select(x => x.Suburb).ToList();
+            return db.RecyclingCentres.Select(x => x.Suburb).ToList();  //return all suburbs for jquery autocomplete
 
         }
 
+        //action to return the recycling centers of the searched suburb
         [HttpPost]
         public ActionResult Index(FormCollection formcollection)
         {
-            var suburbstring = formcollection["suburb"];
-            ViewBag.availabletags = db.RecyclingCentres.Select(x => x.Suburb).Distinct().ToList().ToArray();
-            if (suburbstring == "")
+            var suburbstring = formcollection["suburb"];  //suburb as a string from the formcollection variable
+            ViewBag.availabletags = db.RecyclingCentres.Select(x => x.Suburb).Distinct().ToList().ToArray();  //used LINQ to select the distinct
+            //suburbs from the database and pass it to the view to show them 
+            if (suburbstring == "") //if the suburb is not searched then return all recycling centers
             {
-                return View(db.RecyclingCentres.ToList());
+                return View(db.RecyclingCentres.ToList());  //return all recycling centers to the model
             }
             else 
             {
-                return View(db.RecyclingCentres.Where(x => x.Suburb == suburbstring).ToList());
+                return View(db.RecyclingCentres.Where(x => x.Suburb == suburbstring).ToList());  //if the suburb is found then return 
+                //nearby recycling centers
             }
           
            
@@ -50,9 +54,8 @@ namespace Plaboo.Controllers
         }
 
 
-
-
-        protected override void Dispose(bool disposing)
+       //action to dispose
+       protected override void Dispose(bool disposing)
         {
             if (disposing)
             {

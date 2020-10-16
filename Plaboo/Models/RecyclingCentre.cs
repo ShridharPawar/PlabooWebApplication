@@ -8,6 +8,8 @@ namespace Plaboo.Models
 {
     public class RecyclingCentre
     {
+        //attributes of the recyclingcentre data table
+
         [Key]
         public string Name { get; set; }
         public string Latitude { get; set; }

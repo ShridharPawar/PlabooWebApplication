@@ -8,6 +8,7 @@ namespace Plaboo.Models
 {
     public class councilRate
     {
+        //attributes of the councilrate data table
         [Key]
         public string council { get; set; }
         public string rate { get; set; }

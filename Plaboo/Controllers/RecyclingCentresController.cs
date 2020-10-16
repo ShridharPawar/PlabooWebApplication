@@ -16,9 +16,11 @@ namespace Plaboo.Controllers
         private PlabooContext db = new PlabooContext();
 
         //GET: RecyclingCentres
+        //This will return all distinct suburbs of the recycling centers to shpw it to the users using mapbox
         public ActionResult Index()
         {
-            ViewBag.availabletags = db.RecyclingCentres.Select(x => x.Suburb).Distinct().ToList().ToArray();
+            ViewBag.availabletags = db.RecyclingCentres.Select(x => x.Suburb).Distinct().ToList().ToArray(); //used LINQ to select the distinct
+            //suburbs from the database 
             return View(db.RecyclingCentres.ToList());
 
         }

@@ -391,7 +391,7 @@
     <Content Include="Content\Images\totalRecycle.png" />
     <Content Include="Content\Images\travel1.png" />
     <Content Include="Content\Images\utensils.png" />
-    <Content Include="Content\Images\VICrecycling.gif" />
+    <Content Include="Content\Images\Vicgif.gif" />
     <Content Include="Content\Images\yogamat.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

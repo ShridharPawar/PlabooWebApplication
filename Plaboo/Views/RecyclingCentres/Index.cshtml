@@ -484,12 +484,51 @@
    #places{
        width:50px;
    }
+
+   
+           .hero-image {
+            background-image: url('../../Content/Images/recyclingcover3.JPG');
+            height: 50%;
+             
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            width: 100%;
+        }
     </style>
 </head>
 
 
 <body>
     <div class="content">
+
+        <div class="hero-image responsive" style="height: 460px;margin-bottom:30px;">
+                            <div class="hero-text" style="        text-align: center;
+                transform: translate(-50%, -40%);
+                position: absolute;
+                left: 50%;
+                top: 50%;
+        ">
+                                <h2 style="color:white; font-family: Calibri;">
+                                    <b>Got Household Waste? Get Waste Management Suggestions</b>
+                                </h2>
+                                
+                                <div class="row">
+                                    <div class="col-md-12">
+
+
+                                        <a href="#timeline" id="learn" class="btn btn-primary"  role="button">Learn More</a>
+                                        
+                                        @*<input type="submit" value="Search" id="search" class="btn btn-primary" />*@
+                                    </div>
+                                       
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
 
         <div class="container" style="margin-top: 20px;">
             <div class="page-header text-center">
@@ -543,7 +582,9 @@
                         </div>
 
                         <div class="timeline-footer">
-                            <a style="font-size: 22px; color: #0275d8; font-family: Calibri" target="_blank" href="https://engage.vic.gov.au/waste/wastetoenergy">
+                            <a style="        font-size: 22px;
+        color: #0275d8;
+        font-family: Calibri" target="_blank" href="https://engage.vic.gov.au/waste/wastetoenergy">
                                 Let's Do It <i class="fas fa-arrow-circle-right"></i>
                             </a>
                         </div>
@@ -582,40 +623,40 @@
 
         @*@using (Html.BeginForm("Index", "RecyclingCentres", FormMethod.Post))
         {*@
-            <div class="content">
-                @*<div class="hero-image responsive" style="height: 460px;margin-bottom:30px;">
-                    <div class="hero-text" style="        text-align: center;
-        transform: translate(-50%, -40%);
-        position: absolute;
-        left: 50%;
-        top: 25%;
-">
-                        <h2 style="color:indianred; font-family: Calibri">
-                            <b>Got Waste? Find Waste Management Centres In Your Suburb</b>
-                        </h2>
-                        <p>Dispose any unwanted household plastic products at home, making sure these materials can be returned to create new products
-                        while protecting our environment.</p>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="col-md-2"></div>
-                                <div class="col-md-4">
+        <div class="content">
+            @*<div class="hero-image responsive" style="height: 460px;margin-bottom:30px;">
+                                <div class="hero-text" style="        text-align: center;
+                    transform: translate(-50%, -40%);
+                    position: absolute;
+                    left: 50%;
+                    top: 25%;
+            ">
+                                    <h2 style="color:indianred; font-family: Calibri">
+                                        <b>Got Waste? Find Waste Management Centres In Your Suburb</b>
+                                    </h2>
+                                    <p>Dispose any unwanted household plastic products at home, making sure these materials can be returned to create new products
+                                    while protecting our environment.</p>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-4">
 
-                                    <input style="width: 230px;  height: 40px;" class="form-control" id="suburb"
-                                           aria-describedby="emailHelp" name="suburb" placeholder="Enter Suburb (Ex:Anglesea)">
+                                                <input style="width: 230px;  height: 40px;" class="form-control" id="suburb"
+                                                       aria-describedby="emailHelp" name="suburb" placeholder="Enter Suburb (Ex:Anglesea)">
+                                            </div>
+                                            <div class="col-md-2" style="margin-top:2px;">
+
+
+
+                                                <input type="submit" value="Search" id="search" class="btn btn-primary" />
+                                            </div>
+                                            <div class="col-md-4"></div>
+                                        </div>
+                                    </div>
+
                                 </div>
-                                <div class="col-md-2" style="margin-top:2px;">
-
-
-
-                                    <input type="submit" value="Search" id="search" class="btn btn-primary" />
-                                </div>
-                                <div class="col-md-4"></div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>*@
-            </div>
+                            </div>*@
+        </div>
         @*}*@
 
 
@@ -628,7 +669,7 @@
                 {
 
                     <div class="text-center">
-                        <h1 style="font-family:Calibri;color:indianred;"><b>Got Waste? Find Waste Management Centres In Your Suburb</b></h1>
+                        <h1 style="font-family:Calibri;color:indianred;"><b>Find Waste Management Centres In Your Area</b></h1>
                     </div>
                     <p style="font-family:Calibri;margin:10px;text-align:center">
                         Dispose any unwanted household plastic products at home, making sure these materials can be returned to create new products
@@ -638,8 +679,8 @@
 
                         <div class="col-md-2">
 
-                            <input style="width: 230px;height: 40px;margin-right:20px;" class="form-control" id="suburb"
-                                   aria-describedby="emailHelp" name="suburb" placeholder="Enter Suburb (Ex:Anglesea)">
+                            <input style="width: 230px;height: 40px;margin-right:20px;" class="form-control" id="postcode"
+                                   aria-describedby="emailHelp" name="postcode" placeholder="Enter Postcode">
                         </div>
                         <div class="col-md-2" style="margin-top:2px;text-align:left;margin-left:10px;">
 
@@ -652,7 +693,7 @@
 
                 }
 
-                </div>
+            </div>
             <div id="maprow" class="row">
                 <div class="col-md-8">
                     <div id="map" style="width: 100%; height: 400px;"></div>
@@ -735,7 +776,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p class="mcontent" id="popupcontent">Oops, there is no waste management centre in your suburb!</p>
+                    <p class="mcontent" id="popupcontent">Oops, there is no waste management centre in your postcode!</p>
                 </div>
             </div>
         </div>
@@ -747,20 +788,35 @@
 
 <script>
 
-    var availableTags = [];
+    
+                // Add smooth scrolling to all links
+                $("#learn").on('click', function (event) {
+
+                    // Make sure this.hash has a value before overriding default behavior
+                    if (this.hash !== "") {
+                        // Prevent default anchor click behavior
+                        event.preventDefault();
+
+                        // Store hash
+                        var hash = this.hash;
+
+                        // Using jQuery's animate() method to add smooth page scroll
+                        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 800, function () {
+
+                            // Add hash (#) to URL when done scrolling (default click behavior)
+                            window.location.hash = hash;
+                        });
+                    } // End if
+                });
+           
 
     var model = @Html.Raw(Json.Encode(Model));
           
     var array = @Html.Raw(Json.Encode(@ViewBag.availabletags));
-    for (var i = 0; i < array.length; i++) {
-       
-        availableTags.push(array[i]);
-        }
-
-    $("#suburb").autocomplete({
-        source: availableTags
-       
-    });
+    
 
 
     var locations = [];
@@ -792,7 +848,7 @@
             locations.push(point);
 
         }
-        $('html, body').animate({ scrollTop: $(window).height() / 0.43 }, 'slow');
+        $('html, body').animate({ scrollTop: $(window).height() / 0.34 }, 'slow');
         showMap();
 
     }
@@ -825,15 +881,15 @@
         //code to be executed when the 'search' button is clicked
     $("#search").click(function (e) {
         
-        var suburb = $("#suburb").val();
-        if (suburb == "") {
+        var postcode = $("#postcode").val();
+        if (postcode == "") {
             var z = 0;
         }
         else {
         var Found = false;
          for (var item in array)
          {
-             if (array[item] == suburb)
+             if (array[item] == postcode)
              {
                  Found = true;
                  break;

@@ -347,6 +347,7 @@
     <Content Include="Content\Images\3.jpeg" />
     <Content Include="Content\Images\all1.png" />
     <Content Include="Content\Images\altern.jpg" />
+    <Content Include="Content\Images\alternativescover4.jpg" />
     <Content Include="Content\Images\arrowdown.PNG" />
     <Content Include="Content\Images\bag.png" />
     <Content Include="Content\Images\bathroom1.png" />
@@ -378,6 +379,7 @@
     <Content Include="Content\Images\quizcover.jpg" />
     <Content Include="Content\Images\quizz.jpg" />
     <Content Include="Content\Images\recycle1.jpg" />
+    <Content Include="Content\Images\recyclingcover3.jpg" />
     <Content Include="Content\Images\recyclingpapers.jpg" />
     <Content Include="Content\Images\rugs.png" />
     <Content Include="Content\Images\schooleducation.PNG" />

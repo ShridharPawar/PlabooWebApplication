@@ -94,6 +94,17 @@ img:hover {
             -moz-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
             box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
         }
+
+   .hero-image {
+            background-image: url('../../Content/Images/alternativescover4.JPG');
+            height: 50%;
+             
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -102,13 +113,37 @@ img:hover {
 
 
     @*below is the container-fluid to show the categories (classifications)*@
-    <div class="container-fluid">
-        <div class="row" style="background-color:ghostwhite;text-align:center">
+    <div class="">
+        <div class="hero-image responsive" style="height: 460px;margin-bottom:30px;">
+            <div class="hero-text" style="        text-align: center;
+                transform: translate(-50%, -40%);
+                position: absolute;
+                left: 50%;
+                top: 50%;
+        ">
+                <h2 style="color:ghostwhite; font-family: Calibri;">
+                    <b>Find Plastic Alternatives</b>
+                </h2>
+
+                <div class="row">
+                    <div class="col-md-12">
+
+
+                        <a href="#alternatives1" id="learn" class="btn btn-primary" role="button">Learn More</a>
+
+                        @*<input type="submit" value="Search" id="search" class="btn btn-primary" />*@
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div id="alternatives1" class="row" style="background-color:ghostwhite;text-align:center">
             <div class="col-md-4">
 
             </div>
             @*to show the all icon image*@
-            <div class="col-md-1"> <img style="height:70px;width:70px;margin-top:30px;margin-bottom:10px;border:1px solid black;" id="all" src="~/Content/Images/all1.png" /></div>
+            <div class="col-md-1"> <img  style="height:70px;width:70px;margin-top:30px;margin-bottom:10px;border:1px solid black;" id="all" src="~/Content/Images/all1.png" /></div>
             @*to show the bathroom icon*@
             <div class="col-md-1">
                 <img style="height: 70px;width: 80px;margin-top: 30px;margin-bottom: 10px;border: 1px solid black;" id="bathroom" src="~/Content/Images/bathroom1.png" />
@@ -300,6 +335,28 @@ img:hover {
 
 <script>
     $(document).ready(function () {
+           $("#learn").on('click', function (event) {
+
+                    // Make sure this.hash has a value before overriding default behavior
+                    if (this.hash !== "") {
+                        // Prevent default anchor click behavior
+                        event.preventDefault();
+
+                        // Store hash
+                        var hash = this.hash;
+
+                        // Using jQuery's animate() method to add smooth page scroll
+                        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 800, function () {
+
+                            // Add hash (#) to URL when done scrolling (default click behavior)
+                            window.location.hash = hash;
+                        });
+                    } // End if
+                });
+
 
         //code to show the modal popup when any item is selected
         function alignModal(reason, alternative, harmindex, description) {

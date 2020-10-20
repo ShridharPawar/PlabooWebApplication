@@ -89,3 +89,4 @@ D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Debug\Plaboo.csproj.
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Debug\Plaboo.csproj.CopyComplete
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Debug\Plaboo.dll
 D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Debug\Plaboo.pdb
+D:\MonashSem4\PlaBOOProject\PlabooWebApplication\Plaboo\obj\Debug\Plaboo.csprojAssemblyReference.cache

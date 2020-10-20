@@ -27,6 +27,7 @@
         #homenav {
             color: black;
             font-family: 'Calibri';
+            font-size: large;
         }
 
             #homenav:hover {
@@ -45,6 +46,11 @@
             .dropdown:hover .dropdown-menu {
                 display: block;
             }
+
+             footer {
+            background-color: #DDE6EF;
+            color: black;
+        }
     </style>
 
 
@@ -61,8 +67,9 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <img onclick="location.href='@Url.Action("Index", "Home")'" src="~/Content/Images/plaboo.png"
-                     style="position:relative;top:-9px;width:55px;height:55px;">
+                <img onclick="location.href='@Url.Action("Index", "Home")'" src="~/Content/Images/plaboo2.png"
+                     @*style="position:relative;top:-9px;width:55px;height:55px;">*@
+                     style="position:relative;width:90px;height:auto;">
 
             </div>
             <div class="navbar-collapse collapse">
@@ -110,32 +117,38 @@
 
 
         <footer>
-
+            <div class="container-fluid padding" style="margin-top:50px;">
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <img style="width:140px;height:auto;" src="~/Content/Images/plaboo2.png" /> <h5>&copy; PlaBOO-2020 Developed by Team Slay</h5>
+                    </div>
+                </div>
+            </div>
             @*<div id="footer">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <img style="width:1500px;height:400px;" src="~/Content/Images/footer.png" />
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <img style="width:1500px;height:400px;" src="~/Content/Images/footer.png" />
+                </div>
+            </div>
 
-                </div>*@
+        </div>*@
             @*<div id="solution" style="background-color:black;margin-top:15px;">
-                    <div class="row">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-1">
-                            <img style="width:140px;height:120px;margin-top:20px;margin-bottom:20px;" src="~/Content/Images/plaboo.png" />
-                        </div>
-                        <div class="col-md-9">
-                            <p style="font-family:'Calibri';color:white;margin-top:70px;">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-1">
+                    <img style="width:140px;height:120px;margin-top:20px;margin-bottom:20px;" src="~/Content/Images/plaboo.png" />
+                </div>
+                <div class="col-md-9">
+                    <p style="font-family:'Calibri';color:white;margin-top:70px;">
 
-                                    Copyrights @@ All reserved. Plaboo-2020 Developed by Team Slay
+                            Copyrights @@ All reserved. Plaboo-2020 Developed by Team Slay
 
-                            </p>
-                        </div>
+                    </p>
+                </div>
 
 
-                    </div>
-                </div>*@
+            </div>
+        </div>*@
 
         </footer>
     </div>
